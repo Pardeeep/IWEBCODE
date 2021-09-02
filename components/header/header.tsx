@@ -4,13 +4,12 @@ import Image from "next/image";
 import { BsFillCaretRightFill } from "react-icons/bs";
 
 const Main = styled.div`
-  padding: 0 3.8rem;
+  padding: 0 8rem;
 `;
 
 const InnerPart = styled.div`
   color: black;
   padding: 3.2rem 0;
-
   display: flex;
   @media (max-width:800px){
     flex-direction: column;
@@ -22,15 +21,15 @@ const InnerPart = styled.div`
 `;
 
 const InnerText = styled.div`
-  width: 50%;
+  width: 55%;
   @media (max-width:800px){
     width: 100%;
   }
 `;
 
 const FirstP = styled.p`
-  font-size: 5rem;
-  font-weight: 550;
+  font-size: 4rem;
+  font-weight: 600;
   width: 100%;
   line-height: 1.2;
   word-spacing: 4px;
@@ -63,7 +62,7 @@ const Button = styled.button`
 
 const Lamp = styled.div`
   width: 70%;
-  height: 400px;
+  height: 500px;
   border: 4px solid #8447ff;
   background: #e5e5e5;
   background-size: cover;
@@ -81,6 +80,8 @@ const Lamp = styled.div`
     width: 100%;
     .customImg {
       width: 500px;
+      height: 500px;
+      overflow-y: hidden;
     }
   }
 `;
@@ -107,8 +108,8 @@ const Header = () => {
               <Image
                 src="https://iwebcode.design/wp-content/uploads/2020/03/keystoke-image-3.jpg"
                 alt="IWEBCODE"
-                width="400"
-                height="490"
+                width="450"
+                height="650"
                 layout="intrinsic"
               />
             </div>

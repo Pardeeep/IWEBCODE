@@ -4,8 +4,7 @@
 
 .Navbar {
   overflow: hidden;
-  padding: 2.5rem 0rem;
-
+  padding: 2rem 0rem;
 }
 
 .link {
@@ -13,17 +12,6 @@
   font-size: 14px;
   margin-left: 2rem;
 }
-
-
-@media (max-width: 800px){
-  .link{
-    margin: 0;
-  }
-  .Navbar {
-    padding: 0 2rem;
-  }
-}
-
 .active {
   color: #8447ff;
 }
@@ -92,3 +80,25 @@
   display: block;
   z-index: 40;
 }
+
+.bars2{
+  display: none;
+}
+
+@media (max-width: 800px){
+  .bars2{
+    display: flex!important;
+    cursor: pointer;
+  }
+  .link{
+    display: none;
+    margin: 0;
+  }
+  .bars{
+    display: block;
+  }
+  .Navbar {
+    padding: 0 2rem;
+  }
+}
+

@@ -91,6 +91,11 @@ const Navbar = () => {
               </div>
             </li>
           </ul>
+          <div className={`${styles.bars} ${styles.bars2} btn-dark`}>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
         </nav>
       </div>
     </Main>

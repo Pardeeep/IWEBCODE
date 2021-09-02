@@ -1,28 +1,61 @@
 import React from "react";
 import styled from "styled-components";
+import { FaEye } from "react-icons/fa";
 
 const CardBox = styled.section`
-    display:flex;
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 0 5rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0 5rem;
+  flex-wrap: wrap;
 `;
-
 
 // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 const Card = styled.div`
   width: 280px;
   min-height: 500px;
   margin: 2rem 0;
-  padding: 1rem .96rem;
+  padding: 1rem 0.96rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   .icon {
-    width: 80px;
-    height: 80px;
+    position: relative;
+    height: 100px;
+    width: 120px;
+    z-index: 2;
+    margin: 0 auto;
+  }
+  .icon::before {
+    background: linear-gradient(180deg, #ebfffd 0, #efeefa 100%);
+    position: absolute;
+    content: "";
+    right: 44%;
+    top: -15%;
+    height: 100%;
+    width: 88px;
+    z-index: -1;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform: rotateY(-7deg);
+    box-shadow: 0 0 1px transparent;
+  }
+  .icon-inner {
+    position: relative;
+    width: 62px;
+    height: 62px;
+    text-align: center;
+    line-height: 58px;
+    border-radius: 100%;
     background: #8447ff;
+    left: 32px;
+  }
+  .image {
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    font-size: 30px;
+    color: white;
   }
   .violet {
     color: #8447ff;
@@ -50,7 +83,18 @@ export const Cards = () => {
   return (
     <CardBox>
       <Card>
-        <p className="icon"></p>
+        <div className="icon">
+          <div className="icon-inner">
+            <img
+              src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
+              alt="Icon Images"
+            />
+            <div className="image-2">
+              {" "}
+              <FaEye className="image" />
+            </div>
+          </div>
+        </div>
         <Title>Design</Title>
         <Description>
           Our Creative Design Services Assure Best Quality Standards And Stand
@@ -65,7 +109,18 @@ export const Cards = () => {
         </a>
       </Card>
       <Card>
-        <p className="icon"></p>
+        <div className="icon">
+          <div className="icon-inner">
+            <img
+              src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
+              alt="Icon Images"
+            />
+            <div className="image-2">
+              {" "}
+              <FaEye className="image" />
+            </div>
+          </div>
+        </div>
         <Title>Development</Title>
         <Description>
           Your Web Platform Is Home Of Our Business Whatever Environment Does It
@@ -78,7 +133,18 @@ export const Cards = () => {
         </a>
       </Card>
       <Card>
-        <p className="icon"></p>
+        <div className="icon">
+          <div className="icon-inner">
+            <img
+              src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
+              alt="Icon Images"
+            />
+            <div className="image-2">
+              {" "}
+              <FaEye className="image" />
+            </div>
+          </div>
+        </div>
         <Title>Digital Marketing</Title>
         <Description>
           We Are Artefact- A Complete And Over Solution To Grow Your Business
@@ -93,7 +159,18 @@ export const Cards = () => {
         </a>
       </Card>
       <Card>
-        <p className="icon"></p>
+        <div className="icon">
+          <div className="icon-inner">
+            <img
+              src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
+              alt="Icon Images"
+            />
+            <div className="image-2">
+              {" "}
+              <FaEye className="image" />
+            </div>
+          </div>
+        </div>
         <Title>Technology</Title>
         <Description>
           Our Awesome Technical Tools I.E. Hosting And Big Data Analysis Have
@@ -106,7 +183,18 @@ export const Cards = () => {
         </a>
       </Card>
       <Card>
-        <p className="icon"></p>
+        <div className="icon">
+          <div className="icon-inner">
+            <img
+              src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
+              alt="Icon Images"
+            />
+            <div className="image-2">
+              {" "}
+              <FaEye className="image" />
+            </div>
+          </div>
+        </div>
         <Title>Content Strategy</Title>
         <Description>
           We Follow High And Best Level Planning And Management Approached For
@@ -118,7 +206,18 @@ export const Cards = () => {
         </a>
       </Card>
       <Card>
-        <p className="icon"></p>
+        <div className="icon">
+          <div className="icon-inner">
+            <img
+              src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
+              alt="Icon Images"
+            />
+            <div className="image-2">
+              {" "}
+              <FaEye className="image" />
+            </div>
+          </div>
+        </div>
         <Title>Quality Assurance</Title>
         <Description>
           We Strive Our Best To Provide Quality Assurance Services Ensuring That
