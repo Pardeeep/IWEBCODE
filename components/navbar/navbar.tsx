@@ -11,14 +11,14 @@ const Main = styled.section`
   .Active {
     flex-direction: column;
     align-items: flex-start;
-    padding: 8px 0px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background: white;
     color: black;
-
+    padding:0 !important;
+    margin: 0!important;
   }
 }
 #Active {
@@ -26,10 +26,13 @@ const Main = styled.section`
   top: 0;
   left: 0;
   right: 0;
-  padding: 0 8rem;
+  padding: 0 4rem;
   background: rgba(250,250,250,0.97);
   z-index: 50;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  @media{
+    padding: 0 20px;
+  }
 `;
 
 const Navbar = () => {

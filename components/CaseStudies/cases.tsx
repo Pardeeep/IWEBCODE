@@ -50,8 +50,11 @@ const Title = styled.h1`
 `;
 
 const Detail = styled.p`
-    width: 100%;
+    width: 80%;
     color: #808080;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 30px;
     margin-bottom: 2rem;
     @media (max-width:800px){
       font-size: 14px;
@@ -124,8 +127,8 @@ const Cases = () => {
           <Image
             src="https://iwebcode.design/wp-content/uploads/2020/12/pcr-new.png"
             alt="IWEBCODE"
-            width="550"
-            height="565"
+            width="650"
+            height="665"
             layout="intrinsic"
           />
         </ImgContainer>

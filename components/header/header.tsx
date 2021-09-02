@@ -5,6 +5,9 @@ import { BsFillCaretRightFill } from "react-icons/bs";
 
 const Main = styled.div`
   padding: 10px 4rem;
+  @media(max-width:800px){
+    padding : 0 20px;
+  }
 `;
 
 const InnerPart = styled.div`
@@ -74,7 +77,7 @@ const Lamp = styled.div`
     transform: rotate(-2deg);
   }
   @media (max-width:800px){
-    margin: 4rem 0;
+    margin: 1rem 0;
     border: none;
     background: none;
     width: 100%;

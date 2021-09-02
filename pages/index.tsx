@@ -6,6 +6,8 @@ import Navbar from "../components/navbar/navbar";
 import Services from "../components/services/services";
 import Cases from "../components/CaseStudies/cases"
 import styles from "../styles/Home.module.css";
+import About from "../components/AboutPage/about";
+import Projects from "../components/Projects/projects";
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +31,8 @@ const Home: NextPage = () => {
       <Header />
       <Services />
       <Cases />
+      <About />
+      <Projects />
     </div>
   );
 };

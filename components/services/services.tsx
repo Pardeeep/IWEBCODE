@@ -29,6 +29,7 @@ const Description = styled.p`
   line-height: 3.9rem;
   width: 19em;
   text-align: center;
+
   @media(max-width: 800px){
     width: 80%;
     font-size: 2rem;
