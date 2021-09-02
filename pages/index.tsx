@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/header/header";
 import Navbar from "../components/navbar/navbar";
+import Services from "../components/services/services";
+import Cases from "../components/CaseStudies/cases"
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -25,6 +27,8 @@ const Home: NextPage = () => {
         ></script>
       </Head>
       <Header />
+      <Services />
+      <Cases />
     </div>
   );
 };

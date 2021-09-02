@@ -3,15 +3,25 @@
 }
 
 .Navbar {
-  font-size: 1rem;
-  font-weight: 550;
   overflow: hidden;
   padding: 2.5rem 0rem;
+
 }
 
 .link {
   cursor: pointer;
-  margin-left: 2.4rem;
+  font-size: 14px;
+  margin-left: 2rem;
+}
+
+
+@media (max-width: 800px){
+  .link{
+    margin: 0;
+  }
+  .Navbar {
+    padding: 0 2rem;
+  }
 }
 
 .active {
@@ -53,18 +63,18 @@
 }
 
 .dropdown {
-  display: inline-block;
+  display: block;
 }
 
 .dropdownContent {
   display: none;
   list-style: none;
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   min-width: 250px;
   padding: 0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 60;
 }
 
 .dropdownContent li {
@@ -80,4 +90,5 @@
 
 .dropdown:hover .dropdownContent {
   display: block;
+  z-index: 40;
 }

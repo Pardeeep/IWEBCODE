@@ -10,11 +10,22 @@ const Main = styled.div`
 const InnerPart = styled.div`
   color: black;
   padding: 3.2rem 0;
+
   display: flex;
+  @media (max-width:800px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column-reverse;
+    padding: 0;
+  }
 `;
 
 const InnerText = styled.div`
   width: 50%;
+  @media (max-width:800px){
+    width: 100%;
+  }
 `;
 
 const FirstP = styled.p`
@@ -52,14 +63,25 @@ const Button = styled.button`
 
 const Lamp = styled.div`
   width: 70%;
-  height: 500px;
+  height: 400px;
   border: 4px solid #8447ff;
   background: #e5e5e5;
   background-size: cover;
+  transform: rotate(2deg);
   .customImg {
     position: relative;
     bottom: 20px;
-    left: 10px;
+    left: 25px;
+    transform: rotate(-2deg);
+  }
+  @media (max-width:800px){
+    margin: 4rem 0;
+    border: none;
+    background: none;
+    width: 100%;
+    .customImg {
+      width: 500px;
+    }
   }
 `;
 const Header = () => {
