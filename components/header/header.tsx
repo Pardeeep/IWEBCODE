@@ -4,7 +4,7 @@ import Image from "next/image";
 import { BsFillCaretRightFill } from "react-icons/bs";
 
 const Main = styled.div`
-  padding: 0 8rem;
+  padding: 10px 4rem;
 `;
 
 const InnerPart = styled.div`
@@ -28,7 +28,7 @@ const InnerText = styled.div`
 `;
 
 const FirstP = styled.p`
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 600;
   width: 100%;
   line-height: 1.2;

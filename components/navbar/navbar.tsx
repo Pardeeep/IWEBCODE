@@ -54,8 +54,8 @@ const Navbar = () => {
           <Image
             src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-1-e1609682976969.png"
             alt="IWEBCODE"
-            width="180"
-            height="70"
+            width="210"
+            height="80"
             layout="intrinsic"
             className="custom-img"
           />
