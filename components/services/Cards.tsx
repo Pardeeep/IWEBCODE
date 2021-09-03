@@ -12,7 +12,7 @@ const CardBox = styled.section`
 
 // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 const Card = styled.div`
-  background: #000;
+  background: #fff;
 
   max-width: 360px ;
   min-height: 600px;
