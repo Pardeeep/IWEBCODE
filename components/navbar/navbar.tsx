@@ -8,35 +8,94 @@ const Logo = styled.div``;
 
 const Main = styled.section`
   @media screen and (max-width: 768px) {
-  .Active {
-    flex-direction: column;
-    align-items: flex-start;
+    .Active {
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      color: black;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+  #Active {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: white;
-    color: black;
-    padding:0 !important;
-    margin: 0!important;
+    padding: 0 3rem;
+    background: rgba(250, 250, 250, 0.97);
+    z-index: 50;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
   }
-}
-#Active {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 0 4rem;
-  background: rgba(250,250,250,0.97);
-  z-index: 50;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-  @media{
-    padding: 0 20px;
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  .show{
+    width: 100%;
   }
 `;
 
+const Bar = styled.div``;
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  const [show,setShow] = useState(false);
+
+  const handleClick = ()=>{
+    setShow(!show);
+  }
   const listenScrollEvent = () => {
     if (window.scrollY > 300) {
       setNavbar(true);
@@ -87,7 +146,7 @@ const Navbar = () => {
             <li className={styles.link}>Blogs</li>
             <li className={styles.link}>Contact</li>
             <li className={styles.link}>
-              <div className={`${styles.bars} btn-dark`}>
+              <div onClick={handleClick}className={`${styles.bars} btn-dark`}>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -95,11 +154,19 @@ const Navbar = () => {
             </li>
           </ul>
           <div className={`${styles.bars} ${styles.bars2} btn-dark`}>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </nav>
+      </div>
+      <div  className={show? "show overlay" : "overlay"}>
+        <div className="overlay-content">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
       </div>
     </Main>
   );

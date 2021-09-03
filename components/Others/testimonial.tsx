@@ -98,6 +98,11 @@ const Box = styled.div`
       line-height: 1.5;
       margin: 0;
   }
+  @media( max-width: 968px){
+      margin: 0;
+      max-width: 100%;
+      margin-top: 1rem;
+  }
 `;
 const Testimonial = () => {
   return (

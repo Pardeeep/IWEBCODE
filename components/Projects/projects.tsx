@@ -63,7 +63,10 @@ const Cards = styled.div`
   place-items: center;
   min-height: 100vh;
   grid-column-gap: 20px;
-  @media ( max-width: 800px){
+  @media(max-width:1040px){
+    padding: 0 10px;
+  }
+  @media ( max-width: 968px){
     grid-template-columns: auto auto;
     grid-column-gap: 10px;
   }

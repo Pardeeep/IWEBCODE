@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Header from "../components/header/header";
-import Navbar from "../components/navbar/navbar";
 import Services from "../components/services/services";
 import Cases from "../components/CaseStudies/cases"
 import styles from "../styles/Home.module.css";
@@ -10,6 +8,8 @@ import About from "../components/AboutPage/about";
 import Projects from "../components/Projects/projects";
 import Testimonial from "../components/Others/testimonial";
 import Clients from "../components/Others/clients";
+import Present from "../components/Others/present";
+import Footer from "../components/Footer/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -37,6 +37,8 @@ const Home: NextPage = () => {
       <Projects />
       <Testimonial />
       <Clients />
+      <Present />
+      <Footer />
     </div>
   );
 };

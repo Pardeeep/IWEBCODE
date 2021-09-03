@@ -16,6 +16,13 @@ const Car = styled.div`
   h2:hover {
     color: #8447ff;
   }
+  @media( max-width: 1040px){
+    div{
+      width: 300px;
+      height: 280px;
+    }
+  }
+
   @media (max-width: 800px) {
       div{
           width: 250px;

@@ -7,9 +7,18 @@ const Main = styled.section`
   min-height: 50vh;
   display: flex;
   justify-content: flex-start;
-
   .details {
     width: 40%;
+  }
+  @media( max-width: 968px ){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .details{
+      width: 100%;
+      display: grid;
+      place-items: center;
+    }
   }
 `;
 
@@ -17,8 +26,8 @@ const Title = styled.p`
   background: #fff3ee;
   color: #ff9970;
   padding: 5px;
-  width: 120px;
   text-align: center;
+  width: fit-content;
 `;
 
 const Heading = styled.h1`
@@ -27,9 +36,13 @@ const Heading = styled.h1`
   font-size: 45px;
   font-weight: 600;
   width: 70%;
+  @media( max-width: 968px ){
+    text-align: center;
+  }
   @media (max-width: 800px) {
     margin: 1rem 0;
     width: 100%;
+    text-align: center;
   }
 `;
 
@@ -37,9 +50,13 @@ const Subheading = styled.p`
   color: #858597;
   width: 80%;
   font-size: 20px;
+  @media( max-width: 968px ){
+    width: 100%;
+    text-align: center;
+  }
 `;
 
-const Grid = styled.p`
+const Grid = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   width: 60%;
@@ -48,6 +65,11 @@ const Grid = styled.p`
 
   div:hover{
       transform: scale(1.05);
+  }
+  @media( max-width: 968px ){
+    width: 100%;
+    margin-top: 2rem;
+    height: 250px;
   }
   @media (max-width: 800px) {
     grid-template-columns: auto auto;
