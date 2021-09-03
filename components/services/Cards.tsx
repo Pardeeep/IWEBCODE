@@ -12,25 +12,27 @@ const CardBox = styled.section`
 
 // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 const Card = styled.div`
-  width: 280px;
-  min-height: 500px;
+  background: #000;
+
+  max-width: 360px ;
+  min-height: 600px;
   margin: 2rem 0;
-  padding: 1rem 0.96rem;
+  padding: 1rem 1.8rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   .icon {
     position: relative;
     height: 100px;
     width: 120px;
     z-index: 2;
-    margin: 0 auto;
   }
   .icon::before {
     background: linear-gradient(180deg, #ebfffd 0, #efeefa 100%);
     position: absolute;
     content: "";
-    right: 44%;
+    right: 33%;
     top: -15%;
     height: 100%;
     width: 88px;
@@ -48,7 +50,7 @@ const Card = styled.div`
     line-height: 58px;
     border-radius: 100%;
     background: #8447ff;
-    left: 32px;
+    left: 50px;
   }
   .image {
     position: absolute;
@@ -60,17 +62,18 @@ const Card = styled.div`
   .violet {
     color: #8447ff;
     text-decoration: underline;
-    margin-top: 15px;
   }
 `;
 const Title = styled.h4`
-  margin-top: 30px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 `;
 
 const Description = styled.p`
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.7;
   text-align: center;
+  word-spacing: 2px;
   font-weight: 400;
   color: #7f7f92;
   .bigger {

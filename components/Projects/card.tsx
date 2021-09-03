@@ -7,8 +7,8 @@ const Car = styled.div`
   max-width: 340px;
   margin-bottom: 3rem;
   div{
-      width: 340px;
-      height: 320px;
+      width: 360px;
+      height: 340px;
   }
   h2 {
     margin: 1rem 0;
@@ -34,7 +34,7 @@ const Card = (props: { image: string; title: string; Tags: string[] }) => {
   return (
     <Car>
       <div>
-        <Image src={props.image} alt="Image" width={340} height={320} />
+        <Image src={props.image} alt="Image" width={380} height={360} />
       </div>
       <h2>{props.title}</h2>
       <P>

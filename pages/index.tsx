@@ -8,6 +8,8 @@ import Cases from "../components/CaseStudies/cases"
 import styles from "../styles/Home.module.css";
 import About from "../components/AboutPage/about";
 import Projects from "../components/Projects/projects";
+import Testimonial from "../components/Others/testimonial";
+import Clients from "../components/Others/clients";
 
 const Home: NextPage = () => {
   return (
@@ -33,6 +35,8 @@ const Home: NextPage = () => {
       <Cases />
       <About />
       <Projects />
+      <Testimonial />
+      <Clients />
     </div>
   );
 };

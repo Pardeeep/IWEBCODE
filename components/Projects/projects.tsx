@@ -58,6 +58,7 @@ const Pages = styled.div`
 
 const Cards = styled.div`
   display: grid;
+  padding: 0 4rem;
   grid-template-columns: auto auto auto;
   place-items: center;
   min-height: 100vh;
@@ -95,28 +96,28 @@ const Projects = () => {
         />
         <Card
           image="https://iwebcode.design/wp-content/uploads/2020/03/ranky-new-400x380.png"
-          title="Daily Needs"
-          Tags={["Design", "Ios"]}
+          title="Ranky.De"
+          Tags={["Design", "Web Application"]}
         />
         <Card
           image="https://iwebcode.design/wp-content/uploads/2020/03/epic-new-400x380.png"
-          title="Daily Needs"
-          Tags={["Design", "Ios"]}
+          title="Epic Digital Solutions"
+          Tags={["Web Applicatioin"]}
         />
         <Card
           image="https://iwebcode.design/wp-content/uploads/2020/12/DreamNation-400x380.png"
-          title="Daily Needs"
-          Tags={["Design", "Ios"]}
+          title="DreamNation"
+          Tags={["Web Application"]}
         />
         <Card
           image="https://iwebcode.design/wp-content/uploads/2020/12/pcr-new-400x380.png"
-          title="Daily Needs"
-          Tags={["Design", "Ios"]}
+          title="Pcr Consultants"
+          Tags={["Design"]}
         />
         <Card
           image="https://iwebcode.design/wp-content/uploads/2020/12/hexkey-new-400x380.png"
-          title="Daily Needs"
-          Tags={["Design", "Ios"]}
+          title="Hexkey Portfolio"
+          Tags={["Web Application"]}
         />
       </Cards>
     </>
