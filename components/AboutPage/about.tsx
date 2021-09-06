@@ -271,7 +271,6 @@ const About = () => {
               className="input"
               autoComplete="off"
               placeholder=" "
-              autoFocus
             />
             <label className="label">Name</label>
           </StyleInput>
