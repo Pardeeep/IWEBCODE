@@ -88,16 +88,15 @@
 }
 
 @media (max-width: 800px){
-  .bars2{
-    display: flex!important;
-    cursor: pointer;
-  }
   .link{
     display: none;
     margin: 0;
   }
-  .bars{
-    display: block;
+  .bars2{
+    display: flex;
+    position: fixed;
+    top: 30px;
+    right: 30px;
   }
   .Navbar {
     padding: 0 2rem;

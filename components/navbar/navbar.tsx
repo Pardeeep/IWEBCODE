@@ -7,6 +7,7 @@ import styled from "styled-components";
 const Logo = styled.div``;
 
 const Main = styled.section`
+  font-weight: 500;
   @media screen and (max-width: 768px) {
     .Active {
       flex-direction: column;
@@ -27,7 +28,7 @@ const Main = styled.section`
     left: 0;
     right: 0;
     padding: 0 3rem !important;
-    margin: 0!important;
+    margin: 0 !important;
     background: rgba(250, 250, 250, 0.97);
     z-index: 50;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
@@ -84,7 +85,7 @@ const Main = styled.section`
       right: 35px;
     }
   }
-  .show{
+  .show {
     width: 100%;
   }
 `;
@@ -92,11 +93,11 @@ const Main = styled.section`
 const Bar = styled.div``;
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-  const [show,setShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-  const handleClick = ()=>{
+  const handleClick = () => {
     setShow(!show);
-  }
+  };
   const listenScrollEvent = () => {
     if (window.scrollY > 300) {
       setNavbar(true);
@@ -147,21 +148,21 @@ const Navbar = () => {
             <li className={styles.link}>Blogs</li>
             <li className={styles.link}>Contact</li>
             <li className={styles.link}>
-              <div onClick={handleClick}className={`${styles.bars} btn-dark`}>
+              <div onClick={handleClick} className={`${styles.bars} btn-dark`}>
                 <div></div>
                 <div></div>
                 <div></div>
               </div>
             </li>
           </ul>
-          <div className={`${styles.bars} ${styles.bars2} btn-dark`}>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
         </nav>
       </div>
-      <div  className={show? "show overlay" : "overlay"}>
+      <div className={`${styles.bars2} d-flex btn-dark`}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div className={show ? "show overlay" : "overlay"}>
         <div className="overlay-content">
           <a href="#">About</a>
           <a href="#">Services</a>
