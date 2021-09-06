@@ -15,6 +15,7 @@ import styled from "styled-components";
 const Case = styled.div`
   padding: 4rem 0rem;
   z-index: 1;
+  cursor: pointer;
   transition: 2s;
   @media (max-width: 800px) {
     flex-direction: column;
@@ -102,6 +103,7 @@ const Section = styled.section`
   min-height: 100vh;
   background: #fafafb;
   display: flex;
+  padding: 0 4rem;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
@@ -110,13 +112,15 @@ const Section = styled.section`
       margin: 2rem 0;
     }
   }
+  @media(max-width: 968px){
+    padding: 0 10px;
+  }
 `;
 
 const Cases = () => {
   return (
-    <Section className="container d-flex justify-content-center align-items-center">
+    <Section className="container-fluid d-flex justify-content-center align-items-center">
       <Swiper
-
         pagination={{
           clickable: true,
         }}

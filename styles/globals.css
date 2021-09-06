@@ -16,6 +16,9 @@ a {
   font-family: dm sans, sans-serif;
 }
 
+.slick-dotted.slick-slider{
+  cursor:pointer !important;
+}
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
