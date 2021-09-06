@@ -133,7 +133,7 @@ const Cases = () => {
                 src="https://iwebcode.design/wp-content/uploads/2020/12/pcr-new.png"
                 alt="IWEBCODE"
                 width="650"
-                height="665"
+                height="690"
                 layout="intrinsic"
               />
             </ImgContainer>
@@ -163,8 +163,8 @@ const Cases = () => {
               <Image
                 src="https://iwebcode.design/wp-content/uploads/2020/12/DreamNation.png"
                 alt="IWEBCODE"
-                width="660"
-                height="650"
+                width="650"
+                height="690"
                 layout="intrinsic"
               />
             </ImgContainer>
@@ -192,10 +192,10 @@ const Cases = () => {
           <Case className="row d-flex justify-content-center align-items-center">
             <ImgContainer className="col">
               <Image
-                src="https://iwebcode.design/wp-content/uploads/2020/12/pcr-new.png"
+                src="https://iwebcode.design/wp-content/uploads/2020/12/hexkey-new.png"
                 alt="IWEBCODE"
-                width="660"
-                height="650"
+                width="650"
+                height="690"
                 layout="intrinsic"
               />
             </ImgContainer>
