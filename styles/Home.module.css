@@ -59,13 +59,14 @@
   margin-left: 10px;
 }
 .dropbtn {
-  background-color: #fff;
-  font-weight: bold;
+  background-color: inherit ;
+  font-weight: 500;
   border: none;
 }
 
 .dropdown {
   display: block;
+  background-color: inherit!important ;
 }
 
 .dropdownContent {
