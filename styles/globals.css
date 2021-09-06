@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 a {
@@ -13,5 +13,22 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: dm sans,sans-serif;
+  font-family: dm sans, sans-serif;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  margin-left: 90px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  margin: 15px !important;
+  height: 12px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #844ff7 !important;
 }
