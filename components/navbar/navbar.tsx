@@ -8,6 +8,9 @@ const Logo = styled.div``;
 
 const Main = styled.section`
   font-weight: 500;
+  font-size: 18px;
+  padding: 2rem;
+  margin-top: 4px;
   @media screen and (max-width: 768px) {
     .Active {
       flex-direction: column;
@@ -27,7 +30,8 @@ const Main = styled.section`
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 3rem !important;
+    font-weight: 500 !important;
+    padding: 5px 3.5rem!important;
     margin: 0 !important;
     background: rgba(250, 250, 250, 0.97);
     z-index: 50;
@@ -90,7 +94,7 @@ const Main = styled.section`
   }
 `;
 
-const Bar = styled.div``;
+
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [show, setShow] = useState(false);
@@ -109,66 +113,66 @@ const Navbar = () => {
     window.addEventListener("scroll", listenScrollEvent);
   });
   return (
-    <Main>
+    <Main className="container-fluid px-5">
       <div
-        className={`overflow:hidden py-5 container-fluid d-flex justify-content-between align-items-center`}
+        className={`row align-items-center justify-content-center`}
         id={navbar ? "Active" : "none"}
       >
-        <Logo>
+        <Logo className="px-4 col-lg-3 col-md-6 col-sm-6 col-8 ">
           <Image
             src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-1-e1609682976969.png"
             alt="IWEBCODE"
-            width="210"
+            width="220"
             height="80"
             layout="intrinsic"
             className="custom-img"
           />
         </Logo>
-        <nav className="navbar-nav d-none d-lg-block">
-          <ul
-            className={` list-group list-group-horizontal d-flex justify-content-evenly align-items-center`}
-          >
-            <li className={`${styles.link} ${styles.active}`}>Home</li>
-            <li className={styles.link}>About</li>
-            <li className={`${styles.link} `}>
-              <div className={styles.dropdown}>
-                <button className={styles.dropbtn}>
-                  Services <FiChevronDown />
-                </button>
-                <ul className={styles.dropdownContent}>
-                  <li className="li">Design</li>
-                  <li className="li">Development</li>
-                  <li className="li">Online Marketing</li>
-                  <li className="li">Technology</li>
-                  <li className="li">Content Strategy</li>
-                </ul>
-              </div>
-            </li>
-            <li className={styles.link}>Case Studies</li>
-            <li className={styles.link}>Blogs</li>
-            <li className={styles.link}>Contact</li>
-            <li className={styles.link}>
-              <div onClick={handleClick} className={`${styles.bars} btn-dark`}>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div className={`${styles.bars2} d-flex btn-dark`}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div className={show ? "show overlay" : "overlay"}>
-        <div className="overlay-content">
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
+        <div className="col-lg-9 col-md-6 col-sm-6 col-4 t">
+          <nav className=" d-none d-lg-block">
+            <ul
+              className="d-flex justify-content-end align-items-center m-0 list-inline"
+            >
+              <li className={`${styles.active} nav-item mx-3`}>Home</li>
+              <li className="nav-item mx-3">About</li>
+              <li className="nav-item mx-2">
+                <div className={styles.dropdown}>
+                  <button className={styles.dropbtn}>
+                    Services <FiChevronDown />
+                  </button>
+                  <ul className={styles.dropdownContent}>
+                    <li className="li">Design</li>
+                    <li className="li">Development</li>
+                    <li className="li">Online Marketing</li>
+                    <li className="li">Technology</li>
+                    <li className="li">Content Strategy</li>
+                  </ul>
+                </div>
+              </li>
+              <li className="nav-item mx-3">Case Studies</li>
+              <li className="nav-item mx-3">Blogs</li>
+              <li className="nav-item mx-3">Contact</li>
+              <li className="nav-item mx-3">
+                <div
+                  onClick={handleClick}
+                  className={`${styles.bars} nav-item btn-dark`}
+                >
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </li>
+            </ul>
+          </nav>
         </div>
+        {/* <div className={show ? "show overlay" : "overlay"}>
+          <div className="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+        </div> */}
       </div>
     </Main>
   );

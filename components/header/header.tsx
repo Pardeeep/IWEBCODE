@@ -7,7 +7,7 @@ const Main = styled.div``;
 
 const InnerPart = styled.div`
   color: black;
-  padding: 3.2rem 0;
+  padding: 3.75rem 0;
   display: flex;
   @media (max-width: 800px) {
     flex-direction: column;
@@ -19,16 +19,15 @@ const InnerPart = styled.div`
 `;
 
 const InnerText = styled.div`
-  width: 55%;
+  padding: 0;
   @media (max-width: 800px) {
-    width: 100%;
+
   }
 `;
 
 const FirstP = styled.p`
   font-size: 5rem;
   font-weight: 600;
-  width: 100%;
   line-height: 1.2;
   word-spacing: 4px;
   margin: 0;
@@ -38,7 +37,7 @@ const FirstP = styled.p`
   }
 `;
 const SecondP = styled.p`
-  width: 80%;
+  width: 85%;
   font-size: 1.5rem;
   color: #666666;
   padding: 1.2rem 0;
@@ -55,7 +54,7 @@ const Button = styled.button`
   padding: 15px 30px;
   margin: 10px 0;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   .spacing {
     margin-left: 20px;
   }
@@ -93,7 +92,7 @@ const Lamp = styled.div`
 const Header = () => {
   return (
     <Main className="container">
-      <Navbar />
+
       <InnerPart className="row">
         <InnerText className="col">
           <FirstP>We Are One Stop For Your All Digital Needs.</FirstP>

@@ -10,6 +10,7 @@ import Testimonial from "../components/Others/testimonial";
 import Clients from "../components/Others/clients";
 import Present from "../components/Others/present";
 import Footer from "../components/Footer/Footer";
+import Navbar from "../components/navbar/navbar";
 
 const Home: NextPage = () => {
   return (
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
           crossOrigin="anonymous"
         ></script>
       </Head>
+      <Navbar />
       <Header />
       <Services />
       <Cases />
