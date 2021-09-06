@@ -3,18 +3,13 @@ import Navbar from "../navbar/navbar";
 import Image from "next/image";
 import { BsFillCaretRightFill } from "react-icons/bs";
 
-const Main = styled.div`
-  padding: 10px 4rem;
-  @media(max-width:800px){
-    padding : 0 20px;
-  }
-`;
+const Main = styled.div``;
 
 const InnerPart = styled.div`
   color: black;
   padding: 3.2rem 0;
   display: flex;
-  @media (max-width:800px){
+  @media (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -25,7 +20,7 @@ const InnerPart = styled.div`
 
 const InnerText = styled.div`
   width: 55%;
-  @media (max-width:800px){
+  @media (max-width: 800px) {
     width: 100%;
   }
 `;
@@ -38,12 +33,19 @@ const FirstP = styled.p`
   word-spacing: 4px;
   margin: 0;
   padding: 0;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 const SecondP = styled.p`
   width: 80%;
   font-size: 1.5rem;
   color: #666666;
   padding: 1.2rem 0;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    width: 100%;
+  }
 `;
 
 const Button = styled.button`
@@ -76,7 +78,7 @@ const Lamp = styled.div`
     left: 25px;
     transform: rotate(-2deg);
   }
-  @media (max-width:800px){
+  @media (max-width: 800px) {
     margin: 1rem 0;
     border: none;
     background: none;
@@ -90,10 +92,10 @@ const Lamp = styled.div`
 `;
 const Header = () => {
   return (
-    <Main>
+    <Main className="container">
       <Navbar />
-      <InnerPart>
-        <InnerText>
+      <InnerPart className="row">
+        <InnerText className="col">
           <FirstP>We Are One Stop For Your All Digital Needs.</FirstP>
           <SecondP>
             We Dont Develop Project to Find Buyers, We Craft Projects that
@@ -103,9 +105,7 @@ const Header = () => {
             Lets work together <BsFillCaretRightFill className="spacing" />
           </Button>
         </InnerText>
-        <div
-          style={{ width: "50%", display: "flex", justifyContent: " center" }}
-        >
+        <div className="col d-flex justify-content-center">
           <Lamp>
             <div className="customImg">
               <Image

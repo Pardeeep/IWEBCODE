@@ -3,18 +3,15 @@ import React from "react";
 import styled from "styled-components";
 
 const Main = styled.section`
-  padding: 4rem;
   min-height: 50vh;
   display: flex;
-  justify-content: flex-start;
-  .details {
-    width: 40%;
-  }
-  @media( max-width: 968px ){
+  padding: 4rem;
+  justify-content: center;
+  @media (max-width: 968px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .details{
+    .details {
       width: 100%;
       display: grid;
       place-items: center;
@@ -35,8 +32,7 @@ const Heading = styled.h1`
   line-height: 60px;
   font-size: 45px;
   font-weight: 600;
-  width: 70%;
-  @media( max-width: 968px ){
+  @media (max-width: 968px) {
     text-align: center;
   }
   @media (max-width: 800px) {
@@ -50,7 +46,7 @@ const Subheading = styled.p`
   color: #858597;
   width: 80%;
   font-size: 20px;
-  @media( max-width: 968px ){
+  @media (max-width: 968px) {
     width: 100%;
     text-align: center;
   }
@@ -59,14 +55,13 @@ const Subheading = styled.p`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
-  width: 60%;
   background: #e5e5e5;
+  padding: 0;
   gap: 1px;
-
-  div:hover{
-      transform: scale(1.05);
+  div:hover {
+    transform: scale(1.05);
   }
-  @media( max-width: 968px ){
+  @media (max-width: 968px) {
     width: 100%;
     margin-top: 2rem;
     height: 250px;
@@ -88,77 +83,81 @@ const GridItem = styled.div`
 `;
 const Clients = () => {
   return (
-    <Main>
-      <div className="details">
-        <Title>Top Clients</Title>
-        <Heading>Our Services And Products For Clients</Heading>
-        <Subheading>
-          Having lot of projects in portfolio, IWEBCODE is one of the top most
-          IT Company offering the best services to Multinational Brands
-        </Subheading>
+    <Main className="container-fluid">
+      <div className="row">
+        <div className="col-xl-4 col-lg-4 col-md-12 col-12">
+          <div className=" details">
+            <Title>Top Clients</Title>
+            <Heading>Our Services And Products For Clients</Heading>
+            <Subheading>
+              Having lot of projects in portfolio, IWEBCODE is one of the top
+              most IT Company offering the best services to Multinational Brands
+            </Subheading>
+          </div>
+        </div>
+        <Grid className="col-xl-8 col-lg-8 mt_md--20 mt_sm--20">
+          <GridItem>
+            <div>
+              <Image
+                src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1.png"
+                width={121}
+                height={49}
+                alt="CompanyImage"
+              />
+            </div>
+          </GridItem>
+          <GridItem>
+            <div>
+              <Image
+                src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1-copy.png"
+                width={121}
+                height={49}
+                alt="CompanyImage"
+              />
+            </div>
+          </GridItem>
+          <GridItem>
+            <div>
+              <Image
+                src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1-copy-5.png"
+                width={121}
+                height={49}
+                alt="CompanyImage"
+              />
+            </div>
+          </GridItem>
+          <GridItem>
+            <div>
+              <Image
+                src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1-copy-4.png"
+                width={121}
+                height={49}
+                alt="CompanyImage"
+              />
+            </div>
+          </GridItem>
+          <GridItem>
+            <div>
+              <Image
+                src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1-copy-3.png"
+                width={121}
+                height={49}
+                alt="CompanyImage"
+              />
+            </div>
+          </GridItem>
+          <GridItem>
+            <div>
+              <Image
+                src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1-copy-2.png"
+                width={121}
+                height={49}
+                alt="CompanyImage"
+              />
+            </div>
+          </GridItem>
+        </Grid>
       </div>
-      <Grid>
-        <GridItem>
-          <div>
-            <Image
-              src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1.png"
-              width={121}
-              height={49}
-              alt="CompanyImage"
-            />
-          </div>
-        </GridItem>
-        <GridItem>
-          <div>
-            <Image
-              src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1-copy.png"
-              width={121}
-              height={49}
-              alt="CompanyImage"
-            />
-          </div>
-        </GridItem>
-        <GridItem>
-          <div>
-            <Image
-              src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1-copy-5.png"
-              width={121}
-              height={49}
-              alt="CompanyImage"
-            />
-          </div>
-        </GridItem>
-        <GridItem>
-          <div>
-            <Image
-              src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1-copy-4.png"
-              width={121}
-              height={49}
-              alt="CompanyImage"
-            />
-          </div>
-        </GridItem>
-        <GridItem>
-          <div>
-            <Image
-              src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1-copy-3.png"
-              width={121}
-              height={49}
-              alt="CompanyImage"
-            />
-          </div>
-        </GridItem>
-        <GridItem>
-          <div>
-            <Image
-              src="https://iwebcode.design/wp-content/uploads/2021/01/Artboard-1-copy-2.png"
-              width={121}
-              height={49}
-              alt="CompanyImage"
-            />
-          </div>
-        </GridItem>
-      </Grid>
     </Main>
   );
 };

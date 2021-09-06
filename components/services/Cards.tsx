@@ -3,24 +3,19 @@ import styled from "styled-components";
 import { FaEye } from "react-icons/fa";
 
 const CardBox = styled.section`
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 0 5rem;
-  flex-wrap: wrap;
+  min-height: 100vh;
+  margin: 5rem 0;
 `;
-
 // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 const Card = styled.div`
-  background: #fff;
-  max-width: 360px ;
-  min-height: 600px;
-  margin: 2rem 0;
-  padding: 1rem 1.8rem;
+  min-width: 265px;
+  margin-bottom: 3rem;
+  margin-left: 30px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 10px;
   .icon {
     position: relative;
     height: 100px;
@@ -62,6 +57,13 @@ const Card = styled.div`
     color: #8447ff;
     text-decoration: underline;
   }
+  @media(max-width: 1024px){
+    background: #f6f6f7;
+  }
+  @media (max-width: 768px) {
+    width: 200px;
+    background: #f6f6f7;
+  }
 `;
 const Title = styled.h4`
   margin-top: 25px;
@@ -79,12 +81,15 @@ const Description = styled.p`
     font-weight: bold;
     color: #555555;
   }
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
 
 export const Cards = () => {
   return (
-    <CardBox>
-      <Card>
+    <CardBox className="row">
+      <Card className="col">
         <div className="icon">
           <div className="icon-inner">
             <img
@@ -110,7 +115,7 @@ export const Cards = () => {
           Learn More
         </a>
       </Card>
-      <Card>
+      <Card className="col">
         <div className="icon">
           <div className="icon-inner">
             <img
@@ -134,7 +139,7 @@ export const Cards = () => {
           Learn More
         </a>
       </Card>
-      <Card>
+      <Card className="col">
         <div className="icon">
           <div className="icon-inner">
             <img
@@ -160,7 +165,7 @@ export const Cards = () => {
           Learn More
         </a>
       </Card>
-      <Card>
+      <Card className="col">
         <div className="icon">
           <div className="icon-inner">
             <img
@@ -184,7 +189,7 @@ export const Cards = () => {
           Learn More
         </a>
       </Card>
-      <Card>
+      <Card className="col">
         <div className="icon">
           <div className="icon-inner">
             <img
@@ -207,7 +212,7 @@ export const Cards = () => {
           Learn More
         </a>
       </Card>
-      <Card>
+      <Card className="col">
         <div className="icon">
           <div className="icon-inner">
             <img

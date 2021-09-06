@@ -3,12 +3,7 @@ import styled from "styled-components";
 import { Cards } from "./Cards";
 
 const Main = styled.div`
-  margin: 8.5rem 4rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     margin: 4rem 0;
   }
 `;
@@ -27,42 +22,48 @@ const Description = styled.p`
   letter-spacing: 1.3px;
   margin-top: 0.5rem;
   line-height: 3.9rem;
-  width: 19em;
   text-align: center;
 
-  @media(max-width: 800px){
-    width: 80%;
+  @media (max-width: 800px) {
+    width: 12em;
     font-size: 2rem;
   }
 `;
 const SubDescription = styled.p`
-    width: 28em;
-    margin-top: 5px;
-    font-size: 1.3rem;
-    text-align: center;
-    color: gray;
-    @media(max-width: 800px){
-      font-size: 1rem;
-    }
+  width: 28em;
+  margin-top: 5px;
+  font-size: 1.3rem;
+  text-align: center;
+  color: gray;
+  @media (max-width: 800px) {
+    font-size: 1rem;
+  }
 `;
-
+const Section = styled.section`
+    min-height: 100vh;
+`
 
 const Services = () => {
   return (
-    <>
-    <Main>
-      <Title>Services</Title>
-      <Description>
-        We Offer Multi-Dimensional Solutions To All Your IT Problems
-      </Description>
-      <SubDescription>
-        We provide one-stop solution for all digital support you need under one
-        roof.
-      </SubDescription>
-
-    </Main>
-    <Cards />
-    </>
+    <Section className="container">
+      <div className="row">
+        <div className="col">
+          <Main className="d-flex justify-content-start flex-column align-items-center">
+            <Title>Services</Title>
+            <Description>
+              We Offer Multi-Dimensional Solutions To All Your IT Problems
+            </Description>
+            <SubDescription>
+              We provide one-stop solution for all digital support you need
+              under one roof.
+            </SubDescription>
+          </Main>
+        </div>
+      </div>
+      <div className="row">
+        <Cards  />
+      </div>
+    </Section>
   );
 };
 

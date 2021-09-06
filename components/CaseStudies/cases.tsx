@@ -5,13 +5,10 @@ import { BsFillCaretRightFill } from "react-icons/bs";
 import styled from "styled-components";
 
 const Case = styled.div`
-  padding: 1rem 8rem;
+  padding: 4rem 0rem;
   min-height: 100vh;
   z-index: 1;
   transition:  2s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   @media (max-width:800px){
     flex-direction: column;
   }
@@ -97,7 +94,6 @@ const CarouselButtons = styled.div`
 const Section = styled.section`
   min-height: 100vh;
   background: #fafafb;
-  margin-bottom: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,15 +111,15 @@ const Cases = () => {
     setActive(temp);
   };
   return (
-    <Section>
+    <Section className="container d-flex justify-content-center align-items-center">
       <Case
         className={
           active === 1
-            ? `d-flex justify-content-center align-items-center`
+            ? `row d-flex justify-content-center align-items-center`
             : "d-none"
         }
       >
-        <ImgContainer>
+        <ImgContainer className="col">
           <Image
             src="https://iwebcode.design/wp-content/uploads/2020/12/pcr-new.png"
             alt="IWEBCODE"
@@ -132,7 +128,7 @@ const Cases = () => {
             layout="intrinsic"
           />
         </ImgContainer>
-        <Description>
+        <Description className="col">
           <Subtitle>Featured Case Studies</Subtitle>
           <Title>PCR Consultants</Title>
           <Detail>
@@ -168,11 +164,11 @@ const Cases = () => {
       <Case
         className={
           active === 2
-            ? `d-flex justify-content-center align-items-center margin`
+            ? `row d-flex justify-content-center align-items-center margin`
             : "d-none"
         }
       >
-        <ImgContainer>
+        <ImgContainer className="col">
           <Image
             src="https://iwebcode.design/wp-content/uploads/2020/12/DreamNation.png"
             alt="IWEBCODE"
@@ -181,7 +177,7 @@ const Cases = () => {
             layout="intrinsic"
           />
         </ImgContainer>
-        <Description>
+        <Description className="col">
           <Subtitle>Featured Case Studies</Subtitle>
           <Title>DreamNation</Title>
           <Detail>
@@ -218,11 +214,11 @@ const Cases = () => {
       <Case
         className={
           active === 3
-            ? `d-flex justify-content-center align-items-center`
+            ? `row d-flex justify-content-center align-items-center`
             : "d-none"
         }
       >
-        <ImgContainer>
+        <ImgContainer className="col">
           <Image
             src="https://iwebcode.design/wp-content/uploads/2020/12/pcr-new.png"
             alt="IWEBCODE"
@@ -231,7 +227,7 @@ const Cases = () => {
             layout="intrinsic"
           />
         </ImgContainer>
-        <Description>
+        <Description className="col">
           <Subtitle>Featured Case Studies</Subtitle>
           <Title>Hexkey Infotech Pvt. Ltd.</Title>
           <Detail>

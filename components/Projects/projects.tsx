@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Card from "./card";
 
-const Main = styled.section`
+const Main = styled.div`
   margin: 5rem 0;
   padding: 0 4rem;
   div {
@@ -11,7 +11,10 @@ const Main = styled.section`
   }
   @media (max-width: 800px) {
     padding: 0 20px;
-    div{  flex-direction: column; justify-content: space-evenly;}
+    div {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
   }
 `;
 const Title = styled.p`
@@ -36,7 +39,7 @@ const Heading = styled.div`
 `;
 
 const Pages = styled.div`
-  width: 38%;
+  width: 45%;
   display: flex;
   align-items: flex-end;
   p {
@@ -48,50 +51,39 @@ const Pages = styled.div`
     place-items: center;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
   }
-  @media(max-width: 800px){
-        width: 100%;
-        flex-direction: row !important;
-        p{
-        }
+  @media (max-width: 800px) {
+    width: 100%;
+    flex-direction: row !important;
+    p {
+    }
   }
 `;
 
 const Cards = styled.div`
-  display: grid;
-  padding: 0 4rem;
-  grid-template-columns: auto auto auto;
-  place-items: center;
   min-height: 100vh;
-  grid-column-gap: 20px;
-  @media(max-width:1040px){
+  @media (max-width: 1040px) {
     padding: 0 10px;
-  }
-  @media ( max-width: 968px){
-    grid-template-columns: auto auto;
-    grid-column-gap: 10px;
-  }
-  @media ( max-width: 520px){
-    grid-template-columns: auto;
-    grid-column-gap: 10px;
   }
 `;
 
 const Projects = () => {
   return (
-    <>
-      <Main>
-        <Title>Our Projects</Title>
-        <div>
-          <Heading>We Take A Project, We Execute It With Class</Heading>
-          <Pages>
-            <p>All</p>
-            <p>Design</p>
-            <p>Ios</p>
-            <p>Web Application</p>
-          </Pages>
-        </div>
+    <section className="container-fluid">
+      <Main className="row">
+
+          <Title>Our Projects</Title>
+          <div>
+            <Heading>We Take A Project, We Execute It With Class</Heading>
+            <Pages>
+              <p>All</p>
+              <p>Design</p>
+              <p>Ios</p>
+              <p>Web Application</p>
+            </Pages>
+          </div>
+
       </Main>
-      <Cards>
+      <Cards className="row justify-content-evenly">
         <Card
           image="https://iwebcode.design/wp-content/uploads/2020/03/anmol_Daily-Needz-400x380.png"
           title="Daily Needs"
@@ -123,7 +115,7 @@ const Projects = () => {
           Tags={["Web Application"]}
         />
       </Cards>
-    </>
+    </section>
   );
 };
 

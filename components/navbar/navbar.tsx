@@ -26,7 +26,8 @@ const Main = styled.section`
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 3rem;
+    padding: 0 3rem !important;
+    margin: 0!important;
     background: rgba(250, 250, 250, 0.97);
     z-index: 50;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
@@ -109,7 +110,7 @@ const Navbar = () => {
   return (
     <Main>
       <div
-        className={`${styles.Navbar} d-flex justify-content-between align-items-center`}
+        className={`overflow:hidden py-5 container-fluid d-flex justify-content-between align-items-center`}
         id={navbar ? "Active" : "none"}
       >
         <Logo>
@@ -122,9 +123,9 @@ const Navbar = () => {
             className="custom-img"
           />
         </Logo>
-        <nav>
+        <nav className="navbar-nav d-none d-lg-block">
           <ul
-            className={`${styles.links} list-group list-group-horizontal d-flex justify-content-evenly align-items-center`}
+            className={` list-group list-group-horizontal d-flex justify-content-evenly align-items-center`}
           >
             <li className={`${styles.link} ${styles.active}`}>Home</li>
             <li className={styles.link}>About</li>

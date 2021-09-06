@@ -7,25 +7,26 @@ import styled from "styled-components";
 
 const Main = styled.section`
   min-height: 100vh;
-  margin: 6.5rem 4rem;
+  padding: 0 4rem;
+  margin: 3rem 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 800px) {
     flex-direction: column;
   }
 `;
 
 const Detail = styled.div`
-  width: 50%;
   @media (max-width: 800px) {
     width: 100%;
   }
 `;
 const Form = styled.div`
   @media(max-width:800px){
-    width: 100%;
+    width: 70%;
     margin: 0;
   }
-  width: 40%;
   margin-left: 9.5rem;
   padding: 1rem 3rem;
   padding-bottom: 2rem;
@@ -44,10 +45,8 @@ const Form = styled.div`
       font-size: 14px;
       color: gray;
   }
-
   .icon{
       color: black;
-
       font-size: 22px;
   }
 
@@ -66,7 +65,7 @@ const Title = styled.p`
 const Heading = styled.h1`
   margin: 1.6rem 0;
   line-height: 60px;
-  font-size: 45px;
+  font-size: 42px;
   font-weight: bold;
   @media (max-width: 800px) {
     margin: 1rem 0;
@@ -74,11 +73,10 @@ const Heading = styled.h1`
 `;
 
 const Description = styled.div`
-  width: 86%;
   color: #8b8b9c;
   font-size: 20px;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 30px;
   margin-bottom: 2rem;
   @media (max-width: 800px) {
     font-size: 14px;
@@ -154,14 +152,14 @@ const StyleInput = styled.form`
 
 const Expert = styled.div`
   min-height: 90vh;
-  background: #fafafb;
   padding: 0 4rem;
+  background: #fafafb;
   display: flex;
   justify-content: space-evenly:
   align-items: center;
   @media (max-width: 800px){
     flex-direction: column;
-    padding: 0 10px
+    padding: 0 10px;
   }
   .down{
     position: relative;
@@ -182,7 +180,6 @@ const Expert = styled.div`
       max-width: 500px;
       font-size:50px;
       margin: 2rem 0;
-
   }
 
   .description {
@@ -235,11 +232,14 @@ const Box = styled.div`
   }
 `;
 
+const Section = styled.section`
+  margin: 6rem 0;
+`
 const About = () => {
   return (
-    <>
-      <Main>
-        <Detail>
+    <Section className="container-fluid">
+      <Main className="row">
+        <Detail className="col">
           <Title>About Us</Title>
           <Heading>A Perfect Blend Of Technology And Innovation</Heading>
           <Description>
@@ -262,7 +262,7 @@ const About = () => {
             </p>
           </Description>
         </Detail>
-        <Form>
+        <Form className="col">
           <Heading className="heading">Get A Free Quote Now</Heading>
           <StyleInput className="form">
             <input
@@ -317,8 +317,8 @@ const About = () => {
           </div>
         </Form>
       </Main>
-      <Expert>
-        <div className="details">
+      <Expert className="row">
+        <div className="col details">
           <Title className="title">Experts In Field</Title>
           <Heading className="heading">We Started From Zero</Heading>
           <Description className="description">
@@ -330,7 +330,7 @@ const About = () => {
             Careers <BsFillCaretRightFill className="spacing" />
           </Button>
         </div>
-        <div className="projects">
+        <div className="col projects">
           <Box>
             <div className="Img">
               <Image
@@ -359,7 +359,7 @@ const About = () => {
           </Box>
         </div>
       </Expert>
-    </>
+    </Section>
   );
 };
 

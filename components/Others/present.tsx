@@ -4,24 +4,21 @@ import { FaPhoneAlt } from "react-icons/fa";
 import styled from "styled-components";
 import card from "../../public/card2.jpg";
 
-const Main = styled.section`
+const Main = styled.div`
   background: #fafafb;
   padding: 4rem;
-  width: 100%;
   min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  .details {
-    width: 40%;
-  }
 `;
 
 const Title = styled.p`
   background: #e1f6fb;
   color: #844ff7;
-  padding: 5px;
+  padding: 5px 20px;
+  width: fit-content;
   text-align: center;
 `;
 
@@ -29,8 +26,9 @@ const Heading = styled.h1`
   margin: 1.3rem 0;
   font-size: 55px;
   font-weight: 600;
+  text-align:center;
   @media (max-width: 968px) {
-    text-align: center;
+
   }
 `;
 
@@ -52,7 +50,7 @@ const Flex = styled.div`
   @media (max-width: 700px) {
     flex-direction: column;
   }
-  @media(max-width: 968px){
+  @media (max-width: 968px) {
     padding-bottom: 20rem;
   }
   .first {
@@ -119,6 +117,7 @@ const Tags = styled.div`
 const Flex1 = styled.div`
   min-height: 50vh;
   background: #fafafb;
+  padding: 3rem 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -160,8 +159,8 @@ const A = styled.a`
 
 const Present = () => {
   return (
-    <>
-      <Main>
+    <section className="container-fluid">
+      <Main className="row">
         <Title> What&#39;s Going On</Title>
         <Heading> What&#39;s Going In It Now!</Heading>
         <P>
@@ -170,52 +169,56 @@ const Present = () => {
           future is necessary to secure a safe tomorrow.
         </P>
       </Main>
-      <Flex className="d-flex justify-content-center align-items-center">
-        <Card className="first">
-          <Content>
-            <Tags>
-              <p>Design</p>
-              <p>Website Development</p>
-            </Tags>
-            <Heading className="heading">
-              How Much Cost Required To Build A Business Website In 2021?
-            </Heading>
-            <p className="paragraph">
-              So, you’ve decided to create a website for your company or store.
-              But since the market is s...
-            </p>
-          </Content>
-        </Card>
-        <Card className="first">
-          <Content>
-            <Tags>
-              <p>Online Marketing</p>
-            </Tags>
-            <Heading className="heading">
-              Why We Need Off Page Optimization For SEO?
-            </Heading>
-            <p className="paragraph">
-              Off-page SEO is a powerful SEO method that improves a website’s
-              capacity to rank higher on ...
-            </p>
-          </Content>
-        </Card>
-      </Flex>
-      <Flex1 className="d-flex justify-content-center align-items-center">
-        <Title>Lets Work Together</Title>
-        <Heading>Need Our Services? Get A Quote Now!</Heading>
-        <Button>
-          Estimate Project <BsFillCaretRightFill className="spacing" />
-        </Button>
-        <div className="call">
-          Or call us now
-          <span>
-            <FaPhoneAlt className="icon" />{" "}
-            <A href="tel: +9175032750322">(+91) 75032 50322</A>
-          </span>
-        </div>
-      </Flex1>
-    </>
+      <div className="row">
+        <Flex className="d-flex justify-content-center align-items-center">
+          <Card className="first">
+            <Content>
+              <Tags>
+                <p>Design</p>
+                <p>Website Development</p>
+              </Tags>
+              <Heading className="heading">
+                How Much Cost Required To Build A Business Website In 2021?
+              </Heading>
+              <p className="paragraph">
+                So, you’ve decided to create a website for your company or
+                store. But since the market is s...
+              </p>
+            </Content>
+          </Card>
+          <Card className="first">
+            <Content>
+              <Tags>
+                <p>Online Marketing</p>
+              </Tags>
+              <Heading className="heading">
+                Why We Need Off Page Optimization For SEO?
+              </Heading>
+              <p className="paragraph">
+                Off-page SEO is a powerful SEO method that improves a website’s
+                capacity to rank higher on ...
+              </p>
+            </Content>
+          </Card>
+        </Flex>
+      </div>
+      <div className="row">
+        <Flex1 className="d-flex justify-content-center align-items-center">
+          <Title>Lets Work Together</Title>
+          <Heading>Need Our Services? Get A Quote Now!</Heading>
+          <Button>
+            Estimate Project <BsFillCaretRightFill className="spacing" />
+          </Button>
+          <div className="call">
+            Or call us now
+            <span>
+              <FaPhoneAlt className="icon" />{" "}
+              <A href="tel: +9175032750322">(+91) 75032 50322</A>
+            </span>
+          </div>
+        </Flex1>
+      </div>
+    </section>
   );
 };
 

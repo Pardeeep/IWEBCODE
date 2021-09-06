@@ -6,6 +6,8 @@ import styled from "styled-components";
 const Car = styled.div`
   max-width: 340px;
   margin-bottom: 3rem;
+  margin-left: 10px;
+  padding: 10px;
   div{
       width: 360px;
       height: 340px;
@@ -39,7 +41,7 @@ const P = styled.p`
 
 const Card = (props: { image: string; title: string; Tags: string[] }) => {
   return (
-    <Car>
+    <Car className="col">
       <div>
         <Image src={props.image} alt="Image" width={380} height={360} />
       </div>

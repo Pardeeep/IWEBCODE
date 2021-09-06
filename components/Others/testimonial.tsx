@@ -45,9 +45,6 @@ const Subheading = styled.p`
 `;
 
 const Flex = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 2rem 0;
   @media (max-width: 800px) {
     flex-direction: column;
@@ -58,96 +55,99 @@ const Box = styled.div`
   background: #fff;
   padding: 1rem;
   margin-right: 3rem;
-  max-width: 50%;
-  .position{
-      color: gray;
-      font-size: 16px;
+  .position {
+    color: gray;
+    font-size: 16px;
   }
-  .flex{
-      display: flex;
-      padding: 0 !important;
-      padding-top: 1rem!important;
-      height: 100px;
+  .flex {
+    display: flex;
+    padding: 0 !important;
+    padding-top: 1rem !important;
+    height: 100px;
   }
-  .flex::after{
-      content: '"';
-      color: black;
-      color: #844ff7;
-      width: 30%;
-      font-size: 200px;
-      position: relative;
-      top: -60px;
-      text-align: right;
+  .flex::after {
+    content: '"';
+    color: black;
+    color: #844ff7;
+    width: 30%;
+    font-size: 200px;
+    position: relative;
+    top: -60px;
+    text-align: right;
   }
-  .img{
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: gray;
-      margin: 0 20px;
+  .img {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: gray;
+    margin: 0 20px;
   }
-  .text{
-      width: 100%;
+  .text {
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    padding: 0 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+  }
+  @media (max-width: 968px) {
 
-      text-align: left;
-      font-size: 25px;
-      padding: 0 1rem;
-      color: #555;
-      line-height: 1.5;
-      margin: 0;
-  }
-  @media( max-width: 968px){
-      margin: 0;
-      max-width: 100%;
-      margin-top: 1rem;
   }
 `;
 const Testimonial = () => {
   return (
     <Main>
-      <Title>Testimonials</Title>
-      <Heading>
-        Don’t Get Impressed By Our Words, Judge Us By Our Portfolio
-      </Heading>
-      <Subheading>
-        We rely on positive feedback provided by our valuable customers. Please
-        read below and see what they feel about IWEBCODE.
-      </Subheading>
-      <Flex>
-        <Box>
-          <div className="flex">
-            <div className="img">
-              <FaUser className ="pic" data-fa-mask="fas fa-circile"/>
-            </div>
-            <div className="Name">
-              <h3>Mandy Ryan</h3>
-              <p className="position">CEO @ Manifest Media Agency</p>
-            </div>
+      <div className="container">
+        <div className="row">
+          <div className="col d-flex flex-column justify-content-start align-items-center">
+            <Title>Testimonials</Title>
+            <Heading>
+              Don’t Get Impressed By Our Words, Judge Us By Our Portfolio
+            </Heading>
+            <Subheading>
+              We rely on positive feedback provided by our valuable customers.
+              Please read below and see what they feel about IWEBCODE.
+            </Subheading>
           </div>
-          <Subheading className="text">
-            &#34;IWEBCODE is an amazing asset to my business! They are reliable,
-            timely and I can&apos;t imagine not having his help. I&apos;m
-            looking forward to working together for years to come. &#34;
-          </Subheading>
-        </Box>
-        <Box>
-          <div className="flex">
-          <div className="img">
-              <FaUser className ="pic" data-fa-mask="fas fa-circile"/>
+        </div>
+        <Flex className="row">
+          <Box className="col">
+            <div className="flex">
+              <div className="img">
+                <FaUser className="pic" data-fa-mask="fas fa-circile" />
+              </div>
+              <div className="Name">
+                <h3>Mandy Ryan</h3>
+                <p className="position">CEO @ Manifest Media Agency</p>
+              </div>
             </div>
-            <div className="Name">
-              <h3>Aeron</h3>
-              <p className="position">CEO @ Maids in Red</p>
+            <Subheading className="text">
+              &#34;IWEBCODE is an amazing asset to my business! They are
+              reliable, timely and I can&apos;t imagine not having his help.
+              I&apos;m looking forward to working together for years to come.
+              &#34;
+            </Subheading>
+          </Box>
+          <Box className="col">
+            <div className="flex">
+              <div className="img">
+                <FaUser className="pic" data-fa-mask="fas fa-circile" />
+              </div>
+              <div className="Name">
+                <h3>Aeron</h3>
+                <p className="position">CEO @ Maids in Red</p>
+              </div>
             </div>
-          </div>
-          <p className="text">
-            &#34;Great Website development agency, looking forward to working
-            with them again in the future! &#34;
-          </p>
-        </Box>
-      </Flex>
+            <p className="text">
+              &#34;Great Website development agency, looking forward to working
+              with them again in the future! &#34;
+            </p>
+          </Box>
+        </Flex>
+      </div>
     </Main>
   );
 };
