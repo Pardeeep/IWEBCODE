@@ -59,14 +59,14 @@
   margin-left: 10px;
 }
 .dropbtn {
-  background-color: inherit ;
+  background-color: inherit;
   font-weight: 500;
   border: none;
 }
 
 .dropdown {
   display: block;
-  background-color: inherit!important ;
+  background-color: inherit !important ;
 }
 
 .dropdownContent {
@@ -76,7 +76,8 @@
   background-color: #fff;
   min-width: 250px;
   padding: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
+
   z-index: 60;
 }
 
@@ -95,5 +96,3 @@
   display: block;
   z-index: 40;
 }
-
-

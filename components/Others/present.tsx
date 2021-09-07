@@ -27,9 +27,8 @@ const Heading = styled.h1`
   margin: 1.3rem 0;
   font-size: 55px;
   font-weight: 600;
-  text-align:center;
+  text-align: center;
   @media (max-width: 968px) {
-
   }
 `;
 
@@ -85,7 +84,8 @@ const Content = styled.div`
   padding: 2rem;
   margin-bottom: 2rem;
   background: #fff;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
+
   position: relative;
   top: 90px;
   left: -100px;
@@ -161,7 +161,10 @@ const A = styled.a`
 
 const Present = () => {
   return (
-    <section className="container-fluid d-flex flex-column align-items-center justify-content-center " style={{backgroundColor: " #fafafb"}}>
+    <section
+      className="container-fluid d-flex flex-column align-items-center justify-content-center "
+      style={{ backgroundColor: " #fafafb" }}
+    >
       <Main className="row">
         <Title> What&#39;s Going On</Title>
         <Heading> What&#39;s Going In It Now!</Heading>

@@ -10,7 +10,7 @@ const Main = styled.section`
   padding: 0 4rem;
   margin: 8rem 0;
   @media (max-width: 800px) {
-    align-items:center;
+    align-items: center;
     justify-content: center;
     padding: 0px;
   }
@@ -23,7 +23,7 @@ const Detail = styled.div`
 `;
 const Form = styled.div`
   max-width: 600px;
-  @media(max-width:968px){
+  @media (max-width: 968px) {
     width: 100%;
     margin: 0;
   }
@@ -34,25 +34,23 @@ const Form = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
-  ;
   .heading {
-      font-size: 35px;
-      word-spacing: 1px;
-      margin-bottom: 10px;
+    font-size: 35px;
+    word-spacing: 1px;
+    margin-bottom: 10px;
   }
   .call {
-      margin-top: 1.6rem;
-      font-size: 14px;
-      color: gray;
+    margin-top: 1.6rem;
+    font-size: 14px;
+    color: gray;
   }
-  .icon{
-      color: black;
-      font-size: 22px;
+  .icon {
+    color: black;
+    font-size: 22px;
   }
-  .call span{
-      padding-left: 30px;
+  .call span {
+    padding-left: 30px;
   }
-
 `;
 const Title = styled.p`
   background: #e5faf5;
@@ -154,32 +152,32 @@ const Expert = styled.div`
   width: 100vw;
   padding: 3rem 4rem;
   background: #fafafb;
-  @media (max-width: 800px){
+  @media (max-width: 800px) {
     flex-direction: column;
     padding: 0 10px;
   }
-  .max{
+  .max {
     max-width: 1170px;
   }
-  .down{
+  .down {
     position: relative;
     top: 80px;
   }
-  .details{
+  .details {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-  .title{
-      max-width: 150px;
-      font-size: 14px;
-      padding: 8px 0px !important;
-      margin: 0;
+  .title {
+    max-width: 150px;
+    font-size: 14px;
+    padding: 8px 0px !important;
+    margin: 0;
   }
-  .heading{
-      max-width: 500px;
-      font-size:50px;
-      margin: 2rem 0;
+  .heading {
+    max-width: 500px;
+    font-size: 50px;
+    margin: 2rem 0;
   }
 
   .description {
@@ -187,18 +185,18 @@ const Expert = styled.div`
   }
 
   .button {
-      width: 150px;
-      margin: 0;
+    width: 150px;
+    margin: 0;
   }
-  .projects{
+  .projects {
     width: 50%;
     display: flex;
-      justify-content: center;
-      align-items: center;
-      @media(max-width: 800px){
-        padding: 4rem;
-        width: 100%;
-      }
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 800px) {
+      padding: 4rem;
+      width: 100%;
+    }
   }
 `;
 
@@ -210,7 +208,8 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
+
   .Img {
     padding: 10px;
     height: 50px;
@@ -318,46 +317,46 @@ const About = () => {
       </Main>
       <Expert className="row justify-content-center">
         <div className="row max">
-        <div className="col details">
-          <Title className="title">Experts In Field</Title>
-          <Heading className="heading">We Started From Zero</Heading>
-          <Description className="description">
-            Every Mockup we drafted, every logo we crafted, every brochure we
-            designed, and every website we developed added a milestone to our
-            journey
-          </Description>
-          <Button className="button">
-            Careers <BsFillCaretRightFill className="spacing" />
-          </Button>
-        </div>
-        <div className="col projects">
-          <Box>
-            <div className="Img">
-              <Image
-                src="https://iwebcode.design/wp-content/uploads/2020/03/shape-02.png"
-                title="shape-02"
-                alt="shape-02"
-                height={20}
-                width={30}
-              />
-            </div>
-            <p className="counting">1244+</p>
-            <p className="text">Working hours were spent</p>
-          </Box>
-          <Box className="down">
-            <div className="Img">
-              <Image
-                src="https://iwebcode.design/wp-content/uploads/2020/03/shape-04.png"
-                title="shape-02"
-                alt="shape-02"
-                height={20}
-                width={30}
-              />
-            </div>
-            <p className="counting">1244+</p>
-            <p className="text">Working hours were spent</p>
-          </Box>
-        </div>
+          <div className="col details">
+            <Title className="title">Experts In Field</Title>
+            <Heading className="heading">We Started From Zero</Heading>
+            <Description className="description">
+              Every Mockup we drafted, every logo we crafted, every brochure we
+              designed, and every website we developed added a milestone to our
+              journey
+            </Description>
+            <Button className="button">
+              Careers <BsFillCaretRightFill className="spacing" />
+            </Button>
+          </div>
+          <div className="col projects">
+            <Box>
+              <div className="Img">
+                <Image
+                  src="https://iwebcode.design/wp-content/uploads/2020/03/shape-02.png"
+                  title="shape-02"
+                  alt="shape-02"
+                  height={20}
+                  width={30}
+                />
+              </div>
+              <p className="counting">1244+</p>
+              <p className="text">Working hours were spent</p>
+            </Box>
+            <Box className="down">
+              <div className="Img">
+                <Image
+                  src="https://iwebcode.design/wp-content/uploads/2020/03/shape-04.png"
+                  title="shape-02"
+                  alt="shape-02"
+                  height={20}
+                  width={30}
+                />
+              </div>
+              <p className="counting">1244+</p>
+              <p className="text">Working hours were spent</p>
+            </Box>
+          </div>
         </div>
       </Expert>
     </Section>

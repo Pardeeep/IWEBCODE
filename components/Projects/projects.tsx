@@ -49,7 +49,7 @@ const Pages = styled.div`
     min-width: 70px;
     display: grid;
     place-items: center;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
   }
   @media (max-width: 800px) {
     width: 100%;
@@ -68,20 +68,18 @@ const Cards = styled.div`
 
 const Projects = () => {
   return (
-    <section className="container-fluid" style={{maxWidth: "1170px"}}>
+    <section className="container-fluid" style={{ maxWidth: "1170px" }}>
       <Main className="row">
-
-          <Title>Our Projects</Title>
-          <div>
-            <Heading>We Take A Project, We Execute It With Class</Heading>
-            <Pages>
-              <p>All</p>
-              <p>Design</p>
-              <p>Ios</p>
-              <p>Web Application</p>
-            </Pages>
-          </div>
-
+        <Title>Our Projects</Title>
+        <div>
+          <Heading>We Take A Project, We Execute It With Class</Heading>
+          <Pages>
+            <p>All</p>
+            <p>Design</p>
+            <p>Ios</p>
+            <p>Web Application</p>
+          </Pages>
+        </div>
       </Main>
       <Cards className="row justify-content-evenly">
         <Card

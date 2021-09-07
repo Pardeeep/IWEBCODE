@@ -8,6 +8,8 @@ const CardBox = styled.section`
 `;
 // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 const Card = styled.div`
+  box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
+
   min-width: 265px;
   margin-bottom: 3rem;
   margin-left: 30px;
@@ -57,7 +59,7 @@ const Card = styled.div`
     color: #8447ff;
     text-decoration: underline;
   }
-  @media(max-width: 1024px){
+  @media (max-width: 1024px) {
     background: #f6f6f7;
   }
   @media (max-width: 768px) {

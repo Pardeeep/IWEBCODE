@@ -50,7 +50,7 @@ const Subheading = styled.p`
 const Flex = styled.div``;
 
 const Box = styled.div`
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
   background: #fff;
   padding: 1rem;
   margin: 0 1.5rem;
