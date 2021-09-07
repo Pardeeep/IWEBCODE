@@ -7,6 +7,7 @@ import card from "../../public/card2.jpg";
 const Main = styled.div`
   background: #fafafb;
   padding: 4rem;
+  max-width: 1170px;
   min-height: 50vh;
   display: flex;
   justify-content: center;
@@ -44,6 +45,7 @@ const P = styled.p`
 
 const Flex = styled.div`
   background: #fafafb;
+  max-width: 1170px;
   @media (max-width: 1030px) {
     margin: 0;
   }
@@ -159,7 +161,7 @@ const A = styled.a`
 
 const Present = () => {
   return (
-    <section className="container-fluid">
+    <section className="container-fluid d-flex flex-column align-items-center justify-content-center " style={{backgroundColor: " #fafafb"}}>
       <Main className="row">
         <Title> What&#39;s Going On</Title>
         <Heading> What&#39;s Going In It Now!</Heading>

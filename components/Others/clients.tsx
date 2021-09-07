@@ -5,6 +5,7 @@ import styled from "styled-components";
 const Main = styled.section`
   min-height: 50vh;
   display: flex;
+  max-width: 1170px;
   padding: 4rem;
   justify-content: center;
   @media (max-width: 968px) {

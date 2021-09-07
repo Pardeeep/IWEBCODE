@@ -68,7 +68,7 @@ const Cards = styled.div`
 
 const Projects = () => {
   return (
-    <section className="container-fluid">
+    <section className="container-fluid" style={{maxWidth: "1170px"}}>
       <Main className="row">
 
           <Title>Our Projects</Title>

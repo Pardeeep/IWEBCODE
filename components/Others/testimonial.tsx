@@ -6,11 +6,14 @@ import { FaUser } from "react-icons/fa";
 const Main = styled.section`
   background: #fafafb;
   padding: 4rem;
-  min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  .max {
+    max-width: 1170px;
+  }
 `;
 
 const Title = styled.p`
@@ -44,17 +47,13 @@ const Subheading = styled.p`
   }
 `;
 
-const Flex = styled.div`
-  margin: 2rem 0;
-  @media (max-width: 800px) {
-    flex-direction: column;
-  }
-`;
+const Flex = styled.div``;
+
 const Box = styled.div`
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   background: #fff;
   padding: 1rem;
-  margin-right: 3rem;
+  margin: 0 1.5rem;
   .position {
     color: gray;
     font-size: 16px;
@@ -94,58 +93,57 @@ const Box = styled.div`
     margin: 0;
   }
   @media (max-width: 968px) {
-
   }
 `;
 const Testimonial = () => {
   return (
     <Main>
-      <div className="container">
-        <div className="row">
-          <div className="col d-flex flex-column justify-content-start align-items-center">
-            <Title>Testimonials</Title>
-            <Heading>
-              Don’t Get Impressed By Our Words, Judge Us By Our Portfolio
-            </Heading>
-            <Subheading>
-              We rely on positive feedback provided by our valuable customers.
-              Please read below and see what they feel about IWEBCODE.
-            </Subheading>
-          </div>
+      <div className="container-fluid max">
+        <div className="row d-flex flex-column justify-content-start align-items-center">
+          <Title>Testimonials</Title>
+          <Heading>
+            Don’t Get Impressed By Our Words, Judge Us By Our Portfolio
+          </Heading>
+          <Subheading>
+            We rely on positive feedback provided by our valuable customers.
+            Please read below and see what they feel about IWEBCODE.
+          </Subheading>
         </div>
-        <Flex className="row">
-          <Box className="col">
-            <div className="flex">
-              <div className="img">
-                <FaUser className="pic" data-fa-mask="fas fa-circile" />
+        <Flex className="container-fluid max">
+          <div className="row d-flex justify-content-center ">
+            <Box className="col-5">
+              <div className="flex">
+                <div className="img">
+                  <FaUser className="pic" data-fa-mask="fas fa-circile" />
+                </div>
+                <div className="Name">
+                  <h3>Mandy Ryan</h3>
+                  <p className="position">CEO @ Manifest Media Agency</p>
+                </div>
               </div>
-              <div className="Name">
-                <h3>Mandy Ryan</h3>
-                <p className="position">CEO @ Manifest Media Agency</p>
+              <Subheading className="text">
+                &#34;IWEBCODE is an amazing asset to my business! They are
+                reliable, timely and I can&apos;t imagine not having his help.
+                I&apos;m looking forward to working together for years to come.
+                &#34;
+              </Subheading>
+            </Box>
+            <Box className="col-4">
+              <div className="flex">
+                <div className="img">
+                  <FaUser className="pic" data-fa-mask="fas fa-circile" />
+                </div>
+                <div className="Name">
+                  <h3>Aeron</h3>
+                  <p className="position">CEO @ Maids in Red</p>
+                </div>
               </div>
-            </div>
-            <Subheading className="text">
-              &#34;IWEBCODE is an amazing asset to my business! They are
-              reliable, timely and I can&apos;t imagine not having his help.
-              I&apos;m looking forward to working together for years to come.
-              &#34;
-            </Subheading>
-          </Box>
-          <Box className="col">
-            <div className="flex">
-              <div className="img">
-                <FaUser className="pic" data-fa-mask="fas fa-circile" />
-              </div>
-              <div className="Name">
-                <h3>Aeron</h3>
-                <p className="position">CEO @ Maids in Red</p>
-              </div>
-            </div>
-            <p className="text">
-              &#34;Great Website development agency, looking forward to working
-              with them again in the future! &#34;
-            </p>
-          </Box>
+              <p className="text">
+                &#34;Great Website development agency, looking forward to
+                working with them again in the future! &#34;
+              </p>
+            </Box>
+          </div>
         </Flex>
       </div>
     </Main>

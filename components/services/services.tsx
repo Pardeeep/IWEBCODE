@@ -19,6 +19,7 @@ const Title = styled.p`
 const Description = styled.p`
   font-size: 3rem;
   font-weight: 550;
+  width: 86%;
   letter-spacing: 1.3px;
   margin-top: 0.5rem;
   line-height: 3.9rem;
@@ -40,8 +41,10 @@ const SubDescription = styled.p`
   }
 `;
 const Section = styled.section`
-    min-height: 100vh;
-`
+  min-height: 100vh;
+  max-width: 1200px;
+  padding: 0 4rem;
+`;
 
 const Services = () => {
   return (
@@ -61,7 +64,7 @@ const Services = () => {
         </div>
       </div>
       <div className="row">
-        <Cards  />
+        <Cards />
       </div>
     </Section>
   );

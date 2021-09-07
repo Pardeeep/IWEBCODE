@@ -16,8 +16,8 @@ a {
   font-family: dm sans, sans-serif;
 }
 
-.slick-dotted.slick-slider{
-  cursor:pointer !important;
+.slick-dotted.slick-slider {
+  cursor: pointer !important;
 }
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -34,4 +34,13 @@ a {
 
 .swiper-pagination-bullet-active {
   background: #844ff7 !important;
+}
+
+@media (max-width: 968px) {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    margin: 0px !important;
+  }
 }

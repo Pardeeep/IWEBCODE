@@ -11,7 +11,7 @@ import { BsFillCaretRightFill } from "react-icons/bs";
 
 const Main = styled.section`
   min-height: 100vh;
-  overflow: hidden;
+  max-width: 1170px;
   .hr {
     margin-top: 3rem;
   }
@@ -120,74 +120,76 @@ const Copyright = styled.div`
 `;
 const Footer = () => {
   return (
-    <Main className="containerd-fluid">
-      <Icons className="row">
-        <div className="col d-flex justify-content-center align-items-center">
-          <FaFacebookF className="icon" />
-          <FaTwitter className="icon" />
-          <FaLinkedinIn className="icon" />
-          <FaInstagram className="icon" />
-        </div>
-      </Icons>
-      <Content className="row">
-        <Subscribe className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-          <div className="imgContainer">
-            <Image
-              src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-300x109.png"
-              width={300}
-              height={109}
-              alt="companyLogo"
-            />
+    <section className="container-fluid d-flex justify-content-center">
+      <Main className="containerd-fluid">
+        <Icons className="row">
+          <div className="col d-flex justify-content-center align-items-center">
+            <FaFacebookF className="icon" />
+            <FaTwitter className="icon" />
+            <FaLinkedinIn className="icon" />
+            <FaInstagram className="icon" />
           </div>
-          <Detail>
-            IWEBCODE is a versatile design agency that visualizes your thinking
-            and also creates a delightful experience.
-          </Detail>
-          <Form>
-            <Input type="text" placeholder="Email" />
-            <Button>
-              Subscribe <BsFillCaretRightFill className="spacing" />
-            </Button>
-          </Form>
-        </Subscribe>
+        </Icons>
+        <Content className="row">
+          <Subscribe className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <div className="imgContainer">
+              <Image
+                src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-300x109.png"
+                width={300}
+                height={109}
+                alt="companyLogo"
+              />
+            </div>
+            <Detail>
+              IWEBCODE is a versatile design agency that visualizes your
+              thinking and also creates a delightful experience.
+            </Detail>
+            <Form>
+              <Input type="text" placeholder="Email" />
+              <Button>
+                Subscribe <BsFillCaretRightFill className="spacing" />
+              </Button>
+            </Form>
+          </Subscribe>
 
-        <Services className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt_mobile--5">
-          <h4>Services</h4>
-          <ul>
-            <li>Logo & Branding</li>
-            <li>Website Development</li>
-            <li>Mobile App Development</li>
-            <li>Search Engine Optimization</li>
-            <li>Pay-Per-Click</li>
-            <li>Social Media Marketing</li>
-          </ul>
-        </Services>
-        <Services className="resource col-xl-2 col-lg-6 col-md-6 col-sm-6 col-12 mt_lg--5 mt_md--5 mt_sm--5">
-          <h4>Resources</h4>
-          <ul>
-            <li>Blog</li>
-            <li>Case Study</li>
-          </ul>
-        </Services>
-        <Services className="support col-xl-1 col-lg-6 col-md-6 col-sm-6 col-12 mt_lg--5 mt_md--5 mt_sm--5">
-          <h4>Support</h4>
-          <ul>
-            <li>Contact</li>
-            <li>Privacy Policy</li>
-          </ul>
-        </Services>
-      </Content>
-      <Copyright className="row d-flex justify-content-between">
-        <hr className="row hr" />
-        <div className="row">
-          <p className="col">© 2020, Built with pride and caffeine.</p>
-          <div className="col d-flex justify-content-end">
-            <a href="#">Terms of Use</a>
-            <a href="#">Privacy Policy</a>
+          <Services className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt_mobile--5">
+            <h4>Services</h4>
+            <ul>
+              <li>Logo & Branding</li>
+              <li>Website Development</li>
+              <li>Mobile App Development</li>
+              <li>Search Engine Optimization</li>
+              <li>Pay-Per-Click</li>
+              <li>Social Media Marketing</li>
+            </ul>
+          </Services>
+          <Services className="resource col-xl-2 col-lg-6 col-md-6 col-sm-6 col-12 mt_lg--5 mt_md--5 mt_sm--5">
+            <h4>Resources</h4>
+            <ul>
+              <li>Blog</li>
+              <li>Case Study</li>
+            </ul>
+          </Services>
+          <Services className="support col-xl-1 col-lg-6 col-md-6 col-sm-6 col-12 mt_lg--5 mt_md--5 mt_sm--5">
+            <h4>Support</h4>
+            <ul>
+              <li>Contact</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </Services>
+        </Content>
+        <Copyright className="row d-flex justify-content-between">
+          <hr className="row hr" />
+          <div className="row">
+            <p className="col">© 2020, Built with pride and caffeine.</p>
+            <div className="col d-flex justify-content-end">
+              <a href="#">Terms of Use</a>
+              <a href="#">Privacy Policy</a>
+            </div>
           </div>
-        </div>
-      </Copyright>
-    </Main>
+        </Copyright>
+      </Main>
+    </section>
   );
 };
 

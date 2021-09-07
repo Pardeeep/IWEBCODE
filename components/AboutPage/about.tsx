@@ -6,14 +6,13 @@ import { FaPhoneAlt } from "react-icons/fa";
 import styled from "styled-components";
 
 const Main = styled.section`
-  min-height: 100vh;
+  max-width: 1170px;
   padding: 0 4rem;
-  margin: 3rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 8rem 0;
   @media (max-width: 800px) {
-    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    padding: 0px;
   }
 `;
 
@@ -23,22 +22,23 @@ const Detail = styled.div`
   }
 `;
 const Form = styled.div`
-  @media(max-width:800px){
-    width: 70%;
+  max-width: 600px;
+  @media(max-width:968px){
+    width: 100%;
     margin: 0;
   }
-  margin-left: 9.5rem;
   padding: 1rem 3rem;
   padding-bottom: 2rem;
   height: fit-content;
   display: flex;
   justify-content: flex-start;
-  flex-direction column;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
+  ;
   .heading {
       font-size: 35px;
       word-spacing: 1px;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
   }
   .call {
       margin-top: 1.6rem;
@@ -49,10 +49,10 @@ const Form = styled.div`
       color: black;
       font-size: 22px;
   }
-
   .call span{
       padding-left: 30px;
   }
+
 `;
 const Title = styled.p`
   background: #e5faf5;
@@ -115,7 +115,7 @@ const A = styled.a`
 const StyleInput = styled.form`
   position: relative;
   height: 3rem;
-  margin: 0.8rem 0;
+  margin: 10px 0;
   .input {
     position: absolute;
     top: 0;
@@ -151,15 +151,15 @@ const StyleInput = styled.form`
 `;
 
 const Expert = styled.div`
-  min-height: 90vh;
-  padding: 0 4rem;
+  width: 100vw;
+  padding: 3rem 4rem;
   background: #fafafb;
-  display: flex;
-  justify-content: space-evenly:
-  align-items: center;
   @media (max-width: 800px){
     flex-direction: column;
     padding: 0 10px;
+  }
+  .max{
+    max-width: 1170px;
   }
   .down{
     position: relative;
@@ -200,13 +200,11 @@ const Expert = styled.div`
         width: 100%;
       }
   }
-
 `;
 
 const Box = styled.div`
   background: #fff;
-  height: 280px;
-  width: 250px;
+  padding: 2rem 1rem;
   margin-left: 1.5rem;
   display: flex;
   justify-content: center;
@@ -233,13 +231,13 @@ const Box = styled.div`
 `;
 
 const Section = styled.section`
-  margin: 6rem 0;
-`
+  overflow: hidden;
+`;
 const About = () => {
   return (
-    <Section className="container-fluid">
-      <Main className="row">
-        <Detail className="col">
+    <Section className="container-fluid d-flex flex-column align-items-center">
+      <Main className="row justify-content-around align-items-start">
+        <Detail className="col-md-6">
           <Title>About Us</Title>
           <Heading>A Perfect Blend Of Technology And Innovation</Heading>
           <Description>
@@ -262,61 +260,64 @@ const About = () => {
             </p>
           </Description>
         </Detail>
-        <Form className="col">
-          <Heading className="heading">Get A Free Quote Now</Heading>
-          <StyleInput className="form">
-            <input
-              type="text"
-              id="text"
-              className="input"
-              autoComplete="off"
-              placeholder=" "
-            />
-            <label className="label">Name</label>
-          </StyleInput>
-          <StyleInput className="form">
-            <input
-              type="text"
-              id="email"
-              className="input"
-              autoComplete="off"
-              placeholder=" "
-            />
-            <label className="label">Email</label>
-          </StyleInput>
-          <StyleInput className="form">
-            <input
-              type="text"
-              id="email"
-              className="input"
-              autoComplete="off"
-              placeholder=" "
-            />
-            <label className="label">Company</label>
-          </StyleInput>
-          <StyleInput className="form">
-            <input
-              type="number"
-              id="email"
-              className="input"
-              autoComplete="off"
-              placeholder=" "
-            />
-            <label className="label">Phone</label>
-          </StyleInput>
-          <Button>
-            Get Pricing Now <BsFillCaretRightFill className="spacing" />
-          </Button>
-          <div className="call">
-            Or call us now
-            <span>
-              <FaPhoneAlt className="icon" />{" "}
-              <A href="tel: +9175032750322">(+91) 75032 50322</A>
-            </span>
-          </div>
-        </Form>
+        <div className="col-md-6 d-flex align-items-end justify-content-md-center">
+          <Form className="w-md-100">
+            <Heading className="heading">Get A Free Quote Now</Heading>
+            <StyleInput className="form">
+              <input
+                type="text"
+                id="text"
+                className="input"
+                autoComplete="off"
+                placeholder=" "
+              />
+              <label className="label">Name</label>
+            </StyleInput>
+            <StyleInput className="form">
+              <input
+                type="text"
+                id="email"
+                className="input"
+                autoComplete="off"
+                placeholder=" "
+              />
+              <label className="label">Email</label>
+            </StyleInput>
+            <StyleInput className="form">
+              <input
+                type="text"
+                id="email"
+                className="input"
+                autoComplete="off"
+                placeholder=" "
+              />
+              <label className="label">Company</label>
+            </StyleInput>
+            <StyleInput className="form">
+              <input
+                type="number"
+                id="email"
+                className="input"
+                autoComplete="off"
+                placeholder=" "
+              />
+              <label className="label">Phone</label>
+            </StyleInput>
+            <Button>
+              Get Pricing Now <BsFillCaretRightFill className="spacing" />
+            </Button>
+            <div className="call">
+              Or call us now
+              <span>
+                <FaPhoneAlt className="icon" />{" "}
+                <A href="tel: +9175032750322">(+91) 75032 50322</A>
+              </span>
+            </div>
+          </Form>
+        </div>
       </Main>
-      <Expert className="row">
+      <Expert className="row justify-content-center">
+        <div className="row max">
         <div className="col details">
           <Title className="title">Experts In Field</Title>
           <Heading className="heading">We Started From Zero</Heading>
@@ -356,6 +357,7 @@ const About = () => {
             <p className="counting">1244+</p>
             <p className="text">Working hours were spent</p>
           </Box>
+        </div>
         </div>
       </Expert>
     </Section>

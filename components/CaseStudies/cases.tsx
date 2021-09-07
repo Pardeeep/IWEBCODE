@@ -19,22 +19,27 @@ const Case = styled.div`
   transition: 2s;
   @media (max-width: 800px) {
     flex-direction: column;
+    margin-right: 4rem;
   }
 `;
 
 const ImgContainer = styled.div`
   width: 50%;
-  @media (max-width: 800px) {
+  @media (max-width: 968px) {
     width: 100%;
   }
 `;
 const Description = styled.div`
   width: 50%;
-  padding-left: 4.5rem;
-  @media (max-width: 800px) {
+
+  @media (max-width: 968px) {
     width: 100%;
-    padding: 0;
+    padding: 0 1rem;
     margin-top: 2rem;
+    margin: 0rem;
+  }
+  @media(max-width: 768px){
+    margin: 0 1.5rem;
   }
 `;
 const Subtitle = styled.p`
@@ -45,6 +50,7 @@ const Subtitle = styled.p`
   font-size: 0.95rem;
   width: 180px;
   text-align: center;
+
 `;
 
 const Title = styled.h1`
@@ -62,6 +68,7 @@ const Detail = styled.p`
   line-height: 30px;
   margin-bottom: 2rem;
   @media (max-width: 800px) {
+    width: 90%;
     font-size: 14px;
     br {
       display: none;
@@ -84,36 +91,24 @@ const Button = styled.button`
   }
 `;
 
-const CarouselButtons = styled.div`
-  button {
-    margin-left: 10px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: none;
-    background: #eee8fb;
-    margin-top: 2rem;
-  }
-  .active {
-    background: #8447ff;
-  }
-`;
 
 const Section = styled.section`
-  min-height: 100vh;
   background: #fafafb;
+  max-width: 100vw !important;
   display: flex;
-  padding: 0 4rem;
+  padding: 1rem 4rem;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  .margin {
-    ${CarouselButtons} {
-      margin: 2rem 0;
-    }
+
+  @media (max-width: 968px) {
+    padding: 0 30px !important;
   }
-  @media(max-width: 968px){
-    padding: 0 10px;
+  @media (max-width: 768px){
+    padding: 0 5px !important;
+  }
+  .mySwiper {
+    max-width: 1170px !important;
   }
 `;
 
@@ -124,9 +119,9 @@ const Cases = () => {
         pagination={{
           clickable: true,
         }}
-        className="mySwiper"
+        className="mySwiper row"
       >
-        <SwiperSlide>
+        <SwiperSlide className="w-100 px-5">
           <Case className="row d-flex justify-content-center align-items-center">
             <ImgContainer className="col">
               <Image
@@ -157,7 +152,7 @@ const Cases = () => {
             </Description>
           </Case>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide  className="w-100 px-5">
           <Case className="row d-flex justify-content-center align-items-center">
             <ImgContainer className="col">
               <Image
@@ -168,7 +163,7 @@ const Cases = () => {
                 layout="intrinsic"
               />
             </ImgContainer>
-            <Description className="col">
+            <Description className="col justify-content-center">
               <Subtitle>Featured Case Studies</Subtitle>
               <Title>DreamNation</Title>
               <Detail>
@@ -188,7 +183,7 @@ const Cases = () => {
             </Description>
           </Case>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide  className="w-100 px-5">
           <Case className="row d-flex justify-content-center align-items-center">
             <ImgContainer className="col">
               <Image

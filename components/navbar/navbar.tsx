@@ -8,9 +8,13 @@ const Logo = styled.div``;
 
 const Main = styled.section`
   font-weight: 500;
+  max-width: 1170px;
   font-size: 18px;
-  padding: 2rem;
-  margin-top: 4px;
+  padding: 1.5rem 0 !important;
+  margin-top: 10px;
+  .max{
+    max-width: 1170px;
+  }
   @media screen and (max-width: 768px) {
     .Active {
       flex-direction: column;
@@ -31,7 +35,7 @@ const Main = styled.section`
     left: 0;
     right: 0;
     font-weight: 500 !important;
-    padding: 5px 3.5rem!important;
+    padding: 5px 3.5rem !important;
     margin: 0 !important;
     background: rgba(250, 250, 250, 0.97);
     z-index: 50;
@@ -94,7 +98,6 @@ const Main = styled.section`
   }
 `;
 
-
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [show, setShow] = useState(false);
@@ -113,57 +116,57 @@ const Navbar = () => {
     window.addEventListener("scroll", listenScrollEvent);
   });
   return (
-    <Main className="container-fluid px-5">
+    <Main className="container-fluid px-2">
       <div
         className={`row align-items-center justify-content-center`}
         id={navbar ? "Active" : "none"}
       >
-        <Logo className="px-4 col-lg-3 col-md-6 col-sm-6 col-8 ">
-          <Image
-            src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-1-e1609682976969.png"
-            alt="IWEBCODE"
-            width="220"
-            height="80"
-            layout="intrinsic"
-            className="custom-img"
-          />
-        </Logo>
-        <div className="col-lg-9 col-md-6 col-sm-6 col-4 t">
-          <nav className=" d-none d-lg-block">
-            <ul
-              className="d-flex justify-content-end align-items-center m-0 list-inline"
-            >
-              <li className={`${styles.active} nav-item mx-3`}>Home</li>
-              <li className="nav-item mx-3">About</li>
-              <li className="nav-item mx-2">
-                <div className={styles.dropdown}>
-                  <button className={styles.dropbtn}>
-                    Services <FiChevronDown />
-                  </button>
-                  <ul className={styles.dropdownContent}>
-                    <li className="li">Design</li>
-                    <li className="li">Development</li>
-                    <li className="li">Online Marketing</li>
-                    <li className="li">Technology</li>
-                    <li className="li">Content Strategy</li>
-                  </ul>
-                </div>
-              </li>
-              <li className="nav-item mx-3">Case Studies</li>
-              <li className="nav-item mx-3">Blogs</li>
-              <li className="nav-item mx-3">Contact</li>
-              <li className="nav-item mx-3">
-                <div
-                  onClick={handleClick}
-                  className={`${styles.bars} nav-item btn-dark`}
-                >
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </li>
-            </ul>
-          </nav>
+        <div className="row max justify-content-center align-items-center">
+          <Logo className="col-3 g-0">
+            <Image
+              src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-1-e1609682976969.png"
+              alt="IWEBCODE"
+              width="220"
+              height="80"
+              layout="intrinsic"
+              className="custom-img"
+            />
+          </Logo>
+          <div className="col-9 g-0">
+            <nav className=" d-none d-lg-block g-0">
+              <ul className="d-flex justify-content-end align-items-center m-0 list-inline">
+                <li className={`${styles.active} nav-item mx-3`}>Home</li>
+                <li className="nav-item mx-3">About</li>
+                <li className="nav-item mx-2">
+                  <div className={styles.dropdown}>
+                    <button className={styles.dropbtn}>
+                      Services <FiChevronDown />
+                    </button>
+                    <ul className={styles.dropdownContent}>
+                      <li className="li">Design</li>
+                      <li className="li">Development</li>
+                      <li className="li">Online Marketing</li>
+                      <li className="li">Technology</li>
+                      <li className="li">Content Strategy</li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="nav-item mx-3">Case Studies</li>
+                <li className="nav-item">Blogs</li>
+                <li className="nav-item mx-3 px-4">Contact</li>
+                <li className="nav-item mx-0">
+                  <div
+                    onClick={handleClick}
+                    className={`${styles.bars} nav-item btn-dark`}
+                  >
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
         {/* <div className={show ? "show overlay" : "overlay"}>
           <div className="overlay-content">

@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import Navbar from "../navbar/navbar";
 import Image from "next/image";
 import { BsFillCaretRightFill } from "react-icons/bs";
 
-const Main = styled.div``;
+const Main = styled.div`
+    max-width: 1170px;
+`;
 
 const InnerPart = styled.div`
   color: black;
-  padding: 3.75rem 0;
+  padding: 3.75rem 1rem;
   display: flex;
   @media (max-width: 800px) {
     flex-direction: column;
@@ -20,6 +21,7 @@ const InnerPart = styled.div`
 
 const InnerText = styled.div`
   padding: 0;
+  margin-top: 10px;
   @media (max-width: 800px) {
 
   }
@@ -92,7 +94,6 @@ const Lamp = styled.div`
 const Header = () => {
   return (
     <Main className="container">
-
       <InnerPart className="row">
         <InnerText className="col">
           <FirstP>We Are One Stop For Your All Digital Needs.</FirstP>
