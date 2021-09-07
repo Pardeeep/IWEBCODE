@@ -63,6 +63,7 @@ const Flex = styled.div`
 `;
 const Card = styled.div`
   margin-left: 10rem;
+  cursor: pointer;
   background-size: cover;
   width: 410px;
   height: 452px;
