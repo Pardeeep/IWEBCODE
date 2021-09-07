@@ -8,7 +8,7 @@ const Main = styled.div`
   background: #fafafb;
   padding: 4rem;
   max-width: 1170px;
-  min-height: 50vh;
+  
   display: flex;
   justify-content: center;
   align-items: center;

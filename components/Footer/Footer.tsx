@@ -10,7 +10,6 @@ import Image from "next/image";
 import { BsFillCaretRightFill } from "react-icons/bs";
 
 const Main = styled.section`
-  min-height: 100vh;
   max-width: 1170px;
   .hr {
     margin-top: 3rem;
