@@ -12,7 +12,7 @@ const Main = styled.section`
   font-size: 18px;
   padding: 1.5rem 0 !important;
   margin-top: 10px;
-  .max{
+  .max {
     max-width: 1170px;
   }
   @media screen and (max-width: 768px) {
@@ -31,13 +31,15 @@ const Main = styled.section`
   }
   #Active {
     position: fixed;
+
     top: 0;
     left: 0;
     right: 0;
     font-weight: 500 !important;
     padding: 5px 3.5rem !important;
     margin: 0 !important;
-    background: rgba(250, 250, 250, 0.97);
+    background: rgba(250,250,250,0.4);
+    backdrop-filter: blur(15px);
     z-index: 50;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
   }
