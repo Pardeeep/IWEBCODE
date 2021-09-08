@@ -4,10 +4,15 @@ import styles from "../../styles/Home.module.css";
 import { FiChevronDown } from "react-icons/fi";
 import styled from "styled-components";
 import {
+  FaArrowDown,
+  FaChevronDown,
+  FaEnvelope,
   FaFacebook,
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
+  FaPhone,
+  FaPhoneAlt,
   FaTwitter,
 } from "react-icons/fa";
 
@@ -54,6 +59,7 @@ const Main = styled.section`
     width: 0;
     position: fixed;
     z-index: 100;
+    margin: 0;
     top: 0;
     left: 0;
     background-color: rgb(0, 0, 0);
@@ -66,8 +72,10 @@ const Main = styled.section`
 
   .overlay a {
     padding: 8px;
+    padding-bottom: 20px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 40px;
+
     color: white;
     display: block;
     transition: 0.3s;
@@ -80,22 +88,16 @@ const Main = styled.section`
 
   .overlay .closebtn {
     font-size: 50px;
+    line-height: 0px;
     font-weight: lighter;
     color: white;
-    padding-right: 25px;
-    padding-left: 55px;
+    padding: 0px @important;
+    margin: 0 !important;
+    margin-bottom: 20px !important;
+    padding-right: 17px;
+    padding-left: 50px;
   }
 
-  @media screen and (max-height: 450px) {
-    .overlay a {
-      font-size: 20px;
-    }
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
   .show {
     width: 100vw;
     bottom: 0;
@@ -106,6 +108,78 @@ const Main = styled.section`
   }
   .overlay .lists {
     list-style: none;
+    padding-top: 18px;
+    letter-spacing: 2px;
+    padding-left: 53px;
+  }
+  .icons {
+    color: #75758b;
+    margin-bottom: 16px;
+    margin-right: 7px;
+    margin-left: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    &:hover {
+      color: #844ff7;
+    }
+  }
+
+  .overlay .tel {
+    font-size: 16px;
+    padding: 0 !important;
+    color: #75758b;
+  }
+
+  .overlay .Address {
+    width: 190px;
+    color: #75758b;
+  }
+  .overlay .height {
+    height: 47vw;
+  }
+  .overlay .Title {
+    padding-bottom: 30px !important;
+  }
+  .smallNav {
+    display: none;
+  }
+  .overlay .services{
+    width: 250px !important;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 1rem 10px !important;
+    .overlay {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .overlay .small {
+      display: none;
+    }
+    .overlay .smallNav {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      overflow-y:auto;
+      left: 0;
+      width: 400px;
+    }
+    .overlay .smallBtn {
+      postiton: relative;
+      top: 50px;
+      right: 50px;
+      color: black !important;
+    }
+    .overlay .smallNav .lists li a{
+      color: black !important;
+      font-size: 25px;
+      font-weight: lighter;
+      &:hover{
+        color:#844ff7;
+      }
+    }
+
   }
 `;
 
@@ -136,8 +210,8 @@ const Navbar = () => {
         className={`row align-items-center justify-content-center`}
         id={navbar ? "Active" : "none"}
       >
-        <div className="row max justify-content-center align-items-center">
-          <Logo className="col-3 g-0">
+        <div className="row max justify-content-between align-items-center">
+          <Logo className="col-auto g-0">
             <Image
               src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-1-e1609682976969.png"
               alt="IWEBCODE"
@@ -147,12 +221,16 @@ const Navbar = () => {
               className="custom-img"
             />
           </Logo>
-          <div className="col-9 g-0">
-            <nav className=" d-none d-lg-block g-0">
+          <div className="col-auto g-0">
+            <nav className="d-lg-block g-0">
               <ul className="d-flex justify-content-end align-items-center m-0 list-inline">
-                <li className={`${styles.active} nav-item mx-3`}>Home</li>
-                <li className="nav-item mx-3">About</li>
-                <li className="nav-item mx-2">
+                <li
+                  className={`${styles.active} nav-item d-none d-lg-block  mx-3`}
+                >
+                  Home
+                </li>
+                <li className="nav-item d-none d-lg-block  mx-3">About</li>
+                <li className="nav-item d-none d-lg-block ">
                   <div className={styles.dropdown}>
                     <button className={styles.dropbtn}>
                       Services <FiChevronDown />
@@ -166,10 +244,14 @@ const Navbar = () => {
                     </ul>
                   </div>
                 </li>
-                <li className="nav-item mx-3">Case Studies</li>
-                <li className="nav-item">Blogs</li>
-                <li className="nav-item mx-3 px-4">Contact</li>
-                <li className="nav-item mx-0">
+                <li className={` nav-item d-none d-lg-block mx-3`}>
+                  Case Studies
+                </li>
+                <li className="nav-item d-none d-lg-block ">Blogs</li>
+                <li className="nav-item d-none d-lg-block  mx-3 px-4">
+                  Contact
+                </li>
+                <li className="nav-item  mx-0">
                   <div
                     onClick={handleClick}
                     className={`${styles.bars} nav-item btn-dark`}
@@ -186,7 +268,7 @@ const Navbar = () => {
       </div>
       <div className={show ? "row show overlay " : "overlay"}>
         <div className=" Container overlay-content">
-          <div className="row p-5 m-3 mx-5 justify-content-between">
+          <div className="row p-5 m-3 mx-5 justify-content-between small">
             <Logo className="col-3 mx-4  justify-content-start g-0 ">
               <Image
                 src="https://iwebcode.design/wp-content/uploads/2020/12/logo-white.png"
@@ -199,19 +281,19 @@ const Navbar = () => {
             </Logo>
             <div className="col-6 g-0">
               <ul className="lists d-flex justify-content-end align-items-center h-100">
-                <li className="px-2">
-                  <FaFacebookF style={{ color: "white" }} />
+                <li className="px-1">
+                  <FaFacebookF className="icons" />
                 </li>
-                <li className="px-2">
-                  <FaTwitter style={{ color: "white" }} />
+                <li className="px-1">
+                  <FaTwitter className="icons" />
                 </li>
-                <li className="px-2">
-                  <FaLinkedinIn style={{ color: "white" }} />
+                <li className="px-1">
+                  <FaLinkedinIn className="icons" />
                 </li>
-                <li className="px-2">
-                  <FaInstagram style={{ color: "white" }} />
+                <li className="px-1">
+                  <FaInstagram className="icons" />
                 </li>
-                <li className="px-2">
+                <li className="px-1">
                   <a href="#" className="closebtn" onClick={handleClick}>
                     &times;
                   </a>
@@ -219,9 +301,9 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-          <div className="row justify-content-center h-100">
-            <div className="col-6 ">
-              <ul className="lists">
+          <div className="row justify-content-center align-items-center mb-5">
+            <div className="col-6 small py-4 ">
+              <ul className="lists lcolor">
                 <li className="active">
                   <a href="https://iwebcode.design/" aria-current="page">
                     Home
@@ -232,7 +314,10 @@ const Navbar = () => {
                 </li>
                 <li className="active">
                   <a href="#" onClick={handleId}>
-                    Services
+                    Services{" "}
+                    <FaChevronDown
+                      style={{ fontSize: "18px", color: "#75758B" }}
+                    />
                   </a>
                   <ul className={id ? "d-block" : "d-none"}>
                     <li className="">
@@ -275,32 +360,109 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-4">
-              <div className="d-flex flex-column text-white align-items-end justify-content-end h-100">
-                <address className="address">
-                  <span className="title">
+            <div className="col-4 small height">
+              <div className="d-flex flex-column text-white align-items-left justify-content-end h-100">
+                <address className="address ">
+                  <span className="Title">
                     We are available 24/ 7. Call Now.
                   </span>
                   <p>
                     <a className="tel" href="tel:+919770024626">
-                      <i className="fas fa-phone"></i>(+91) 97700-24626
+                      <FaPhone /> (+91) 97700-24626
                     </a>
-                  </p>
-                  <p>
                     <a className="tel" href="mailto:hello@iwebcode.design">
-                      <i className="fas fa-envelope"></i>hello@iwebcode.design
+                      <FaEnvelope />
+                      <br /> hello@iwebcode.design
                     </a>
                   </p>
                 </address>
                 <address className="address">
                   <span className="title"> Contact information </span>
-                  <p className="m-b-xs-30 mid grey-dark-three">
+                  <p className="Address">
                     5th Floor, C-205, Phase 8B, Sector 74, Sahibzada Ajit Singh
                     Nagar, Punjab 140308
                   </p>
                 </address>
               </div>
             </div>
+          </div>
+        </div>
+        <div className={show? "bg-light smallNav show" : "d-none"}>
+          <div className="row justify-content-between">
+            <Logo className="col-7
+            p-2 justify-content-start g-0 ">
+              <Image
+                src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-1-e1609682976969.png"
+                alt="IWEBCODE"
+                width="280"
+                height="100"
+                layout="intrinsic"
+                className="custom-img"
+              />
+            </Logo>
+            <a
+              href="#"
+              className="col-2 h-10 smallBtn"
+              onClick={handleClick}
+            >
+              &times;
+            </a>
+          </div>
+          <div className="row">
+            <ul className="lists text-dark lcolor">
+              <li className="active">
+                <a href="https://iwebcode.design/" aria-current="page">
+                  Home
+                </a>
+              </li>
+              <li className="active">
+                <a href="https://iwebcode.design/about-us/">About</a>
+              </li>
+              <li className="active">
+                <a href="#" onClick={handleId}>
+                  Services{" "}
+                  <FaChevronDown
+                    style={{ fontSize: "18px", color: "#75758B" }}
+                  />
+                </a>
+                <ul className={id ? "d-block" : "d-none"} style={{listStyle: "none"}}>
+                  <li className="">
+                    <a href="https://iwebcode.design/services/#design">
+                      Design
+                    </a>
+                  </li>
+                  <li className="">
+                    <a href="https://iwebcode.design/services/#development">
+                      Development
+                    </a>
+                  </li>
+                  <li className="">
+                    <a href="https://iwebcode.design/services/#onlinemarketing">
+                      Online Marketing
+                    </a>
+                  </li>
+                  <li className="">
+                    <a href="https://iwebcode.design/services/#technology">
+                      Technology
+                    </a>
+                  </li>
+                  <li className="">
+                    <a href="https://iwebcode.design/services/#content-strategy">
+                      Content Strategy
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="">
+                <a href="https://iwebcode.design/case-studies/">Case Studies</a>
+              </li>
+              <li className="active">
+                <a href="https://iwebcode.design/blog/">Blogs</a>
+              </li>
+              <li className="active">
+                <a href="https://iwebcode.design/contact/">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

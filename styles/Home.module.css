@@ -62,7 +62,9 @@
   background-color: inherit;
   font-weight: 500;
   border: none;
+width: 150px;
 }
+
 
 .dropdown {
   display: block;
