@@ -140,6 +140,7 @@ const Main = styled.section`
   }
   .smallNav {
     display: none;
+    transition: 0.8s;
   }
   .overlay .services{
     width: 250px !important;
@@ -168,6 +169,7 @@ const Main = styled.section`
       overflow-y:auto;
       left: 0;
       width: 400px;
+      transition: 0.9s;
     }
     .overlay .smallBtn {
       postiton: relative;
@@ -258,7 +260,7 @@ const Navbar = () => {
                 <li className="nav-item  mx-0">
                   <div
                     onClick={handleClick}
-                    className={`${styles.bars} nav-item btn-dark`}
+                    className={`${styles.bars} nav-item`}
                   >
                     <div></div>
                     <div></div>

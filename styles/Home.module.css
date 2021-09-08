@@ -39,6 +39,7 @@
 }
 .bars {
   width: 3.5em;
+  background: #000;
   height: 3.5em;
   border-radius: 50%;
   display: flex;
@@ -79,7 +80,6 @@ width: 150px;
   min-width: 250px;
   padding: 0;
   box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
-
   z-index: 60;
 }
 
@@ -97,4 +97,20 @@ width: 150px;
 .dropdown:hover .dropdownContent {
   display: block;
   z-index: 40;
+}
+
+@media (max-width: 900px){
+  .bars {
+    background: white;
+  }
+  .bars :hover div:nth-child(1){
+      width: 15px;
+  }
+  .bars div {
+    background: #000;
+  }
+  .bars div:nth-child(3){
+    width: 20px;
+    margin: 0;
+  }
 }
