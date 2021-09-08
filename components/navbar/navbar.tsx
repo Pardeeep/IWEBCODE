@@ -56,10 +56,10 @@ const Main = styled.section`
   }
   .overlay {
     min-height: 100vh;
+    width: 0;
     position: fixed;
     z-index: 100;
     margin: 0;
-    width: 0;
     top: 0;
     right: 0;
     background-color: #111111;
@@ -99,7 +99,8 @@ const Main = styled.section`
   }
 
   .show {
-    width: 100%;
+    width: 100vw;
+    bottom: 0;
   }
   .nav-item {
     cursor: pointer;
@@ -151,6 +152,7 @@ const Main = styled.section`
     }
     .show{
       right: 0;
+      bottom: 0;
     }
     padding: 1rem 10px !important;
     .overlay {
