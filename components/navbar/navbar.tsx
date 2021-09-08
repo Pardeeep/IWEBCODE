@@ -56,15 +56,15 @@ const Main = styled.section`
   }
   .overlay {
     min-height: 100vh;
-    width: 0;
     position: fixed;
     z-index: 100;
     margin: 0;
+    width: 0;
     top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0);
+    right: 0;
+    background-color: #111111;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.8s;
   }
 
   .overlay-content {
@@ -99,9 +99,7 @@ const Main = styled.section`
   }
 
   .show {
-    width: 100vw;
-    bottom: 0;
-    right: 0;
+    width: 100%;
   }
   .nav-item {
     cursor: pointer;
@@ -147,6 +145,12 @@ const Main = styled.section`
     width: 250px !important;
   }
   @media screen and (max-width: 900px) {
+    .overlay{
+      left: 0;
+    }
+    .show{
+      right: 0;
+    }
     padding: 1rem 10px !important;
     .overlay {
       background: rgba(0, 0, 0, 0.9);
