@@ -56,15 +56,23 @@ const Main = styled.section`
   }
   .overlay {
     min-height: 100vh;
-    width: 0;
+    width: 100vw;
     position: fixed;
     z-index: 100;
     margin: 0;
     top: 0;
-    right: 0;
+    right: -102vw;
+    bottom: 0;
     background-color: #111111;
     overflow-x: hidden;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
     transition: 0.8s;
+  }
+
+  .overlay::-webkit-scrollbar {
+    display: none;
   }
 
   .overlay-content {
@@ -99,7 +107,7 @@ const Main = styled.section`
   }
 
   .show {
-    width: 100vw;
+    right: 0;
     bottom: 0;
   }
   .nav-item {
@@ -124,13 +132,19 @@ const Main = styled.section`
   }
 
   .overlay .tel {
-    font-size: 16px;
+    font-size: 18px;
     padding: 0 !important;
     color: #75758b;
   }
 
+  .overlay .paddingTop {
+    padding-top: 15px !important;
+  }
+
   .overlay .Address {
     width: 190px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     color: #75758b;
   }
   .overlay .height {
@@ -141,19 +155,27 @@ const Main = styled.section`
   }
   .smallNav {
     display: none;
-    transition: 0.8s;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -450px;
+    overflow-y: auto;
+    left: 0;
+    width: 400px;
+    transition: 0.9s;
   }
-  .overlay .services{
+  .overlay .services {
     width: 250px !important;
   }
   @media screen and (max-width: 900px) {
-    .overlay{
+    .overlay {
+      left: -102vw;
+      right: 0;
+    }
+    .show {
       left: 0;
     }
-    .show{
-      right: 0;
-      bottom: 0;
-    }
+
     padding: 1rem 10px !important;
     .overlay {
       background: rgba(0, 0, 0, 0.9);
@@ -163,31 +185,36 @@ const Main = styled.section`
     .overlay .small {
       display: none;
     }
+
     .overlay .smallNav {
       display: block;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      overflow-y:auto;
-      left: 0;
-      width: 400px;
-      transition: 0.9s;
     }
+
     .overlay .smallBtn {
       postiton: relative;
       top: 50px;
       right: 50px;
       color: black !important;
     }
-    .overlay .smallNav .lists li a{
+    .overlay .smallNav .lists li a {
       color: black !important;
       font-size: 25px;
       font-weight: lighter;
-      &:hover{
-        color:#844ff7;
+      &:hover {
+        color: #844ff7;
       }
     }
-
+  }
+  .overlay .ListStyle {
+    list-style: none;
+    transition: 0.8s;
+  }
+  .overlay .ListStyle li a {
+    font-size: 20px;
+    color: #75758b;
+  }
+  address .Title {
+    font-size: 20px !important;
   }
 `;
 
@@ -313,8 +340,8 @@ const Navbar = () => {
             <div className="col-6 small py-4 ">
               <ul className="lists lcolor">
                 <li className="active">
-                  <a href="https://iwebcode.design/" aria-current="page">
-                    Home
+                  <a href="https://iwebcode.design/" aria-current="page" style={{color:"#844ff7", left: "-40px", position: "relative"}}>
+                    - Home
                   </a>
                 </li>
                 <li className="active">
@@ -327,7 +354,7 @@ const Navbar = () => {
                       style={{ fontSize: "18px", color: "#75758B" }}
                     />
                   </a>
-                  <ul className={id ? "d-block" : "d-none"}>
+                  <ul className={id ? "d-block ListStyle" : "d-none"}>
                     <li className="">
                       <a href="https://iwebcode.design/services/#design">
                         Design
@@ -369,12 +396,12 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="col-4 small height">
-              <div className="d-flex flex-column text-white align-items-left justify-content-end h-100">
-                <address className="address ">
+              <div className="d-flex flex-column text-white align-items-center justify-content-end h-100">
+                <address className="address w-100">
                   <span className="Title">
                     We are available 24/ 7. Call Now.
                   </span>
-                  <p>
+                  <p className="paddingTop">
                     <a className="tel" href="tel:+919770024626">
                       <FaPhone /> (+91) 97700-24626
                     </a>
@@ -384,8 +411,10 @@ const Navbar = () => {
                     </a>
                   </p>
                 </address>
-                <address className="address">
-                  <span className="title"> Contact information </span>
+                <address className="address w-100">
+                  <span className="Title">
+                    Contact information
+                  </span>
                   <p className="Address">
                     5th Floor, C-205, Phase 8B, Sector 74, Sahibzada Ajit Singh
                     Nagar, Punjab 140308
@@ -395,10 +424,12 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className={show? "bg-light smallNav show" : "d-none"}>
+        <div className={show ? "bg-light smallNav show" : "d-none"}>
           <div className="row justify-content-between">
-            <Logo className="col-7
-            p-2 justify-content-start g-0 ">
+            <Logo
+              className="col-7
+            p-2 justify-content-start g-0 "
+            >
               <Image
                 src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-1-e1609682976969.png"
                 alt="IWEBCODE"
@@ -408,11 +439,7 @@ const Navbar = () => {
                 className="custom-img"
               />
             </Logo>
-            <a
-              href="#"
-              className="col-2 h-10 smallBtn"
-              onClick={handleClick}
-            >
+            <a href="#" className="col-2 h-10 smallBtn" onClick={handleClick}>
               &times;
             </a>
           </div>
@@ -433,7 +460,10 @@ const Navbar = () => {
                     style={{ fontSize: "18px", color: "#75758B" }}
                   />
                 </a>
-                <ul className={id ? "d-block" : "d-none"} style={{listStyle: "none"}}>
+                <ul
+                  className={id ? "d-block" : "d-none"}
+                  style={{ listStyle: "none" }}
+                >
                   <li className="">
                     <a href="https://iwebcode.design/services/#design">
                       Design
