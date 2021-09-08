@@ -103,9 +103,12 @@ width: 150px;
   .bars {
     background: white;
   }
-  .bars :hover div:nth-child(1){
+  .bars:hover div:nth-child(1){
       width: 15px;
   }
+  .bars:hover div:nth-child(3){
+    width: 15px;
+}
   .bars div {
     background: #000;
   }
