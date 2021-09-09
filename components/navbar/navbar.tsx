@@ -63,12 +63,13 @@ const Main = styled.section`
     top: 0;
     right: -102vw;
     bottom: 0;
+    padding: 0 12px;
     background-color: #111111;
     overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
-    transition: all .8s cubic-bezier(0.77,.2,.05,1);
+    transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
   .overlay::-webkit-scrollbar {
@@ -110,19 +111,6 @@ const Main = styled.section`
     right: 0;
     bottom: 0;
   }
-  @keyframes shown{
-      0% {
-        transition:0.8s;
-        right: -80vw;
-      }
-      15%{
-        transition: 0.3s;
-      }
-
-      100% {
-        transition: 0.1s;
-      }
-  }
   .nav-item {
     cursor: pointer;
   }
@@ -152,19 +140,21 @@ const Main = styled.section`
 
   .overlay .paddingTop {
     padding-top: 15px !important;
+    padding-bottom: 0px !important;
   }
 
   .overlay .Address {
     width: 190px;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 30px;
+    font-size: 18px;
     color: #75758b;
   }
   .overlay .height {
     height: 47vw;
   }
   .overlay .Title {
-    padding-bottom: 30px !important;
+    padding-bottom: 10px !important;
   }
   .smallNav {
     display: none;
@@ -222,8 +212,8 @@ const Main = styled.section`
         color: #844ff7;
       }
     }
-    .overlay .smallNav .lists .dropdown ul li a{
-        font-size: 16px;
+    .overlay .smallNav .lists .dropdown ul li a {
+      font-size: 16px;
     }
   }
   .overlay .ListStyle {
@@ -236,7 +226,16 @@ const Main = styled.section`
     color: #75758b;
   }
   address .Title {
-    font-size: 20px !important;
+    font-size: 18px !important;
+    font-weight: bold;
+  }
+  address p {
+    line-height: 26px;
+    margin-bottom: 5px !important;
+    font-weight: lighter;
+  }
+  .addressIcon {
+    font-size: 13px;
   }
 `;
 
@@ -323,7 +322,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={show ? "row show overlay " : "overlay"}>
+      <div className={show ? "row show overlay " : "overlay "}>
         <div className=" Container overlay-content">
           <div className="row p-5 m-3 mx-5 justify-content-between small">
             <Logo className="col-3 mx-4  justify-content-start g-0 ">
@@ -358,11 +357,19 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-          <div className="row justify-content-center align-items-center mb-5">
-            <div className="col-6 small py-4 ">
+          <div className="row justify-content-center align-items-center mb-5 px-3">
+            <div className="col-6 small ">
               <ul className="lists lcolor">
                 <li className="active">
-                  <a href="https://iwebcode.design/" aria-current="page" style={{color:"#844ff7", left: "-40px", position: "relative"}}>
+                  <a
+                    href="https://iwebcode.design/"
+                    aria-current="page"
+                    style={{
+                      color: "#844ff7",
+                      left: "-40px",
+                      position: "relative",
+                    }}
+                  >
                     - Home
                   </a>
                 </li>
@@ -419,24 +426,25 @@ const Navbar = () => {
             </div>
             <div className="col-4 small height">
               <div className="d-flex flex-column text-white align-items-center justify-content-end h-100">
-                <address className="address w-100">
+                <address className="address  w-100">
                   <span className="Title">
-                    We are available 24/ 7. Call Now.
+                    We Are Available 24/ 7. Call Now.
                   </span>
-                  <p className="paddingTop">
-                    <a className="tel" href="tel:+919770024626">
-                      <FaPhone /> (+91) 97700-24626
+                  <p className="paddingTop g-0">
+                    <a className="tel p-0 g-0" href="tel:+919770024626">
+                      <FaPhone className="addressIcon" /> (+91) 97700-24626
                     </a>
-                    <a className="tel" href="mailto:hello@iwebcode.design">
-                      <FaEnvelope />
+                    <a
+                      className="tel p-0 g-0"
+                      href="mailto:hello@iwebcode.design"
+                    >
+                      <FaEnvelope className="addressIcon" />
                       <br /> hello@iwebcode.design
                     </a>
                   </p>
                 </address>
-                <address className="address w-100">
-                  <span className="Title">
-                    Contact information
-                  </span>
+                <address className="address pb-3 w-100 ">
+                  <span className="Title">Contact Information</span>
                   <p className="Address">
                     5th Floor, C-205, Phase 8B, Sector 74, Sahibzada Ajit Singh
                     Nagar, Punjab 140308
