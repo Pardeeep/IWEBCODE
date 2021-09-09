@@ -65,11 +65,10 @@ const Main = styled.section`
     bottom: 0;
     background-color: #111111;
     overflow-x: hidden;
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     overflow-y: scroll;
-    transition: .6s;
-    transition-timing-function: cubic-bezier(.5,.16,.61,.14);
+    transition: all .8s cubic-bezier(0.77,.2,.05,1);
   }
 
   .overlay::-webkit-scrollbar {
