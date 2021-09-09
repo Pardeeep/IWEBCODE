@@ -144,7 +144,7 @@ const Main = styled.section`
   }
 
   .overlay .Address {
-    width: 240px;
+    width: 190px;
     padding-top: 15px;
     padding-bottom: 30px;
     font-size: 18px;
