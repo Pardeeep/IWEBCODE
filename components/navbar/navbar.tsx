@@ -144,7 +144,7 @@ const Main = styled.section`
   }
 
   .overlay .Address {
-    width: 190px;
+    width: 240px;
     padding-top: 15px;
     padding-bottom: 30px;
     font-size: 18px;
@@ -236,6 +236,9 @@ const Main = styled.section`
   }
   .addressIcon {
     font-size: 13px;
+  }
+  .overlay .lists a {
+    font-weight: 500;
   }
 `;
 
