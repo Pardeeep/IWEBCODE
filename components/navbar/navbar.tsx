@@ -196,19 +196,28 @@ const Main = styled.section`
       right: 50px;
       color: black !important;
     }
+
+    .overlay .smallNav .lists {
+      padding: 0 30px;
+    }
     .overlay .smallNav .lists li a {
       color: black !important;
-      font-size: 25px;
+      font-size: 18px;
+      margin: 0px !important;
       font-weight: lighter;
       &:hover {
         color: #844ff7;
       }
     }
+    .overlay .smallNav .lists .dropdown ul li a{
+        font-size: 16px;
+    }
   }
   .overlay .ListStyle {
     list-style: none;
-    transition: 0.8s;
+    transition: 0.9s;
   }
+
   .overlay .ListStyle li a {
     font-size: 20px;
     color: #75758b;
@@ -453,7 +462,7 @@ const Navbar = () => {
               <li className="active">
                 <a href="https://iwebcode.design/about-us/">About</a>
               </li>
-              <li className="active">
+              <li className="active dropdown">
                 <a href="#" onClick={handleId}>
                   Services{" "}
                   <FaChevronDown
