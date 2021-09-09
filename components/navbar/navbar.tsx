@@ -68,7 +68,8 @@ const Main = styled.section`
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
-    transition: 0.8s;
+    transition: .6s;
+    transition-timing-function: cubic-bezier(.5,.16,.61,.14);
   }
 
   .overlay::-webkit-scrollbar {
@@ -109,6 +110,19 @@ const Main = styled.section`
   .show {
     right: 0;
     bottom: 0;
+  }
+  @keyframes shown{
+      0% {
+        transition:0.8s;
+        right: -80vw;
+      }
+      15%{
+        transition: 0.3s;
+      }
+
+      100% {
+        transition: 0.1s;
+      }
   }
   .nav-item {
     cursor: pointer;
