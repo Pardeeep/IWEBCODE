@@ -6,6 +6,7 @@ const Flex1 = styled.div`
   min-height: 50vh;
   background: #fafafb;
   padding: 3rem 0;
+  margin: 0 !important;
   flex-direction: column;
   align-items: center;
   justify-content: center;

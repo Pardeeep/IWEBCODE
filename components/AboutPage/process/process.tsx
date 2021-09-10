@@ -7,6 +7,7 @@ const Main = styled.section`
   min-height: 100vh;
   margin: 3rem 0;
   padding: 4rem 5rem;
+  margin-bottom: 0;
   background: linear-gradient(180deg, #fef7e2 0, #eeeefd 100%);
   .title {
     padding: 5px 10px;
