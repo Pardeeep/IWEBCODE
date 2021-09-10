@@ -34,7 +34,7 @@ const Card = styled.div`
   min-width: 300px;
   width: 350px;
   height: fit-content;
-  margin-right: 1.4rem;
+  margin: 2rem 0.7rem;
   padding: 0;
   .icon {
     font-family: icomoon !important;
@@ -86,7 +86,7 @@ const Card = styled.div`
 
 const Values = () => {
   return (
-    <Main className="container-fluid">
+    <Main className="container-fluid d-flex justify-content-center flex-column">
       <div className="row justify-content-center flex-column align-items-center">
         <div className="title">Our Values</div>
         <div className="heading">Why Should You Work With Us?</div>

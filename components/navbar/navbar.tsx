@@ -1,4 +1,3 @@
-
 import Link from 'next/link'
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
@@ -73,30 +72,24 @@ const Main = styled.section`
     overflow-y: scroll;
     transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-
   .overlay::-webkit-scrollbar {
     display: none;
   }
-
   .overlay-content {
   }
-
   .overlay a {
     padding: 8px;
     padding-bottom: 20px;
     text-decoration: none;
     font-size: 40px;
-
     color: white;
     display: block;
     transition: 0.3s;
   }
-
   .overlay a:hover,
   .overlay a:focus {
     color: #844ff7;
   }
-
   .overlay .closebtn {
     font-size: 50px;
     line-height: 0px;
@@ -108,7 +101,6 @@ const Main = styled.section`
     padding-right: 17px;
     padding-left: 50px;
   }
-
   .show {
     right: 0;
     bottom: 0;
@@ -133,18 +125,15 @@ const Main = styled.section`
       color: #844ff7;
     }
   }
-
   .overlay .tel {
     font-size: 18px;
     padding: 0 !important;
     color: #75758b;
   }
-
   .overlay .paddingTop {
     padding-top: 15px !important;
     padding-bottom: 0px !important;
   }
-
   .overlay .Address {
     width: 190px;
     padding-top: 15px;
@@ -180,7 +169,6 @@ const Main = styled.section`
     .show {
       left: 0;
     }
-
     padding: 1rem 10px !important;
     .overlay {
       background: rgba(0, 0, 0, 0.9);
@@ -190,18 +178,15 @@ const Main = styled.section`
     .overlay .small {
       display: none;
     }
-
     .overlay .smallNav {
       display: block;
     }
-
     .overlay .smallBtn {
       postiton: relative;
       top: 50px;
       right: 50px;
       color: black !important;
     }
-
     .overlay .smallNav .lists {
       padding: 0 30px;
     }
@@ -222,7 +207,6 @@ const Main = styled.section`
     list-style: none;
     transition: 0.9s;
   }
-
   .overlay .ListStyle li a {
     font-size: 20px;
     color: #75758b;
@@ -266,13 +250,13 @@ const Navbar = () => {
     window.addEventListener("scroll", listenScrollEvent);
   });
   return (
-    <Main className="container-fluid">
+    <Main className="container-fluid px-2">
       <div
-        className={`row align-items-center justify-content-between`}
+        className={`row align-items-center justify-content-center`}
         id={navbar ? "Active" : "none"}
       >
         <div className="row max justify-content-between align-items-center">
-          <Logo className="col">
+          <Logo className="col-auto g-0">
             <Image
               src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-1-e1609682976969.png"
               alt="IWEBCODE"
@@ -282,7 +266,7 @@ const Navbar = () => {
               className="custom-img"
             />
           </Logo>
-          <div className="col">
+          <div className="col-auto g-0">
             <nav className="d-lg-block g-0">
               <ul className="d-flex justify-content-end align-items-center m-0 list-inline">
                 <li

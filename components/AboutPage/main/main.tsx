@@ -4,6 +4,7 @@ import Navbar from "../../navbar/navbar";
 
 const Center = styled.div`
   min-height : 800px;
+  max-width: 1170px;
 `;
 
 const Detail = styled.div`
@@ -23,8 +24,8 @@ const Detail = styled.div`
 
 const Main = () => {
   return (
-    <section className="container">
-      <Center className="row">
+    <section className="container-fluid d-flex justify-content-center">
+      <Center className="row ">
         <div className="col d-flex flex-column justify-content-center">
           <Detail className="pb-4">
             <h1 className="row heading ">One of the Top Digital Agencies</h1>

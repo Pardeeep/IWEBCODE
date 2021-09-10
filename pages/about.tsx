@@ -9,6 +9,7 @@ import Values from "../components/AboutPage/Values/values";
 import Process from "../components/AboutPage/process/process";
 import LetsWork from "../components/Homepage/Others/letsWork";
 import Footer from "../components/Footer/Footer";
+import Navbar2 from "../components/navbar/navbar2";
 
 const About: NextPage = () => {
   return (
