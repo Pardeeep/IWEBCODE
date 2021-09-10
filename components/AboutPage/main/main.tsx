@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import Navbar from "../../navbar/navbar";
 
 const Center = styled.div`
-  height: 100vh;
+  min-height : 800px;
 `;
 
 const Detail = styled.div`

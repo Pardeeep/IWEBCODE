@@ -2,14 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import {
-  BsArrowDown,
-  BsBoxArrowDown,
+
   BsFillCaretRightFill,
 } from "react-icons/bs";
 
 const Main = styled.section`
   margin-top: 10rem;
-  height: 100vh;
+  height: 800px;
 `;
 
 const Detail = styled.div`

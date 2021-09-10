@@ -266,13 +266,13 @@ const Navbar = () => {
     window.addEventListener("scroll", listenScrollEvent);
   });
   return (
-    <Main className="container-fluid px-2">
+    <Main className="container-fluid">
       <div
-        className={`row align-items-center justify-content-center`}
+        className={`row align-items-center justify-content-between`}
         id={navbar ? "Active" : "none"}
       >
         <div className="row max justify-content-between align-items-center">
-          <Logo className="col-auto g-0">
+          <Logo className="col">
             <Image
               src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-1-e1609682976969.png"
               alt="IWEBCODE"
@@ -282,7 +282,7 @@ const Navbar = () => {
               className="custom-img"
             />
           </Logo>
-          <div className="col-auto g-0">
+          <div className="col">
             <nav className="d-lg-block g-0">
               <ul className="d-flex justify-content-end align-items-center m-0 list-inline">
                 <li

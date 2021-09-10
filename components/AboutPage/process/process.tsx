@@ -4,7 +4,7 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const Main = styled.section`
-  min-height: 100vh;
+  min-height: 800px;
   margin: 3rem 0;
   padding: 4rem 5rem;
   margin-bottom: 0;
@@ -32,6 +32,7 @@ const Main = styled.section`
     text-align: center;
     font-size: 20px;
     line-height: 30px;
+    max-width: 1170px;
     width: 50%;
     @media (max-width: 968px) {
       width: 70%;

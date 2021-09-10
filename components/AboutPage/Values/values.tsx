@@ -4,7 +4,8 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const Main = styled.div`
-  min-height: 100vh;
+  max-width: 1170px;
+  min-height: 800px;
   .title {
     padding: 5px 10px;
     color: #844ff7;
@@ -85,7 +86,7 @@ const Card = styled.div`
 
 const Values = () => {
   return (
-    <Main className="container">
+    <Main className="container-fluid">
       <div className="row justify-content-center flex-column align-items-center">
         <div className="title">Our Values</div>
         <div className="heading">Why Should You Work With Us?</div>
