@@ -4,6 +4,8 @@ import { FaPhoneAlt } from "react-icons/fa";
 import styled from "styled-components";
 import card from "../../public/card2.jpg";
 
+import LetsWork from "./letsWork";
+
 const Main = styled.div`
   background: #fafafb;
   padding: 4rem;
@@ -116,49 +118,6 @@ const Tags = styled.div`
   }
 `;
 
-const Flex1 = styled.div`
-  min-height: 50vh;
-  background: #fafafb;
-  padding: 3rem 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  .call {
-    margin-top: 1.6rem;
-    font-size: 14px;
-    color: gray;
-    padding-bottom: 2rem;
-  }
-
-  .icon {
-    color: black;
-
-    font-size: 22px;
-  }
-
-  .call span {
-    padding-left: 30px;
-  }
-`;
-const Button = styled.div`
-  border: 2px solid #844ff7;
-  padding: 15px 25px;
-  color: #844ff7;
-  &:hover {
-    color: white;
-    background: #844ff7;
-  }
-`;
-const A = styled.a`
-  font-size: 22px;
-  font-weight: 700;
-  color: #000248;
-  text-decoration: none;
-  &:hover {
-    color: #8447ff;
-  }
-`;
-
 const Present = () => {
   return (
     <section
@@ -208,23 +167,11 @@ const Present = () => {
         </Flex>
       </div>
       <div className="row">
-        <Flex1 className="d-flex justify-content-center align-items-center">
-          <Title>Lets Work Together</Title>
-          <Heading>Need Our Services? Get A Quote Now!</Heading>
-          <Button>
-            Estimate Project <BsFillCaretRightFill className="spacing" />
-          </Button>
-          <div className="call">
-            Or call us now
-            <span>
-              <FaPhoneAlt className="icon" />{" "}
-              <A href="tel: +9175032750322">(+91) 75032 50322</A>
-            </span>
-          </div>
-        </Flex1>
+        <LetsWork />
       </div>
     </section>
   );
 };
 
 export default Present;
+

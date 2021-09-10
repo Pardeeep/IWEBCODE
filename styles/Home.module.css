@@ -1,39 +1,21 @@
-/* .link {
-  list-style-type: none;
-}
-
-.bars2{
-  display: none;
-}
-
-@media (max-width: 800px){
-  .link{
-    display: none;
-    margin: 0;
-  }
-  .bars2{
-    display: flex;
-    position: fixed;
-    top: 30px;
-    right: 30px;
-  }
-  .Navbar {
-    padding: 0 2rem;
-  }
-}
-.link {
-  cursor: pointer;
-  font-size: 18px;
-  margin-left: 1rem;
-}
 
 
-.logo {
-  height: 80px;
-  width: 100% !important;
-  margin: 0;
-  padding: 0;
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .active {
   color: #8447ff;
 }

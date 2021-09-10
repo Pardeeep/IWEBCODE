@@ -1,18 +1,20 @@
+
+import Link from 'next/link'
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import { FiChevronDown } from "react-icons/fi";
 import styled from "styled-components";
 import {
-  FaArrowDown,
+
   FaChevronDown,
   FaEnvelope,
-  FaFacebook,
+
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaPhone,
-  FaPhoneAlt,
+
   FaTwitter,
 } from "react-icons/fa";
 
@@ -286,9 +288,9 @@ const Navbar = () => {
                 <li
                   className={`${styles.active} nav-item d-none d-lg-block  mx-3`}
                 >
-                  Home
+                  <Link href="/">Home</Link>
                 </li>
-                <li className="nav-item d-none d-lg-block  mx-3">About</li>
+                <li className="nav-item d-none d-lg-block  mx-3"><Link href="about">About</Link></li>
                 <li className="nav-item d-none d-lg-block ">
                   <div className={styles.dropdown}>
                     <button className={styles.dropbtn}>
