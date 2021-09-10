@@ -31,7 +31,7 @@
   background-color: inherit;
   font-weight: 500;
   border: none;
-width: 150px;
+width: fit-content;
 }
 
 .dropdown {
@@ -68,7 +68,7 @@ width: 150px;
 
 @media (max-width: 900px){
   .bars {
-    background: white;
+    background: none;
   }
   .bars:hover div:nth-child(1){
       width: 15px;

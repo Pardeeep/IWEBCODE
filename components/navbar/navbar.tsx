@@ -270,11 +270,11 @@ const Navbar = () => {
             <nav className="d-lg-block g-0">
               <ul className="d-flex justify-content-end align-items-center m-0 list-inline">
                 <li
-                  className={`${styles.active} nav-item d-none d-lg-block  mx-3`}
+                  className={`${styles.active} nav-item d-none d-lg-block  mx-2`}
                 >
                   <Link href="/">Home</Link>
                 </li>
-                <li className="nav-item d-none d-lg-block  mx-3"><Link href="about">About</Link></li>
+                <li className="nav-item d-none d-lg-block  mx-2"><Link href="about">About</Link></li>
                 <li className="nav-item d-none d-lg-block ">
                   <div className={styles.dropdown}>
                     <button className={styles.dropbtn}>
@@ -289,11 +289,11 @@ const Navbar = () => {
                     </ul>
                   </div>
                 </li>
-                <li className={` nav-item d-none d-lg-block mx-3`}>
+                <li className={` nav-item d-none d-lg-block mx-2`}>
                   Case Studies
                 </li>
                 <li className="nav-item d-none d-lg-block ">Blogs</li>
-                <li className="nav-item d-none d-lg-block  mx-3 px-4">
+                <li className="nav-item d-none d-lg-block  mx-3 px-1">
                   Contact
                 </li>
                 <li className="nav-item  mx-0">
