@@ -34,7 +34,7 @@ const Card = styled.div`
   min-width: 300px;
   width: 350px;
   height: fit-content;
-  margin: 2rem 0.7rem;
+  margin-right: 1.4rem;
   padding: 0;
   .icon {
     font-family: icomoon !important;
