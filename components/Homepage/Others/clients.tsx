@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Main = styled.section`
-  min-height: 50vh;
+  min-height: 400px;
   display: flex;
   max-width: 1170px;
   padding: 4rem;

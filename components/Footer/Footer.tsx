@@ -17,7 +17,7 @@ const Main = styled.section`
 `;
 
 const Icons = styled.div`
-  height: 30vh;
+  height: 250px;
   .icon {
     margin: 0 2.5rem;
     font-size: 30px;

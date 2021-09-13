@@ -41,7 +41,7 @@ const SubDescription = styled.p`
   }
 `;
 const Section = styled.section`
-  min-height: 100vh;
+  min-height: 800px;
   max-width: 1200px;
   padding: 0 4rem;
 `;

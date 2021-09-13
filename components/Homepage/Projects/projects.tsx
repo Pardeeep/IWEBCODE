@@ -60,7 +60,7 @@ const Pages = styled.div`
 `;
 
 const Cards = styled.div`
-  min-height: 100vh;
+  min-height: 800px;
   @media (max-width: 1040px) {
     padding: 0 10px;
   }

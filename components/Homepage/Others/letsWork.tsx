@@ -3,7 +3,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import styled from "styled-components";
 
 const Flex1 = styled.div`
-  min-height: 50vh;
+  min-height: 400px;
   background: #fafafb;
   padding: 3rem 0;
   margin: 0 !important;
