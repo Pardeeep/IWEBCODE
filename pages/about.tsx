@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import React from "react";
 import styles from "../styles/Home.module.css";
-import Navbar from "../components/navbar/navbar";
 import Head from "next/head";
 import Main from "../components/AboutPage/main/main";
 import Who from "../components/AboutPage/whoWeAre/who";
@@ -9,6 +8,7 @@ import Values from "../components/AboutPage/Values/values";
 import Process from "../components/AboutPage/process/process";
 import LetsWork from "../components/Homepage/Others/letsWork";
 import Footer from "../components/Footer/Footer";
+import AboutN from "../components/navbar/aboutN";
 
 const About: NextPage = () => {
   return (
@@ -30,7 +30,7 @@ const About: NextPage = () => {
         ></script>
       </Head>
 
-      <Navbar />
+      <AboutN />
       <Main />
       <Who />
       <Values />

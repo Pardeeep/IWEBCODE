@@ -78,7 +78,7 @@ const Main = styled.section`
   .overlay-content {
   }
   .overlay a {
-    padding: 8px;
+    padding: 8px 0px;
     padding-bottom: 20px;
     text-decoration: none;
     font-size: 40px;
@@ -324,11 +324,11 @@ const Navbar = () => {
         <div className={styles.overlayMaxWidth}>
           <div className=" Container overlay-content">
             <div className="row p-5 m-3 mx-5 justify-content-between small ">
-              <Logo className="col-3 mx-4  justify-content-start g-0 ">
+              <Logo className="col-4 mx-4  justify-content-start g-0 ">
                 <Image
                   src="https://iwebcode.design/wp-content/uploads/2020/12/logo-white.png"
                   alt="IWEBCODE"
-                  width="280"
+                  width="270"
                   height="100"
                   layout="intrinsic"
                   className="custom-img"
@@ -356,20 +356,16 @@ const Navbar = () => {
                 </ul>
               </div>
 
-              <div className={`${styles.height} row justify-content-between align-items-center`}>
+              <div className={`${styles.height} row justify-content-between
+              align-items-center`}>
                 <div className="col-6 small">
-                  <ul className="lists lcolor">
+                  <ul className="lists g-0 pt-0 lcolor">
                     <li className="active">
                       <a
                         href="https://iwebcode.design/"
                         aria-current="page"
-                        style={{
-                          color: "#844ff7",
-                          left: "-40px",
-                          position: "relative",
-                        }}
                       >
-                        - Home
+                       Home
                       </a>
                     </li>
                     <li className="active">
