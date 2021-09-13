@@ -265,14 +265,18 @@ const Navbar = () => {
           </Logo>
           <div className="col-auto g-0">
             <nav className="d-lg-block g-0">
-              <ul className="d-flex justify-content-end align-items-center m-0 list-inline">
+              <ul className="d-flex justify-content-end align-items-center m-0 mb-1 list-inline">
                 <li
                   className={`${styles.active} nav-item d-none d-lg-block  mx-2`}
                 >
-                  <Link href="/">Home</Link>
+                  <Link href="/" passHref>
+                    <div className={styles.hover}>Home</div>
+                  </Link>
                 </li>
                 <li className="nav-item d-none d-lg-block  mx-2">
-                  <Link href="about">About</Link>
+                  <Link href="about" passHref>
+                    <div className={styles.hover}>About</div>
+                  </Link>
                 </li>
                 <li className="nav-item d-none d-lg-block ">
                   <div className={styles.dropdown}>
@@ -289,11 +293,13 @@ const Navbar = () => {
                   </div>
                 </li>
                 <li className={` nav-item d-none d-lg-block mx-2`}>
-                  Case Studies
+                  <div className={styles.hover}>Case Studies</div>
                 </li>
-                <li className="nav-item d-none d-lg-block ">Blogs</li>
+                <li className="nav-item d-none d-lg-block ">
+                  <div className={styles.hover}>Blogs</div>
+                </li>
                 <li className="nav-item d-none d-lg-block  mx-3 px-1">
-                  Contact
+                  <div className={styles.hover}>Contact</div>
                 </li>
                 <li className="nav-item  mx-0">
                   <div

@@ -1,14 +1,21 @@
 
 
+.hover{
+  margin-top: 10px;
+  margin-right: 20px !important;
+}
 
+.hover:hover{
+  color: #8447ff;
+}
 
 .active {
   color: #8447ff;
 }
 .bars {
-  width: 3.5em;
+  width: 3.3em;
   background: #000;
-  height: 3.5em;
+  height: 3.3em;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -29,9 +36,13 @@
 }
 .dropbtn {
   background-color: inherit;
+  margin-top: 10px;
   font-weight: 500;
   border: none;
-width: fit-content;
+  width: fit-content;
+}
+.dropbtn:hover{
+  color: #8447ff;
 }
 
 .dropdown {

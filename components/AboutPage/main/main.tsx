@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Image from 'next/image'
 
 const Center = styled.div`
-  min-height: 800px;
+  min-height: 660px;
   max-width: 1170px;
   @media (max-width: 968px) {
     padding: 0 20px;
@@ -13,17 +13,20 @@ const Center = styled.div`
 `;
 
 const Detail = styled.div`
+  padding-left: 13px;
   .heading {
     font-size: 54px;
     line-height: 68px;
+    word-spacing: 2px;
     margin-bottom: 20px;
     font-weight: bolder;
   }
   p {
     color: #52526c;
-    padding-right: 25px;
+    padding-right: 30px;
     font-size: 24px;
     line-height: 38px;
+
   }
 `;
 
