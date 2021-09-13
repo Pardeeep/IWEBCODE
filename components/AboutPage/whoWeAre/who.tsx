@@ -5,6 +5,7 @@ import { BsFillCaretRightFill } from "react-icons/bs";
 
 const Main = styled.section`
   min-height: 800px;
+  max-width: 1170px;
   .direction{
     @media(max-width: 968px){
       flex-direction: column;
