@@ -78,7 +78,7 @@ const Main = styled.section`
   .overlay-content {
   }
   .overlay a {
-    padding: 8px 0px;
+    padding: 8px;
     padding-bottom: 20px;
     text-decoration: none;
     font-size: 40px;
@@ -324,11 +324,11 @@ const Navbar = () => {
         <div className={styles.overlayMaxWidth}>
           <div className=" Container overlay-content">
             <div className="row p-5 m-3 mx-5 justify-content-between small ">
-              <Logo className="col-4 mx-4  justify-content-start g-0 ">
+              <Logo className="col-3 mx-4  justify-content-start g-0 ">
                 <Image
                   src="https://iwebcode.design/wp-content/uploads/2020/12/logo-white.png"
                   alt="IWEBCODE"
-                  width="270"
+                  width="280"
                   height="100"
                   layout="intrinsic"
                   className="custom-img"
@@ -356,16 +356,16 @@ const Navbar = () => {
                 </ul>
               </div>
 
-              <div className={`${styles.height} row justify-content-between
-              align-items-center`}>
-                <div className="col-6 small">
-                  <ul className="lists g-0 pt-0 lcolor">
+              <div className={`${styles.height} row justify-content-between`}>
+                <div className={`${styles.heightS} col-6 small d-flex align-items-center py-4 my-5`}>
+                  <ul className="lists lcolor">
                     <li className="active">
                       <a
                         href="https://iwebcode.design/"
                         aria-current="page"
+
                       >
-                       Home
+                        Home
                       </a>
                     </li>
                     <li className="active">
@@ -432,6 +432,7 @@ const Navbar = () => {
                         <a
                           className="tel p-0 g-0"
                           href="mailto:hello@iwebcode.design"
+                          style={{lineHeight: "20px"}}
                         >
                           <FaEnvelope className="addressIcon" />
                           <br /> hello@iwebcode.design

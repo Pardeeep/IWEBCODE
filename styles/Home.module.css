@@ -1,33 +1,55 @@
-.overlayMaxWidth{
+.overlayMaxWidth {
   max-width: 1280px;
 }
 
-.height{
-  max-height: 750px;
-  height: 750px;
-  padding-left: 22px;;
+.height {
+  max-height: 800px;
+  padding-left: 22px;
 }
 
-.heightS{
-  max-height: 700px;
-  margin-left: 8px;
-  padding-bottom: 20px;
-  height: 620px;
-
+.homeButton{
+  color: #8447ff !important;
+  position: relative;
+}
+.homeButton::before {
+  /* position: absolute;
+    background: #8447ff;
+    width: 20px;
+    height: 2px;
+    content: "dfgkljf";
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: .3s; */
+    content: "";
+    width: 20px;
+    background: #8447ff;
+    height: 2px;
+    left: -35px;
+    top: 28px;
+    transform: translateY(-50%);
+    position: absolute;
 }
 
-.hover{
-  margin:0 10px !important;
+.heightS {
+  max-height: 800px;
+  padding-left: 0px !important;
+  height: 660px;
+}
+
+.hover {
+  margin: 0 10px !important;
   margin-top: 2px !important;
   font-weight: 450 !important;
   margin-left: 8px !important;
 }
 
-.hover:hover{
+.hover:hover {
   color: #8447ff;
 }
 
-.hover:active{
+.hover:active {
   color: #8447ff;
 }
 .active {
@@ -66,7 +88,7 @@
   padding-left: 8px;
   width: fit-content;
 }
-.dropbtn:hover{
+.dropbtn:hover {
   color: #8447ff;
 }
 
@@ -102,20 +124,20 @@
   z-index: 40;
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
   .bars {
     background: none;
   }
-  .bars:hover div:nth-child(1){
-      width: 15px;
-  }
-  .bars:hover div:nth-child(3){
+  .bars:hover div:nth-child(1) {
     width: 15px;
-}
+  }
+  .bars:hover div:nth-child(3) {
+    width: 15px;
+  }
   .bars div {
     background: #000;
   }
-  .bars div:nth-child(3){
+  .bars div:nth-child(3) {
     width: 20px;
     margin: 0;
   }

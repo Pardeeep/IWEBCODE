@@ -356,20 +356,16 @@ const Navbar = () => {
                 </ul>
               </div>
 
-              <div className={`${styles.height} row justify-content-between align-items-center`}>
-                <div className="col-6 small">
+              <div className={`${styles.height} row justify-content-between`}>
+                <div className={`${styles.heightS} col-6 small d-flex align-items-center py-4 my-5`}>
                   <ul className="lists lcolor">
                     <li className="active">
                       <a
                         href="https://iwebcode.design/"
                         aria-current="page"
-                        style={{
-                          color: "#844ff7",
-                          left: "-40px",
-                          position: "relative",
-                        }}
+                        
                       >
-                        - Home
+                        <div className={styles.homeButton}>Home</div>
                       </a>
                     </li>
                     <li className="active">
