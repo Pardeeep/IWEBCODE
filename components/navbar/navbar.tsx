@@ -256,7 +256,7 @@ const Navbar = () => {
         id={navbar ? "Active" : "none"}
       >
         <div className="row max justify-content-between align-items-center">
-          <Logo className="col-auto g-0">
+          <Logo className="col-auto pt-2 g-0">
             <Image
               src="https://iwebcode.design/wp-content/uploads/2020/12/Logo-black-1-e1609682976969.png"
               alt="IWEBCODE"
@@ -270,7 +270,7 @@ const Navbar = () => {
             <nav className="d-lg-block g-0">
               <ul className="d-flex justify-content-end align-items-center m-0 mb-1 list-inline">
                 <li
-                  className={`${styles.active} nav-item d-none d-lg-block  mx-2`}
+                  className={`nav-item d-none d-lg-block  mx-2`}
                 >
                   <Link href="/" passHref>
                     <div className={styles.hover}>Home</div>

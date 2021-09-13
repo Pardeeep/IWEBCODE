@@ -3,20 +3,27 @@
 }
 
 .hover{
-  margin-top: 10px;
-  margin-right: 20px !important;
+  margin:0 10px !important;
+  margin-top: 2px !important;
+  font-weight: 450 !important;
+  margin-left: 8px !important;
 }
 
 .hover:hover{
   color: #8447ff;
 }
 
+.hover:active{
+  color: #8447ff;
+}
 .active {
   color: #8447ff;
 }
 .bars {
   width: 3.3em;
   background: #000;
+  margin-right: 3px;
+  margin-left: 10px;
   height: 3.3em;
   border-radius: 50%;
   display: flex;
@@ -38,10 +45,11 @@
 }
 .dropbtn {
   background-color: inherit;
-  margin-top: 10px;
+  margin-top: 2px;
   font-weight: 500;
   border: none;
-  padding-right: 20px;
+  padding-right: 14px;
+  padding-left: 8px;
   width: fit-content;
 }
 .dropbtn:hover{
