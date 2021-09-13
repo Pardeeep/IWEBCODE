@@ -32,10 +32,13 @@ const Main = styled.div`
 const Card = styled.div`
   margin-top: 2rem;
   min-width: 300px;
-  width: 350px;
+  max-width: 360px;
   height: fit-content;
-  margin-right: 1.4rem;
+  margin-right: 1rem;
   padding: 0;
+  @media( max-width: 968px ){
+    padding: 0 10px;
+  }
   .icon {
     font-family: icomoon !important;
     speak: never;
@@ -96,7 +99,7 @@ const Values = () => {
           to help us strengthen our leadership
         </p>
       </div>
-      <div className="row">
+      <div className="row justify-content-center align-items-center mx-auto">
         <Card className="col">
           <div className="icon" style={{ background: "#844ff7" }}>
             <Image

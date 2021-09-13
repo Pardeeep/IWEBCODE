@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "../../navbar/navbar";
+import Image from 'next/image'
 
 const Center = styled.div`
-  min-height : 800px;
+  min-height: 800px;
   max-width: 1170px;
+  @media (max-width: 968px) {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `;
 
 const Detail = styled.div`
@@ -14,7 +19,7 @@ const Detail = styled.div`
     margin-bottom: 20px;
     font-weight: bolder;
   }
-  p{
+  p {
     color: #52526c;
     padding-right: 25px;
     font-size: 24px;
@@ -24,10 +29,10 @@ const Detail = styled.div`
 
 const Main = () => {
   return (
-    <section className="container-fluid d-flex justify-content-center">
+    <section className="container-fluid d-flex  justify-content-center">
       <Center className="row ">
         <div className="col d-flex flex-column justify-content-center">
-          <Detail className="pb-4">
+          <Detail className="pb-lg-4">
             <h1 className="row heading ">One of the Top Digital Agencies</h1>
             <p className="row">
               We are a global IT company providing all digital services to our
@@ -36,7 +41,17 @@ const Main = () => {
             </p>
           </Detail>
         </div>
-        <div className="col bg-info h1">SVG</div>
+        <div className="col">
+          <div className="imgContainer d-flex  justify-content-center align-items-center">
+            <Image
+              src="https://iwebcode.design/wp-content/uploads/2020/04/featured-image-02.jpg"
+              layout="intrinsic"
+              width={600}
+              height={450}
+              alt="image"
+            />
+          </div>
+        </div>
       </Center>
     </section>
   );

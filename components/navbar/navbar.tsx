@@ -1,19 +1,16 @@
-import Link from 'next/link'
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import { FiChevronDown } from "react-icons/fi";
 import styled from "styled-components";
 import {
-
   FaChevronDown,
   FaEnvelope,
-
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaPhone,
-
   FaTwitter,
 } from "react-icons/fa";
 
@@ -274,7 +271,9 @@ const Navbar = () => {
                 >
                   <Link href="/">Home</Link>
                 </li>
-                <li className="nav-item d-none d-lg-block  mx-2"><Link href="about">About</Link></li>
+                <li className="nav-item d-none d-lg-block  mx-2">
+                  <Link href="about">About</Link>
+                </li>
                 <li className="nav-item d-none d-lg-block ">
                   <div className={styles.dropdown}>
                     <button className={styles.dropbtn}>
@@ -345,100 +344,101 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="row justify-content-center align-items-center mb-5 px-3">
-            <div className="col-6 small ">
-              <ul className="lists lcolor">
-                <li className="active">
-                  <a
-                    href="https://iwebcode.design/"
-                    aria-current="page"
-                    style={{
-                      color: "#844ff7",
-                      left: "-40px",
-                      position: "relative",
-                    }}
-                  >
-                    - Home
-                  </a>
-                </li>
-                <li className="active">
-                  <a href="https://iwebcode.design/about-us/">About</a>
-                </li>
-                <li className="active">
-                  <a href="#" onClick={handleId}>
-                    Services{" "}
-                    <FaChevronDown
-                      style={{ fontSize: "18px", color: "#75758B" }}
-                    />
-                  </a>
-                  <ul className={id ? "d-block ListStyle" : "d-none"}>
-                    <li className="">
-                      <a href="https://iwebcode.design/services/#design">
-                        Design
-                      </a>
-                    </li>
-                    <li className="">
-                      <a href="https://iwebcode.design/services/#development">
-                        Development
-                      </a>
-                    </li>
-                    <li className="">
-                      <a href="https://iwebcode.design/services/#onlinemarketing">
-                        Online Marketing
-                      </a>
-                    </li>
-                    <li className="">
-                      <a href="https://iwebcode.design/services/#technology">
-                        Technology
-                      </a>
-                    </li>
-                    <li className="">
-                      <a href="https://iwebcode.design/services/#content-strategy">
-                        Content Strategy
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="">
-                  <a href="https://iwebcode.design/case-studies/">
-                    Case Studies
-                  </a>
-                </li>
-                <li className="active">
-                  <a href="https://iwebcode.design/blog/">Blogs</a>
-                </li>
-                <li className="active">
-                  <a href="https://iwebcode.design/contact/">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-4 small height">
-              <div className="d-flex flex-column text-white align-items-center justify-content-end h-100">
-                <address className="address  w-100">
-                  <span className="Title">
-                    We Are Available 24/ 7. Call Now.
-                  </span>
-                  <p className="paddingTop g-0">
-                    <a className="tel p-0 g-0" href="tel:+919770024626">
-                      <FaPhone className="addressIcon" /> (+91) 97700-24626
-                    </a>
+
+            <div className="row justify-content-center align-items-center mb-5 px-3">
+              <div className="col-6 small ">
+                <ul className="lists lcolor">
+                  <li className="active">
                     <a
-                      className="tel p-0 g-0"
-                      href="mailto:hello@iwebcode.design"
+                      href="https://iwebcode.design/"
+                      aria-current="page"
+                      style={{
+                        color: "#844ff7",
+                        left: "-40px",
+                        position: "relative",
+                      }}
                     >
-                      <FaEnvelope className="addressIcon" />
-                      <br /> hello@iwebcode.design
+                      - Home
                     </a>
-                  </p>
-                </address>
-                <address className="address pb-3 w-100 ">
-                  <span className="Title">Contact Information</span>
-                  <p className="Address">
-                    5th Floor, C-205, Phase 8B, Sector 74, Sahibzada Ajit Singh
-                    Nagar, Punjab 140308
-                  </p>
-                </address>
+                  </li>
+                  <li className="active">
+                    <a href="https://iwebcode.design/about-us/">About</a>
+                  </li>
+                  <li className="active">
+                    <a href="#" onClick={handleId}>
+                      Services{" "}
+                      <FaChevronDown
+                        style={{ fontSize: "18px", color: "#75758B" }}
+                      />
+                    </a>
+                    <ul className={id ? "d-block ListStyle" : "d-none"}>
+                      <li className="">
+                        <a href="https://iwebcode.design/services/#design">
+                          Design
+                        </a>
+                      </li>
+                      <li className="">
+                        <a href="https://iwebcode.design/services/#development">
+                          Development
+                        </a>
+                      </li>
+                      <li className="">
+                        <a href="https://iwebcode.design/services/#onlinemarketing">
+                          Online Marketing
+                        </a>
+                      </li>
+                      <li className="">
+                        <a href="https://iwebcode.design/services/#technology">
+                          Technology
+                        </a>
+                      </li>
+                      <li className="">
+                        <a href="https://iwebcode.design/services/#content-strategy">
+                          Content Strategy
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="">
+                    <a href="https://iwebcode.design/case-studies/">
+                      Case Studies
+                    </a>
+                  </li>
+                  <li className="active">
+                    <a href="https://iwebcode.design/blog/">Blogs</a>
+                  </li>
+                  <li className="active">
+                    <a href="https://iwebcode.design/contact/">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-4 small height">
+                <div className="d-flex flex-column text-white align-items-center justify-content-end h-100">
+                  <address className="address  w-100">
+                    <span className="Title">
+                      We Are Available 24/ 7. Call Now.
+                    </span>
+                    <p className="paddingTop g-0">
+                      <a className="tel p-0 g-0" href="tel:+919770024626">
+                        <FaPhone className="addressIcon" /> (+91) 97700-24626
+                      </a>
+                      <a
+                        className="tel p-0 g-0"
+                        href="mailto:hello@iwebcode.design"
+                      >
+                        <FaEnvelope className="addressIcon" />
+                        <br /> hello@iwebcode.design
+                      </a>
+                    </p>
+                  </address>
+                  <address className="address pb-3 w-100 ">
+                    <span className="Title">Contact Information</span>
+                    <p className="Address">
+                      5th Floor, C-205, Phase 8B, Sector 74, Sahibzada Ajit
+                      Singh Nagar, Punjab 140308
+                    </p>
+                  </address>
+                </div>
               </div>
             </div>
           </div>
