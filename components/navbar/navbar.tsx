@@ -14,7 +14,10 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
-const Logo = styled.div``;
+const Logo = styled.div`
+ @media( max-width:568px){}
+
+`;
 
 const Main = styled.section`
   font-weight: 500;
@@ -303,7 +306,7 @@ const Navbar = () => {
                   <div className={styles.hover}>Blogs</div>
                 </li>
                 <li className="nav-item d-none d-lg-block  mx-3 px-1">
-                  <div className={styles.hover}>Contact</div>
+                  <Link href="/contact-us" passHref><div className={styles.hover}>Contact</div></Link>
                 </li>
                 <li className="nav-item  mx-0">
                   <div
@@ -363,7 +366,7 @@ const Navbar = () => {
                       <a
                         href="https://iwebcode.design/"
                         aria-current="page"
-                        
+
                       >
                         <div className={styles.homeButton}>Home</div>
                       </a>

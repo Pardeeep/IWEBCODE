@@ -1,9 +1,5 @@
 import React from "react";
-import { BsFillCaretRightFill } from "react-icons/bs";
-import { FaPhoneAlt } from "react-icons/fa";
 import styled from "styled-components";
-import card from "../../public/card2.jpg";
-
 import LetsWork from "./letsWork";
 
 const Main = styled.div`

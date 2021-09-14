@@ -36,7 +36,6 @@ const Icons = styled.div`
 
 const Subscribe = styled.div`
   border-right: 1px solid #c7c7d5;
-
   padding-bottom: 2rem;
   @media (max-width: 968px) {
     margin-bottom: 3rem;

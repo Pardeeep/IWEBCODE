@@ -20,8 +20,8 @@ const Main = styled.section`
   font-weight: 500;
   max-width: 1170px;
   font-size: 18px;
-  padding: 1.5rem 0 !important;
-  margin-top: 10px;
+  padding: 2rem 0 !important;
+
   .max {
     max-width: 1170px;
   }
@@ -229,7 +229,7 @@ const Main = styled.section`
   }
 `;
 
-const Navbar = () => {
+const AboutN = () => {
   const [navbar, setNavbar] = useState(false);
   const [show, setShow] = useState(false);
   const [id, setId] = useState(false);
@@ -303,7 +303,7 @@ const Navbar = () => {
                   <div className={styles.hover}>Blogs</div>
                 </li>
                 <li className="nav-item d-none d-lg-block  mx-3 px-1">
-                  <div className={styles.hover}>Contact</div>
+                  <Link href='/contact-us' passHref><div className={styles.hover}>Contact</div></Link>
                 </li>
                 <li className="nav-item  mx-0">
                   <div
@@ -536,4 +536,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default AboutN;
