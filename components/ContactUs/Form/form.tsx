@@ -6,12 +6,13 @@ import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 const FormBox = styled.div`
   padding: 30px 35px;
   min-height: 650px;
+  width: 100%;
   margin: 4rem 0;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   max-width: 500px;
-  width: 400px;
+  width: 450px;
   box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
   .heading {
     font-size: 35px;
@@ -19,7 +20,6 @@ const FormBox = styled.div`
     margin-bottom: 5px;
   }
   @media (max-width: 968px) {
-    width: 100%;
     margin: 3rem 10px;
     box-shadow: 2px 0px 24px -9px rgba(0,0,0,0.75);
   }
