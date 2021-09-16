@@ -21,7 +21,7 @@ const Links = styled.div`
   padding: 0 !important;
   div{
     border-bottom: 1px solid #e5e5e5;
-    max-width: 1170px;
+    max-width: 1300px;
   }
   ul {
     margin: 0;

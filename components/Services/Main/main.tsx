@@ -71,9 +71,9 @@ const Detail = styled.div`
 const Main = () => {
   return (
     <section className="container-fluid d-flex justify-content-center">
-      <Center className="row w-100 px-5">
-        <div className="col-lg-7 col  d-flex  flex-column justify-content-center">
-          <Detail className="  ">
+      <Center className="row w-100">
+        <div className="col  d-flex  flex-column justify-content-center">
+          <Detail className="">
             <h1 className="row heading">Best Solutions For Your Business</h1>
             <p className="row">
               IWEBCODE solves the most challenging issues <br /> faced by clients. We
