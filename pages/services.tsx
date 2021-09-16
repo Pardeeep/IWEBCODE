@@ -20,6 +20,8 @@ const Links = styled.div`
   z-index: 100;
   padding: 0 !important;
   border-bottom: 1px solid #e5e5e5;
+  background: rgba(250, 250, 250, 0.4);
+  backdrop-filter: blur(15px);
   div{
     max-width: 1170px;
   }
