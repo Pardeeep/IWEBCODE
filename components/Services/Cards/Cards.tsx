@@ -28,7 +28,13 @@ import {
 
 const CardBox = styled.section`
   max-width: 1170px;
-  margin: 5rem 0;
+  margin: 5rem 10px;
+  @media(max-width:990px){
+    justify-content: center !important;
+  }
+  @media (max-width: 568px){
+    margin: 1rem 5px;
+  }
 `;
 // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 const Card = styled.div`
@@ -37,7 +43,7 @@ const Card = styled.div`
     box-shadow: -52px 52px 70px -30px rgb(0 0 0 / 10%);
   }
   max-width: 360px;
-  min-width: 360px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -45,6 +51,7 @@ const Card = styled.div`
   padding: 2rem 0;
   padding-right: 37px;
   padding-left: 38px;
+  margin: 1rem 10px;
   z-index: 0;
   .imgContainer {
     position: relative;
@@ -105,12 +112,14 @@ const Card = styled.div`
     color: #844ff7;
     text-decoration: underline;
   }
-  @media (max-width: 1024px) {
+
+  @media (max-width: 768px) {
+    min-width: 250px;
     background: #f6f6f7;
   }
-  @media (max-width: 768px) {
-    width: 200px;
-    background: #f6f6f7;
+
+  @media( max-width: 568px){
+    min-width:100%;
   }
 `;
 const Title = styled.h4`
@@ -150,7 +159,7 @@ export const Cards = (props: { cards: card[] }) => {
     <>
       <CardBox className="row justify-content-start align-items-start mx-auto">
         {props.cards.map((card, index) => (
-          <Card className="col-lg-4" key={index}>
+          <Card className="col" key={index}>
             <div className="icon">
               <div className="icon-inner" id={card.iconC}>
                 <div className="image-2">

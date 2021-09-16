@@ -31,33 +31,6 @@ const Main = styled.section`
   @media (max-width: 1000px) {
     padding: 0 10px !important;
   }
-  @media screen and (max-width: 768px) {
-    .Active {
-      flex-direction: column;
-      align-items: flex-start;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: white;
-      color: black;
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-  }
-  #Active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    font-weight: 500 !important;
-    padding: 5px 3.5rem !important;
-    margin: 0 !important;
-    background: rgba(250, 250, 250, 0.4);
-    backdrop-filter: blur(15px);
-    z-index: 50;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-  }
   .overlay {
     min-height: 100vh;
     width: 100vw;
@@ -232,7 +205,7 @@ const Main = styled.section`
   }
 `;
 
-const Navbar = () => {
+const ServiceN = () => {
   const [navbar, setNavbar] = useState(false);
   const [show, setShow] = useState(false);
   const [id, setId] = useState(false);
@@ -255,10 +228,7 @@ const Navbar = () => {
   });
   return (
     <Main className="container-fluid px-2">
-      <div
-        className={`row align-items-center justify-content-center`}
-        id={navbar ? "Active" : "none"}
-      >
+      <div className={`row align-items-center justify-content-center`}>
         <div className="row max justify-content-between align-items-center">
           <Logo className="col-auto pt-2 g-0">
             <Image
@@ -313,7 +283,7 @@ const Navbar = () => {
                         <Link href="/services/#content" passHref>
                           <div className={styles.Link}>Content Strategy</div>
                         </Link>
-                      </li>{" "}
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -544,4 +514,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default ServiceN;

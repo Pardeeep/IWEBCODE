@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 
-import AboutN from "../components/navbar/aboutN";
 import Main from "../components/Services/Main/main";
 import Link from "next/link";
 import styled from "styled-components";
@@ -12,16 +11,64 @@ import Online from "../components/Services/OnlineMarketing/online";
 import Technology from "../components/Services/Technology/technology";
 import Content from "../components/Services/ContentStrategy/content";
 import LetsWork from "../components/Homepage/Others/letsWork";
+import ServiceN from "../components/navbar/serviceN";
 
 const Links = styled.div`
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+  padding: 0 !important;
+  div{
+    border-bottom: 1px solid #e5e5e5;
+    max-width: 1170px;
+  }
+  ul {
+    margin: 0;
+  }
   li {
+    color: #A4A4B1;
+    outline: none;
     list-style: none;
-    padding: 20px 30px;
-    transition: 1s;
+    padding: 30px;
+    margin: 0 5px;
+    height: 100%;
     cursor: pointer;
-    &:hover {
-      border-bottom: 3px solid #844ff7;
+    position: relative;
+    &::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      position: absolute;
+      left: auto;
+      right: 0;
+      z-index: -1;
+      -webkit-transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+      -o-transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+      transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+      background: #844ff7;
+    }
+    :hover {
       color: #844ff7;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  @media( max-width: 968px){
+    li{
+      padding: 30px 20px;
+    }
+  }
+  @media( max-width: 768px){
+    li{
+      padding: 20px 5px;
+    }
+  }
+  @media( max-width: 568px){
+    li {
+      padding: 10px 5px;
     }
   }
 `;
@@ -47,29 +94,28 @@ const Services = () => {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <AboutN />
+      <ServiceN />
       <Main />
-      <Links className="container-fluid">
-        <div className="row justify-content-center">
-          <ul className="col d-flex justify-content-center">
+      <Links className="container-fluid d-flex justify-content-center">
+        <div className="row justify-content-center align-items-center w-100">
+          <ul className="col d-flex flex-wrap justify-content-center">
             <li>
-              <Link href="/#design">Design</Link>
+              <Link href="services/#design">Design</Link>
             </li>
             <li>
-              <Link href="/#development">Development</Link>
+              <Link href="services/#development">Development</Link>
             </li>
             <li>
-              <Link href="#">Online Marketing</Link>
+              <Link href="services/#online">Online Marketing</Link>
             </li>
             <li>
-              <Link href="#">Technology</Link>
+              <Link href="services/#technology">Technology</Link>
             </li>
             <li>
-              <Link href="#">Content Strategy</Link>
+              <Link href="services/#content">Content Strategy</Link>
             </li>
           </ul>
         </div>
-        <hr />
       </Links>
       <Design />
       <Development />

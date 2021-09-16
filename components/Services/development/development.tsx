@@ -81,8 +81,8 @@ const Development = () => {
     }
   `;
   return (
-    <Section className="container-fluid d-flex flex-column align-items-center ">
-      <div className="row justify-content-start align-items-start w-100" style={{maxWidth: "1170px"}} >
+    <Section className="container-fluid d-flex flex-column align-items-center " id="development">
+      <div className="row px-5 justify-content-start align-items-start w-100" style={{maxWidth: "1170px"}} >
         <div className="row title">Services</div>
         <h1 className="heading">Development</h1>
       </div>

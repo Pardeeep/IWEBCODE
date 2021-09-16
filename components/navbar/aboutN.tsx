@@ -25,7 +25,7 @@ const Main = styled.section`
   .max {
     max-width: 1170px;
   }
-  @media (max-width: 1000px){
+  @media (max-width: 1000px) {
     padding: 0 10px !important;
   }
   @media screen and (max-width: 768px) {
@@ -270,9 +270,7 @@ const AboutN = () => {
           <div className="col-auto g-0">
             <nav className="d-lg-block g-0">
               <ul className="d-flex justify-content-end align-items-center m-0 mb-1 list-inline">
-                <li
-                  className={`nav-item d-none d-lg-block  mx-2`}
-                >
+                <li className={`nav-item d-none d-lg-block  mx-2`}>
                   <Link href="/" passHref>
                     <div className={styles.hover}>Home</div>
                   </Link>
@@ -288,11 +286,31 @@ const AboutN = () => {
                       Services <FiChevronDown />
                     </button>
                     <ul className={styles.dropdownContent}>
-                      <li className="li">Design</li>
-                      <li className="li">Development</li>
-                      <li className="li">Online Marketing</li>
-                      <li className="li">Technology</li>
-                      <li className="li">Content Strategy</li>
+                      <li className="li">
+                        <Link href="/services/#design" passHref>
+                          <div className={styles.Link}>Design</div>
+                        </Link>
+                      </li>
+                      <li className="li">
+                        <Link href="/services/#development" passHref>
+                          <div className={styles.Link}>Development</div>
+                        </Link>
+                      </li>
+                      <li className="li">
+                        <Link href="/services/#online" passHref>
+                          <div className={styles.Link}>Online Marketing</div>
+                        </Link>
+                      </li>
+                      <li className="li">
+                        <Link href="/services/#technology" passHref>
+                          <div className={styles.Link}>Technology</div>
+                        </Link>
+                      </li>
+                      <li className="li">
+                        <Link href="/services/#content" passHref>
+                          <div className={styles.Link}>Content Strategy</div>
+                        </Link>
+                      </li>{" "}
                     </ul>
                   </div>
                 </li>
@@ -303,7 +321,9 @@ const AboutN = () => {
                   <div className={styles.hover}>Blogs</div>
                 </li>
                 <li className="nav-item d-none d-lg-block  mx-3 px-1">
-                  <Link href='/contact-us' passHref><div className={styles.hover}>Contact</div></Link>
+                  <Link href="/contact-us" passHref>
+                    <div className={styles.hover}>Contact</div>
+                  </Link>
                 </li>
                 <li className="nav-item  mx-0">
                   <div
@@ -320,7 +340,11 @@ const AboutN = () => {
           </div>
         </div>
       </div>
-      <div className={show ? "row show overlay justify-content-center " : "overlay "}>
+      <div
+        className={
+          show ? "row show overlay justify-content-center " : "overlay "
+        }
+      >
         <div className={styles.overlayMaxWidth}>
           <div className=" Container overlay-content">
             <div className="row p-5 m-3 mx-5 justify-content-between small ">
@@ -357,14 +381,12 @@ const AboutN = () => {
               </div>
 
               <div className={`${styles.height} row justify-content-between`}>
-                <div className={`${styles.heightS} col-6 small d-flex align-items-center py-4 my-5`}>
+                <div
+                  className={`${styles.heightS} col-6 small d-flex align-items-center py-4 my-5`}
+                >
                   <ul className="lists lcolor">
                     <li className="active">
-                      <a
-                        href="https://iwebcode.design/"
-                        aria-current="page"
-
-                      >
+                      <a href="https://iwebcode.design/" aria-current="page">
                         Home
                       </a>
                     </li>
@@ -420,7 +442,9 @@ const AboutN = () => {
                   </ul>
                 </div>
                 <div className="col-4 small height">
-                  <div className={`${styles.heightS} d-flex flex-column text-white align-items-center justify-content-end `}>
+                  <div
+                    className={`${styles.heightS} d-flex flex-column text-white align-items-center justify-content-end `}
+                  >
                     <address className="address  w-100">
                       <span className="Title">
                         We Are Available 24/ 7. Call Now.
@@ -432,7 +456,7 @@ const AboutN = () => {
                         <a
                           className="tel p-0 g-0"
                           href="mailto:hello@iwebcode.design"
-                          style={{lineHeight: "20px"}}
+                          style={{ lineHeight: "20px" }}
                         >
                           <FaEnvelope className="addressIcon" />
                           <br /> hello@iwebcode.design
@@ -493,29 +517,19 @@ const AboutN = () => {
                   style={{ listStyle: "none" }}
                 >
                   <li className="">
-                    <a href="https://iwebcode.design/services/#design">
-                      Design
-                    </a>
+                    <Link href="/services/#design">Design</Link>
                   </li>
                   <li className="">
-                    <a href="https://iwebcode.design/services/#development">
-                      Development
-                    </a>
+                    <Link href="/services/#development">Development</Link>
                   </li>
                   <li className="">
-                    <a href="https://iwebcode.design/services/#onlinemarketing">
-                      Online Marketing
-                    </a>
+                    <Link href="/services/#online">Online Marketing</Link>
                   </li>
                   <li className="">
-                    <a href="https://iwebcode.design/services/#technology">
-                      Technology
-                    </a>
+                    <Link href="/services/#technology">Technology</Link>
                   </li>
                   <li className="">
-                    <a href="https://iwebcode.design/services/#content-strategy">
-                      Content Strategy
-                    </a>
+                    <Link href="/services/#content">Content Strategy</Link>
                   </li>
                 </ul>
               </li>

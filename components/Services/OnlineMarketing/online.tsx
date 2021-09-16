@@ -70,8 +70,8 @@ const Online = () => {
     }
   `;
   return (
-    <Section className="container-fluid">
-      <div className="row">
+    <Section className="container-fluid" id="online">
+      <div className="row  px-5">
         <div className="row title">Services</div>
         <h1 className="heading">Online Marketing</h1>
       </div>

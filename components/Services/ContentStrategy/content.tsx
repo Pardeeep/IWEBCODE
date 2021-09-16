@@ -31,7 +31,7 @@ const Content = () => {
       icon: "folder",
       iconC: "c3",
     },
-    
+
   ];
 
   const Section = styled.section`
@@ -54,8 +54,8 @@ const Content = () => {
     }
   `;
   return (
-    <Section className="container-fluid d-flex align-items-center flex-column ">
-      <div className="row w-100" style={{maxWidth: "1170px"}}>
+    <Section className="container-fluid d-flex align-items-center flex-column" id="content">
+      <div className="row w-100 px-5" style={{maxWidth: "1170px"}}>
         <div className="row title">Services</div>
         <h1 className="heading">Content Strategy</h1>
       </div>
