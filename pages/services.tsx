@@ -19,9 +19,9 @@ const Links = styled.div`
   background: #fff;
   z-index: 100;
   padding: 0 !important;
+  border-bottom: 1px solid #e5e5e5;
   div{
-    border-bottom: 1px solid #e5e5e5;
-    max-width: 1300px;
+    max-width: 1170px;
   }
   ul {
     margin: 0;
