@@ -1,3 +1,4 @@
+import type { NextPage } from "next";
 import React from "react";
 import styles from "../styles/Home.module.css";
 import Head from "next/head";
@@ -9,7 +10,7 @@ import Where from "../components/ContactUs/whereWeAre/where";
 import LetsWork from "../components/Homepage/Others/letsWork";
 import Footer from "../components/Footer/Footer";
 
-const Contact = () => {
+const Contact:NextPage = () => {
   return (
     <section className="" style={{ background: "#F7F7FF" }}>
       <Head>

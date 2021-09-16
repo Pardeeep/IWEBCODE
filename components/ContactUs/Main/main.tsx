@@ -21,7 +21,7 @@ const Center = styled.div`
 
 const Main = () => {
   return (
-    <section style={{background: "#F7F7FF"}}>
+    <section>
       <Center className="container-fluid">
         <div className="row">
           <div className="col">
