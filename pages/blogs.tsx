@@ -13,7 +13,7 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 export async function getStaticProps() {
   const client = new ApolloClient({
-    uri: 'http://localhost:1337/graphql',
+    uri: 'https://iwebcodestrapi.herokuapp.com/posts',
     cache: new InMemoryCache(),
   });
 
