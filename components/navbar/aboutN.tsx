@@ -21,39 +21,8 @@ const Main = styled.section`
   max-width: 1170px;
   font-size: 18px;
   padding: 2rem 0 !important;
-
   .max {
     max-width: 1170px;
-  }
-  @media (max-width: 1000px) {
-    padding: 0 10px !important;
-  }
-  @media screen and (max-width: 768px) {
-    .Active {
-      flex-direction: column;
-      align-items: flex-start;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: white;
-      color: black;
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-  }
-  #Active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    font-weight: 500 !important;
-    padding: 5px 3.5rem !important;
-    margin: 0 !important;
-    background: rgba(250, 250, 250, 0.4);
-    backdrop-filter: blur(15px);
-    z-index: 50;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
   }
   .overlay {
     min-height: 100vh;
@@ -227,6 +196,36 @@ const Main = styled.section`
   .overlay .lists a {
     font-weight: 500;
   }
+  @media (max-width: 1000px) {
+    padding: 0 10px !important;
+  }
+  @media screen and (max-width: 768px) {
+    .Active {
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      color: black;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+  #Active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-weight: 500 !important;
+    padding: 5px 1.5rem !important;
+    margin: 0 !important;
+    background: rgba(250, 250, 250, 0.4);
+    backdrop-filter: blur(15px);
+    z-index: 50;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  }
 `;
 
 const AboutN = () => {
@@ -269,7 +268,7 @@ const AboutN = () => {
           </Logo>
           <div className="col-auto g-0">
             <nav className="d-lg-block g-0">
-              <ul className="d-flex justify-content-end align-items-center m-0 mb-1 list-inline">
+              <ul className="upperLinks d-flex justify-content-end align-items-center m-0 mb-1 list-inline">
                 <li className={`nav-item d-none d-lg-block  mx-2`}>
                   <Link href="/" passHref>
                     <div className={styles.hover}>Home</div>
@@ -318,7 +317,9 @@ const AboutN = () => {
                   <div className={styles.hover}>Case Studies</div>
                 </li>
                 <li className="nav-item d-none d-lg-block ">
-                  <div className={styles.hover}>Blogs</div>
+                  <Link href="/blogs" passHref>
+                    <div className={styles.hover}>Blogs</div>
+                  </Link>
                 </li>
                 <li className="nav-item d-none d-lg-block  mx-3 px-1">
                   <Link href="/contact-us" passHref>

@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['iwebcode.design']
+    domains: ['iwebcode.design',"localhost"]
   }
 }

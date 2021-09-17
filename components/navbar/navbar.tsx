@@ -51,7 +51,7 @@ const Main = styled.section`
     left: 0;
     right: 0;
     font-weight: 500 !important;
-    padding: 5px 3.5rem !important;
+    padding: 5px 1.5rem !important;
     margin: 0 !important;
     background: rgba(250, 250, 250, 0.4);
     backdrop-filter: blur(15px);
@@ -321,7 +321,9 @@ const Navbar = () => {
                   <div className={styles.hover}>Case Studies</div>
                 </li>
                 <li className="nav-item d-none d-lg-block ">
-                  <div className={styles.hover}>Blogs</div>
+                  <Link href="/blogs" passHref>
+                    <div className={styles.hover}>Blogs</div>
+                  </Link>
                 </li>
                 <li className="nav-item d-none d-lg-block  mx-3 px-1">
                   <Link href="/contact-us" passHref>
@@ -429,7 +431,7 @@ const Navbar = () => {
                       </a>
                     </li>
                     <li className="active">
-                      <a href="https://iwebcode.design/blog/">Blogs</a>
+                      <Link href="/blogs">Blogs</Link>
                     </li>
                     <li className="active">
                       <a href="https://iwebcode.design/contact/">Contact</a>
