@@ -93,7 +93,7 @@ const Post = (props: any) => {
                     layout="intrinsic"
                     width={813}
                     height={431}
-                    src={`http://localhost:1337${Data.Thumbnail.url}`}
+                    src={`https://iwebcodestrapi.herokuapp.com${Data.Thumbnail.url}`}
                     alt="Image"
                   />
                 </div>

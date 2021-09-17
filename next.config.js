@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['iwebcode.design',"localhost"]
+    domains: ['iwebcode.design',"iwebcodestrapi.herokuapp.com", "localhost"]
   }
 }
