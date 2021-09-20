@@ -46,10 +46,10 @@ export async function getStaticProps() {
 
 const Pages = styled.div`
   background: #fff;
-  div {
-    max-width: 1170px;
+  .row {
+    max-width: 1170px !important;
   }
-  button{
+  button {
     line-height: 42px;
     min-width: 42px;
     text-align: center;
@@ -58,7 +58,7 @@ const Pages = styled.div`
     padding: 0 15px;
     background: none;
     border: 1px solid #d3d3d3;
-    &:hover{
+    &:hover {
       color: white;
       background: #844ff7;
     }
@@ -90,26 +90,30 @@ const Blogs: NextPage = (props: any) => {
       <Main />
       <Posts Post={props.post} />
 
-      <Pages className="bg-warning py-5 container-fluid d-flex justfiy-content-center">
-        <div className="bg-info w-100">
-          <Link href="/blogs" passHref>
-            <button className="">1</button>
-          </Link>
-          <Link href="/blogs" passHref>
-            <button className="">2</button>
-          </Link>
-          <Link href="/blogs" passHref>
-            <button className="">3</button>
-          </Link>
-          <Link href="/blogs" passHref>
-            <button className="">4</button>
-          </Link>
-          <Link href="/blogs" passHref>
-            <button className="">5</button>
-          </Link>
-          <Link href="/blogs" passHref>
-            <button className=""><FaArrowRight /></button>
-          </Link>
+      <Pages className="py-5 pt-2 container-fluid d-flex justify-content-center aling-items-center">
+        <div className="row mb-5 g-0 w-100">
+          <div className="col">
+            <Link href="/blogs" passHref>
+              <button className="">1</button>
+            </Link>
+            <Link href="/blogs" passHref>
+              <button className="">2</button>
+            </Link>
+            <Link href="/blogs" passHref>
+              <button className="">3</button>
+            </Link>
+            <Link href="/blogs" passHref>
+              <button className="">4</button>
+            </Link>
+            <Link href="/blogs" passHref>
+              <button className="">5</button>
+            </Link>
+            <Link href="/blogs" passHref>
+              <button className="">
+                <FaArrowRight />
+              </button>
+            </Link>
+          </div>
         </div>
       </Pages>
       <LetsWork />
