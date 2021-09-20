@@ -6,14 +6,17 @@ import AboutN from "../components/navbar/aboutN";
 import LetsWork from "../components/Homepage/Others/letsWork";
 import Footer from "../components/Footer/Footer";
 
-import Main from '../components/Blogs/Main/main'
+import Main from "../components/Blogs/Main/main";
 import Posts from "../components/Blogs/Posts/Posts";
 
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import Link from "next/link";
+import styled from "styled-components";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export async function getStaticProps() {
   const client = new ApolloClient({
-    uri: 'https://iwebcodestrapi.herokuapp.com/graphql',
+    uri: "https://iwebcodestrapi.herokuapp.com/graphql",
     cache: new InMemoryCache(),
   });
 
@@ -41,9 +44,29 @@ export async function getStaticProps() {
   };
 }
 
+const Pages = styled.div`
+  background: #fff;
+  div {
+    max-width: 1170px;
+  }
+  button{
+    line-height: 42px;
+    min-width: 42px;
+    text-align: center;
+    color: #000248;
+    margin-right: 10px;
+    padding: 0 15px;
+    background: none;
+    border: 1px solid #d3d3d3;
+    &:hover{
+      color: white;
+      background: #844ff7;
+    }
+  }
+`;
 
-const Blogs:NextPage = (props: any) => {
-  console.log( props );
+const Blogs: NextPage = (props: any) => {
+  console.log(props.post.posts);
   return (
     <section className="" style={{ background: "#F7F7FF" }}>
       <Head>
@@ -65,10 +88,32 @@ const Blogs:NextPage = (props: any) => {
 
       <AboutN />
       <Main />
-      <Posts Post={props.post}/>
+      <Posts Post={props.post} />
+
+      <Pages className="bg-warning py-5 container-fluid d-flex justfiy-content-center">
+        <div className="bg-info w-100">
+          <Link href="/blogs" passHref>
+            <button className="">1</button>
+          </Link>
+          <Link href="/blogs" passHref>
+            <button className="">2</button>
+          </Link>
+          <Link href="/blogs" passHref>
+            <button className="">3</button>
+          </Link>
+          <Link href="/blogs" passHref>
+            <button className="">4</button>
+          </Link>
+          <Link href="/blogs" passHref>
+            <button className="">5</button>
+          </Link>
+          <Link href="/blogs" passHref>
+            <button className=""><FaArrowRight /></button>
+          </Link>
+        </div>
+      </Pages>
       <LetsWork />
       <Footer />
-
     </section>
   );
 };

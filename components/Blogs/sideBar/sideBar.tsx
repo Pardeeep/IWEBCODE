@@ -145,7 +145,7 @@ const SideBar = (props: any) => {
       <h3>Recent Posts</h3>
       { props.data.Post.posts.map(( Data:any ) => <div className="posts d-flex justify-content-between my-3" key={Data.id}>
             <div className="imgContainer">
-                <Image width={100} height={80} src={`http://localhost:1337${Data.Thumbnail.url}`} alt="iconImg"/>
+                <Image width={100} height={80} src={`http://iwebcodestrapi.herokuapp.com${Data.Thumbnail.url}`} alt="iconImg"/>
             </div>
             <div className="detail">
                 <div className="h6">{Data.Heading}</div>

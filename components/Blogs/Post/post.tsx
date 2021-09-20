@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
+import Link from 'next/link'
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 
 const Column = styled.div`
@@ -38,7 +39,9 @@ const Button = styled.button`
   color: #844ff7;
   font-weight: bold;
   background: none;
-
+  &:focus{
+    outline: none;
+  }
   .spacing {
     margin-left: 10px;
   }
@@ -106,9 +109,11 @@ const Post = (props: any) => {
                 dimensions. There are few hurdles that a websites need to pass
                 to […]
               </Paragraph>
-              <Button className="g-0">
-                Read More <BsCaretRightFill className="spacing" />{" "}
-              </Button>
+              <Link href={`/blog/${Data.id}`} passHref>
+                <Button className="g-0">
+                  Read More <BsCaretRightFill className="spacing" />{" "}
+                </Button>
+              </Link>
             </div>
           </div>
         ))}
