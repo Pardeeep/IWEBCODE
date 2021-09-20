@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 
 const Column = styled.div`
@@ -9,6 +9,10 @@ const Column = styled.div`
   .head {
     letter-spacing: 1px;
     font-weight: bolder;
+    cursor: pointer;
+    &:hover{
+      color: #844ff7;
+    }
   }
   p {
     font-size: 15px;
@@ -39,7 +43,7 @@ const Button = styled.button`
   color: #844ff7;
   font-weight: bold;
   background: none;
-  &:focus{
+  &:focus {
     outline: none;
   }
   .spacing {
@@ -66,7 +70,9 @@ const Post = (props: any) => {
       <div className="container-fluid">
         {props.data.Post.posts.map((Data: any) => (
           <div className="row mb-5" key={Data.id}>
-            <h2 className="head pb-2">{Data.Heading}</h2>
+            <Link href={`/blog/${Data.id}`} passHref>
+              <h2 className="head pb-2">{Data.Heading}</h2>
+            </Link>
             <div className="container">
               <div className="d-flex">
                 <div className="">
