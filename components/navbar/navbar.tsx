@@ -428,15 +428,13 @@ const Navbar = () => {
                       </ul>
                     </li>
                     <li className="">
-                      <Link href="/case-studies">
-                        Case Studies
-                      </Link>
+                      <Link href="/case-studies">Case Studies</Link>
                     </li>
                     <li className="active">
                       <Link href="/blogs">Blogs</Link>
                     </li>
                     <li className="active">
-                      <a href="/contact-us">Contact</a>
+                      <Link href="/contact-us">Contact</Link>
                     </li>
                   </ul>
                 </div>
