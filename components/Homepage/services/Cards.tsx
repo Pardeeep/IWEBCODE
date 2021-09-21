@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaEye } from "react-icons/fa";
+import Image from 'next/image'
 
 const CardBox = styled.section`
   min-height: 800px;
@@ -95,7 +96,8 @@ export const Cards = () => {
       <Card className="col">
         <div className="icon">
           <div className="icon-inner">
-            <img
+            <Image
+              layout="intrinsic"
               src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
               alt="Icon Images"
             />
@@ -121,7 +123,8 @@ export const Cards = () => {
       <Card className="col">
         <div className="icon">
           <div className="icon-inner">
-            <img
+          <Image
+              layout="intrinsic"
               src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
               alt="Icon Images"
             />
@@ -145,7 +148,8 @@ export const Cards = () => {
       <Card className="col">
         <div className="icon">
           <div className="icon-inner">
-            <img
+          <Image
+              layout="intrinsic"
               src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
               alt="Icon Images"
             />
@@ -171,7 +175,8 @@ export const Cards = () => {
       <Card className="col">
         <div className="icon">
           <div className="icon-inner">
-            <img
+          <Image
+              layout="intrinsic"
               src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
               alt="Icon Images"
             />
@@ -195,7 +200,8 @@ export const Cards = () => {
       <Card className="col">
         <div className="icon">
           <div className="icon-inner">
-            <img
+          <Image
+              layout="intrinsic"
               src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
               alt="Icon Images"
             />
@@ -218,7 +224,8 @@ export const Cards = () => {
       <Card className="col">
         <div className="icon">
           <div className="icon-inner">
-            <img
+          <Image
+              layout="intrinsic"
               src="https://iwebcode.design/wp-content/themes/keystroke/assets/images/icons/layer.png"
               alt="Icon Images"
             />
