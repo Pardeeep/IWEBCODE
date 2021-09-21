@@ -318,7 +318,9 @@ const Navbar = () => {
                   </div>
                 </li>
                 <li className={` nav-item d-none d-lg-block mx-2`}>
-                  <div className={styles.hover}>Case Studies</div>
+                  <Link href="/case-studies" passHref>
+                    <div className={styles.hover}>Case Studies</div>
+                  </Link>
                 </li>
                 <li className="nav-item d-none d-lg-block ">
                   <Link href="/blogs" passHref>
@@ -391,12 +393,12 @@ const Navbar = () => {
                 >
                   <ul className="lists lcolor">
                     <li className="active">
-                      <a href="https://iwebcode.design/" aria-current="page">
+                      <Link href="/" passHref>
                         <div className={styles.homeButton}>Home</div>
-                      </a>
+                      </Link>
                     </li>
                     <li className="active">
-                      <a href="https://iwebcode.design/about-us/">About</a>
+                      <Link href="/about">About</Link>
                     </li>
                     <li className="active">
                       <a href="#" onClick={handleId}>
@@ -426,15 +428,15 @@ const Navbar = () => {
                       </ul>
                     </li>
                     <li className="">
-                      <a href="https://iwebcode.design/case-studies/">
+                      <Link href="/case-studies">
                         Case Studies
-                      </a>
+                      </Link>
                     </li>
                     <li className="active">
                       <Link href="/blogs">Blogs</Link>
                     </li>
                     <li className="active">
-                      <a href="https://iwebcode.design/contact/">Contact</a>
+                      <a href="/contact-us">Contact</a>
                     </li>
                   </ul>
                 </div>

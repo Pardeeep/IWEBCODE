@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
 import { BsFillCaretRightFill } from "react-icons/bs";
+import Link from "next/link";
 
 const Case = styled.div`
   max-width: 1170px;
@@ -91,6 +92,9 @@ const Button = styled.button`
   .spacing {
     margin-left: 10px;
   }
+  &:focus{
+    outline: none;
+  }
   &:hover {
     color: #fff;
     background: #8447ff;
@@ -101,18 +105,22 @@ const Cases = () => {
   return (
     <section className="container-fluid d-flex flex-column align-items-center justify-content-center">
       <Case className="row d-flex justify-content-center align-items-center">
-        <ImgContainer className="col">
-          <Image
-            src="https://iwebcode.design/wp-content/uploads/2020/12/pcr-new.png"
-            alt="IWEBCODE"
-            width="650"
-            height="690"
-            layout="intrinsic"
-          />
-        </ImgContainer>
+        <Link href="/case-studies/pcr-consultants" passHref>
+          <ImgContainer className="col">
+            <Image
+              src="https://iwebcode.design/wp-content/uploads/2020/12/pcr-new.png"
+              alt="IWEBCODE"
+              width="650"
+              height="690"
+              layout="intrinsic"
+            />
+          </ImgContainer>
+        </Link>
         <Description className="col">
           <Subtitle>Featured Case Studies</Subtitle>
-          <Title>Logo & Web Desing For PCR Consultants</Title>
+          <Link href="/case-studies/pcr-consultants" passHref>
+            <Title>Logo & Web Desing For PCR Consultants</Title>
+          </Link>
           <Detail>
             Designing their website was a very serious task for us! With the
             website, we wanted to depict their message clear and loud. <br />
@@ -123,9 +131,11 @@ const Cases = () => {
             no fancy designs. We vowed to stick to that plan and control our
             urges to display our creativity with the theme!
           </Detail>
-          <Button>
-            Read Case Study <BsFillCaretRightFill className="spacing" />
-          </Button>
+          <Link href="/case-studies/pcr-consultants" passHref>
+            <Button>
+              Read Case Study <BsFillCaretRightFill className="spacing" />
+            </Button>
+          </Link>
           <div className="sales d-flex">
             <div>
               <h1>45%</h1>
@@ -141,15 +151,25 @@ const Cases = () => {
       <Case className="row d-flex justify-content-center align-items-center">
         <Description className="col">
           <Subtitle>Featured Case Studies</Subtitle>
-          <Title>DreamNation</Title>
+          <Link href="/case-studies/dream-nation" passHref>
+            <Title>DreamNation</Title>
+          </Link>
           <Detail>
-          Everyone dreams of achieving a feat in life where they’re not dependent on anyone! But, this process isn’t as easy as it seems. <br />
+            Everyone dreams of achieving a feat in life where they’re not
+            dependent on anyone! But, this process isn’t as easy as it seems.{" "}
             <br />
-            At times we need a mentor to guide us through! Dream Nation helps thousands of people on the path to attain personal and financial freedom. Our task was to build a website that helps the vision of Dream Nation reach thousands of people who want help in achieving their dreams!
+            <br />
+            At times we need a mentor to guide us through! Dream Nation helps
+            thousands of people on the path to attain personal and financial
+            freedom. Our task was to build a website that helps the vision of
+            Dream Nation reach thousands of people who want help in achieving
+            their dreams!
           </Detail>
-          <Button>
-            Read Case Study <BsFillCaretRightFill className="spacing" />
-          </Button>
+          <Link href="/case-studies/dream-nation" passHref>
+            <Button>
+              Read Case Study <BsFillCaretRightFill className="spacing" />
+            </Button>
+          </Link>
           <div className="sales d-flex">
             <div>
               <h1>45%</h1>
@@ -161,41 +181,52 @@ const Cases = () => {
             </div>
           </div>
         </Description>
-        <ImgContainer className="col">
-          <Image
-            src="https://iwebcode.design/wp-content/uploads/2020/12/DreamNation-661x661.png"
-            alt="IWEBCODE"
-            width="650"
-            height="690"
-            layout="intrinsic"
-          />
-        </ImgContainer>
+        <Link href="/case-studies/dream-nation" passHref>
+          <ImgContainer className="col">
+            <Image
+              src="https://iwebcode.design/wp-content/uploads/2020/12/DreamNation-661x661.png"
+              alt="IWEBCODE"
+              width="650"
+              height="690"
+              layout="intrinsic"
+            />
+          </ImgContainer>
+        </Link>
       </Case>
 
       <Case className="row d-flex justify-content-center align-items-center">
-        <ImgContainer className="col">
-          <Image
-            src="https://iwebcode.design/wp-content/uploads/2020/12/hexkey-new-661x661.png"
-            alt="IWEBCODE"
-            width="650"
-            height="690"
-            layout="intrinsic"
-          />
-        </ImgContainer>
+        <Link href="/case-studies/hexkey-infotech-pvt-ltd" passHref>
+          <ImgContainer className="col">
+            <Image
+              src="https://iwebcode.design/wp-content/uploads/2020/12/hexkey-new-661x661.png"
+              alt="IWEBCODE"
+              width="650"
+              height="690"
+              layout="intrinsic"
+            />
+          </ImgContainer>
+        </Link>
         <Description className="col">
           <Subtitle>Featured Case Studies</Subtitle>
-          <Title>Hexkey Infotech Pvt. Ltd.</Title>
+          <Link href="/case-studies/hexkey-infotech-pvt-ltd" passHref>
+            <Title>Hexkey Infotech Pvt. Ltd.</Title>
+          </Link>
           <Detail>
             Designing websites for different people isn’t a piece of cake. It
             takes a lot of effort, planning and trials to build a successful
             website.
             <br />
             <br />
-            Hexkey aims at providing a total digital solution for the clients. We had to develop a website that provides necessary support to the customer right from the first step! Since this is a field that we play every day, we executed our best!
+            Hexkey aims at providing a total digital solution for the clients.
+            We had to develop a website that provides necessary support to the
+            customer right from the first step! Since this is a field that we
+            play every day, we executed our best!
           </Detail>
-          <Button>
-            Read Case Study <BsFillCaretRightFill className="spacing" />
-          </Button>
+          <Link href="/case-studies/hexkey-infotech-pvt-ltd" passHref>
+            <Button>
+              Read Case Study <BsFillCaretRightFill className="spacing" />
+            </Button>
+          </Link>
           <div className="sales d-flex">
             <div>
               <h1>7%</h1>
