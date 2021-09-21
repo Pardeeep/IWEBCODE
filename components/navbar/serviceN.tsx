@@ -288,7 +288,9 @@ const ServiceN = () => {
                   </div>
                 </li>
                 <li className={` nav-item d-none d-lg-block mx-2`}>
-                  <div className={styles.hover}>Case Studies</div>
+                  <Link href="/case-studies" passHref>
+                    <div className={styles.hover}>Case Studies</div>
+                  </Link>
                 </li>
                 <li className="nav-item d-none d-lg-block ">
                   <div className={styles.hover}>Blogs</div>
